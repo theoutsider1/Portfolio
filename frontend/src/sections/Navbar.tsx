@@ -1,6 +1,10 @@
 import { useState } from "react"
 
-
+const NavItems = ()=>{
+    return (
+        <div></div>
+    )
+}
 
 
 export  const Navbar = ()=>{
@@ -26,6 +30,10 @@ export  const Navbar = ()=>{
                             src={isOpen ? "assets/close.svg" : "assets/menu.svg" } 
                             alt="toggle" className="w-6 h-6" />
                     </button>
+
+                    <nav className="sm:flex hidden">
+                        <NavItems/>
+                    </nav>
                     
                     
                 </div>
