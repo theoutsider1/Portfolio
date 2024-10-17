@@ -28,10 +28,13 @@ export  const Navbar = ()=>{
                     </a>
 
                     {/* Burger */}
-                    <button onClick={toggleMenu} className="text-secondary hover:text-black"> 
-                        <img 
-                            src={isOpen ? "assets/close.svg" : "assets/menu.svg" } 
-                            alt="toggle" className="w-6 h-6" />
+                    <button 
+                        onClick={toggleMenu} 
+                        className="text-secondary hover:text-black focus:outline-none sm:hidden flex"
+                        aria-label="Toggle menu"> 
+                            <img 
+                                src={isOpen ? "assets/close.svg" : "assets/menu.svg" } 
+                                alt="toggle" className="w-6 h-6" />
                     </button>
 
                     <nav className="sm:flex hidden">
