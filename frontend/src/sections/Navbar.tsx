@@ -2,7 +2,10 @@ import { useState } from "react"
 
 const NavItems = ()=>{
     return (
-        <div></div>
+        <ul>
+            
+            
+        </ul>
     )
 }
 
