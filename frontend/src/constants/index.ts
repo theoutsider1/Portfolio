@@ -1,4 +1,6 @@
-export const navLinks = [
+import { NavLinks } from "./Globals/types";
+
+export const navLinks: NavLinks[] = [
     {
       id: 1,
       name: 'Home',
