@@ -1,10 +1,18 @@
 import { useState } from "react"
+import { navLinks } from "../constants"
 
 const NavItems = ()=>{
     return (
-        <ul>
-            
-            
+        <ul className="nav-ul flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20">
+             {navLinks.map(navLink => (
+                    <li className="nav-li text-secondary hover:text-white max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5 " 
+                        key={navLink.id}>
+                            <a 
+                                href={navLink.href} 
+                                className="nav-li_a text-lg md:text-base transition-colors" 
+                                onClick={()=>{}}>{navLink.name}</a>
+                    </li>
+                ))} 
         </ul>
     )
 }
