@@ -31,11 +31,13 @@ export  const Navbar = ()=>{
                 <div className="flex justify-between items-center py-5 mx-auto sm-px-10 px-5">
                     
                     {/* Add LOGO */}
+
                     <a href="/" className="text-secondary font-bold text-xl hover:font-semibold transition-colors" >
                         Hatim Tagmi
                     </a>
 
                     {/* Burger */}
+
                     <button 
                         onClick={toggleMenu} 
                         className="text-secondary hover:text-black focus:outline-none sm:hidden flex"
@@ -48,11 +50,18 @@ export  const Navbar = ()=>{
                     <nav className="sm:flex hidden">
                         <NavItems/>
                     </nav>
-                    
-                    
                 </div>
             </div>
-        
+
+            {/* Mobile sidebar Menu */}
+            
+            <div className={`nav-sidebar absolute left-0 right-0 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block
+                ${isOpen ? `max-h-screen` : `max-h-0`}`}>
+                <nav className="p-5">
+                    <NavItems/>
+                </nav>
+            </div>
+
         </header>
 
 
