@@ -13,7 +13,24 @@ export const About = ()=>{
                         Contact me
                     </span>
 
-                   
+                    <span className="border-2 border-secondary rounded-full p-2.5 text-center inline-flex items-center">
+                        <svg
+                        className="w-5 h-5 transform -rotate-45"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 10"
+                        >
+                        <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="0.5"
+                            d="M1 5h12m0 0L9 1m4 4L9 9"
+                        />
+                        </svg>
+                        <span className="sr-only">Icon description</span>
+                    </span>
                 </button>
                    
                 </div>
