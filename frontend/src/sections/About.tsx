@@ -10,7 +10,7 @@ export const About = ()=>{
                 <div className="w-full flex justify-end">
                 <button className="flex items-center font-thin text-secondary">
                     <span className="border-2 text-base font-light inline-flex items-center my-4 border-secondary rounded-full py-2.5 px-8">
-                        Contact me
+                        Learn More
                     </span>
 
                     <span className="border-2 border-secondary rounded-full p-2.5 text-center inline-flex items-center">
