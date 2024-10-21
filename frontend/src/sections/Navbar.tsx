@@ -3,9 +3,9 @@ import { navLinks } from "../constants"
 
 const NavItems = ()=>{
     return (
-        <ul className="nav-ul flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20">
+        <ul className="nav-ul w-full flex flex-col items-center sm:flex-row sm:justify-around relative z-20">
              {navLinks.map(navLink => (
-                    <li className="nav-li text-secondary hover:text-white max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5 " 
+                    <li className="nav-li text-secondary hover:text-white max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-10 p-4 " 
                         key={navLink.id}>
                             <a 
                                 href={navLink.href} 
@@ -25,22 +25,23 @@ export  const Navbar = ()=>{
         setisOpen((prevIsOpen => !prevIsOpen))
     }
     return (
-        <header className="fixed top-o left-0 z-50 w-full">
+        //fixed top-o left-0
+        <header className="fixed top-0 right-0 sm:static sm:top-auto sm:left-auto z-50 w-full">
             
             <div className=" max-w-7xl mx-auto">
-                <div className="flex justify-between items-center py-5 mx-auto sm-px-10 px-5">
+                <div className="flex justify-end sm:block sm:justify-center py-5 mx-auto sm:px-10 px-5">
                     
                     {/* Add LOGO */}
 
-                    <a href="/" className="text-secondary font-bold text-xl hover:font-semibold transition-colors" >
+                    {/* <a href="/" className="text-white font-bold text-xl hover:font-semibold transition-colors" >
                         Hatim Tagmi
-                    </a>
+                    </a> */}
 
                     {/* Burger */}
 
                     <button 
                         onClick={toggleMenu} 
-                        className="text-secondary hover:text-black focus:outline-none sm:hidden flex"
+                        className="text-white hover:text-black focus:outline-none sm:hidden flex"
                         aria-label="Toggle menu"> 
                             <img 
                                 src={isOpen ? "assets/close.svg" : "assets/menu.svg" } 
