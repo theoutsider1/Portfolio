@@ -6,6 +6,8 @@ export const About = ()=>{
             <div className="w-1/2">
                 <h2 className="text-right items-center text-secondary text-6xl font-bold sm:px-12">About</h2>
             </div>
+            
+            {/* Button Section & Description */}
             <div className="w-1/2">
                 <div className="w-full flex justify-end items-center py-4 sm:py-0">
                     <button className="flex items-center font-thin text-secondary">
