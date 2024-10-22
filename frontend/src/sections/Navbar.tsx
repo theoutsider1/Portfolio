@@ -5,7 +5,7 @@ const NavItems = ()=>{
     return (
         <ul className="nav-ul w-full flex flex-col items-center sm:flex-row sm:justify-around relative z-20">
              {navLinks.map(navLink => (
-                    <li className="nav-li text-secondary hover:text-white max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-10 p-4 " 
+                    <li className="nav-li text-secondary hover:text-third max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-10 p-4 " 
                         key={navLink.id}>
                             <a 
                                 href={navLink.href} 
