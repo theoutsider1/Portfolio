@@ -9,7 +9,7 @@ const NavItems = ()=>{
                         key={navLink.id}>
                             <a 
                                 href={navLink.href} 
-                                className="nav-li_a text-lg md:text-base transition-colors" 
+                                className="nav-li_a text-lg md:text-lg transition-colors" 
                                 onClick={()=>{}}>{navLink.name}</a>
                     </li>
                 ))} 
