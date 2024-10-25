@@ -14,12 +14,12 @@ export function ProjectsList() {
                         <p className="mt-2 text-sm font-thin sm:text-base">Welcome to my magical realm of web development! I’m Hatim Tagmi, 
                              your friendly neighborhood Web Wizard, casting spells of creativity and innovation to bring your digital dreams to life.</p>
                     </div>
-                    <div className="sm:w-1/4 flex justify-end sm:justify-start sm:static">
-                    <button className="flex items-center font-thin text-secondary">
-                                    <span className="border-2 text-sm sm:text-base sm:font-light inline-flex items-center sm:my-4 border-secondary rounded-full py-1.5 sm:py-2.5 px-4 sm:px-8">
-                                        Learn More
-                                    </span>     
-                            </button>
+                    <div className="sm:w-1/4 flex justify-end sm:static">
+                        <button className="flex items-center font-thin text-secondary">
+                            <span className="border-2 text-sm sm:text-base sm:font-light inline-flex items-center sm:my-4 border-secondary rounded-full py-1.5 sm:py-2.5 px-4 sm:px-8">
+                                Learn More
+                            </span>     
+                         </button>
                     </div>
                 </div>
             </div>
