@@ -2,7 +2,7 @@
 
 export const Hero = ()=>{
     return (
-        <section className="mx-4 my-8 sm:my-10 sm:p-12 h-4/5 max-w-7xl  bg-secondary flex flex-col justify-center items-center rounded-3xl">
+        <section className="mx-4 my-8 sm:my-10 sm:p-12 h-4/5 bg-secondary flex flex-col justify-center items-center rounded-3xl">
            
             <div className="w-full"> 
                 <h1 className="text-center py-8 text-7xl sm:text-7xl md:text-9xl text-primary font-extrabold sm:font-black">
