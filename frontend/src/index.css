@@ -9,3 +9,7 @@
 body {
     background: #1f2e13;
 }
+.scrollbar-custom {
+  
+  scrollbar-color: #f4fc96 #f4fc96; /* Thumb color and track color */
+}
