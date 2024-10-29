@@ -9,7 +9,7 @@ export function ProjectsList() {
                         {/* Divider */}
                     <hr className="hidden sm:block px-96 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-secondary to-transparent opacity-75" />
                     {/* Section contains Title Projects & Description */}
-                    <div className="w-full border-y-2 border-secondary sm:border-none ">
+                    <div className="w-full border-b-2 border-secondary sm:border-none ">
                             <div className="flex flex-col sm:flex-row gap-4 py-4">
                                 <div className="sm:w-1/4 text-sm sm:text-base text-secondary font-thin">
                                     {project.date}
