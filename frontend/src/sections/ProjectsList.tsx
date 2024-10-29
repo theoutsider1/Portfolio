@@ -3,17 +3,14 @@ import { ProjectsInfo } from "../constants"
 
 export function ProjectsList() {
     return (
-        <section className="w-full sm:flex flex-col justify-center px-4 sm:px-12 my-12">
-           
+        <section className="scrollbar-custom w-full sm:flex flex-col justify-center px-4 sm:px-12 my-12 py-4 h-96 overflow-y-auto scroll-smooth">
             {ProjectsInfo.map(project => (
-                <div>
+                <div key={project.id} className="py-4">
                         {/* Divider */}
                     <hr className="hidden sm:block px-96 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-secondary to-transparent opacity-75" />
                     {/* Section contains Title Projects & Description */}
                     <div className="w-full border-y-2 border-secondary sm:border-none ">
-                        
-                        
-                            <div key={project.id} className="flex flex-col sm:flex-row gap-4 py-4">
+                            <div className="flex flex-col sm:flex-row gap-4 py-4">
                                 <div className="sm:w-1/4 text-sm sm:text-base text-secondary font-thin">
                                     {project.date}
                                 </div>
@@ -31,8 +28,6 @@ export function ProjectsList() {
                                     </button>
                                 </div>
                         </div>
-                    
-                        
                     </div>
                 </div>
                 ))}
