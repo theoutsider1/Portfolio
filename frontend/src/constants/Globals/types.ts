@@ -3,3 +3,10 @@ export interface NavLinks {
     name: string,
     href : string
 }
+
+export interface ProjectsInfos {
+    id: number,
+    name: string,
+    description: string,
+    date: string,
+}
