@@ -44,12 +44,14 @@ export const Stack = () => {
       max: 10,
     }
   }) 
-  const isMobile = useMediaQuery({maxWidth: 787})
+  const isMobile = useMediaQuery({maxWidth: 768})
+  // const isTablet = useMediaQuery({minWidth:768, maxWidth: 1024})
   return (
         <section className="w-full min-h-screen border-2 relative">
-            <hr className="hidden sm:block px-96 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-secondary to-transparent opacity-75" />
             <Leva/>
-            <Canvas className="w-full h-full absolute">
+            <Canvas className="w-full h-full absolute border-2"
+             style={{
+              height: 400}}>
               <Suspense fallback={<CanvasLoader/>}>
                 <PerspectiveCamera makeDefault position={[0,0,3]} />
                 <MagicWand 
