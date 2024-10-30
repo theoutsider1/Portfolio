@@ -62,7 +62,7 @@ export const Stack = () => {
                     rotation={[controls.rotationX, controls.rotationY, controls.rotationZ]}
                     scale={isMobile ? 0.13 : controls.scale}                  
                     />
-                <ambientLight intensity={1}/>
+                <ambientLight intensity={9}/>
                 <directionalLight position={[10,10,10]}/>
               </Suspense>
             </Canvas>
