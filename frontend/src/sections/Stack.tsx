@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import MagicWand from "../components/MagicWand";
 import CanvasLoader from "../components/CanvasLoader";
 import { Leva, useControls } from "leva";
+import { useMediaQuery } from "react-responsive";
 
 export const Stack = () => {
   const controls = useControls({
@@ -43,11 +44,12 @@ export const Stack = () => {
       max: 10,
     }
   }) 
+  const isMobile = useMediaQuery({maxWidth: 787})
   return (
         <section className="w-full min-h-screen border-2 relative">
             <hr className="hidden sm:block px-96 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-secondary to-transparent opacity-75" />
             <Leva/>
-            <Canvas className="h-full absolute">
+            <Canvas className="w-full h-full absolute">
               <Suspense fallback={<CanvasLoader/>}>
                 <PerspectiveCamera makeDefault position={[0,0,3]} />
                 <MagicWand 
@@ -56,7 +58,7 @@ export const Stack = () => {
                     // rotation={[0,280,0]}
                     position={[controls.positionX, controls.positionY, controls.positionZ]} 
                     rotation={[controls.rotationX, controls.rotationY, controls.rotationZ]}
-                    scale={controls.scale}                  
+                    scale={isMobile ? 0.13 : controls.scale}                  
                     />
                 <ambientLight intensity={1}/>
                 <directionalLight position={[10,10,10]}/>
