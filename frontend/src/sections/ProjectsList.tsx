@@ -27,7 +27,7 @@ export function ProjectsList() {
                                         </span>     
                                     </button>
                                 </div>
-                        </div>
+                            </div>
                     </div>
                 </div>
                 ))}
