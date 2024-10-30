@@ -13,32 +13,32 @@ export const Stack = () => {
       max: 10,
     },
     rotationY: {
-      value : 0,
+      value : -6.6,
       min: -10,
       max: 10,
     },
     rotationZ: {
-      value : 0,
+      value : 0.4,
       min: -10,
       max: 10,
     },
     positionX: {
-      value : 2.5,
+      value : 0,
       min: -10,
       max: 10,
     },
     positionY: {
-      value : 2.5,
+      value : -1.9,
       min: -10,
       max: 10,
     },
     positionZ: {
-      value : 2.5,
+      value : -5.5,
       min: -10,
       max: 10,
     },
     scale : {
-      value: 1,
+      value: 0.2,
       min: 0.1,
       max: 10,
     }
@@ -54,10 +54,9 @@ export const Stack = () => {
                     // scale={[0,0,7]}
                     // position={[0,0,0]} 
                     // rotation={[0,280,0]}
-                    position={[controls.positionX,controls.positionY, controls.positionZ]} 
+                    position={[controls.positionX, controls.positionY, controls.positionZ]} 
                     rotation={[controls.rotationX, controls.rotationY, controls.rotationZ]}
-                    scale={[controls.scale, controls.scale, controls.scale]}
-                  
+                    scale={controls.scale}                  
                     />
                 <ambientLight intensity={1}/>
                 <directionalLight position={[10,10,10]}/>
