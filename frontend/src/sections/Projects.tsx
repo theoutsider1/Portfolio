@@ -4,7 +4,7 @@ export const Projects = ()=> {
             {/* Paragraph section */}
             <div className="w-1/2">
                     <div className="w-full h-full flex flex-col justify-end items-end text-secondary ">
-                    <button className="flex items-center font-thin text-secondary">
+                    <button className="flex items-center sm:px-12 sm:pb-12 font-thin text-secondary">
                                     <span className="border-2 text-sm sm:text-base sm:font-light inline-flex items-center sm:my-4 border-secondary rounded-full py-1.5 sm:py-2.5 px-4 sm:px-8">
                                         Learn More
                                     </span>
