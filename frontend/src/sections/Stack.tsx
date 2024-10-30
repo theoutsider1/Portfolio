@@ -53,7 +53,7 @@ export const Stack = () => {
              style={{
               height: 400}}>
               <Suspense fallback={<CanvasLoader/>}>
-                <PerspectiveCamera makeDefault position={[0,0,3]} />
+                <PerspectiveCamera makeDefault position={[0,0,5]} />
                 <MagicWand 
                     // scale={[0,0,7]}
                     // position={[0,0,0]} 
