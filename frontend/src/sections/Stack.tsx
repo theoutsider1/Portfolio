@@ -6,15 +6,16 @@ import CanvasLoader from "../components/CanvasLoader";
 import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { CrystalBall } from "../components/CrystalBall";
-import { wandControlConfig } from "../constants/Globals/objectsControls";
+import { crystallBallControlConfig, wandControlConfig } from "../constants/Globals/objectsControls";
 
 export const Stack = () => {
   
-  const wandControl = useControls({...wandControlConfig}) 
+  const wandControl = useControls('wand Controls',{...wandControlConfig}) 
+  const crystalBallController = useControls('crystal ball',{...crystallBallControlConfig}) 
   const isMobile = useMediaQuery({maxWidth: 768})
   // const isTablet = useMediaQuery({minWidth:768, maxWidth: 1024})
   return (
-        <section className="w-full min-h-screen border-2 relative">
+        <section className="w-full min-h-screen border-2 relative bg-slate-950">
             <Leva/>
             <Canvas className="w-full h-full absolute border-2"
              style={{
@@ -30,9 +31,9 @@ export const Stack = () => {
                     scale={isMobile ? 0.13 : wandControl.scale}                  
                     />
                 <CrystalBall
-                    position={[wandControl.positionX, wandControl.positionY, wandControl.positionZ]} 
-                    rotation={[wandControl.rotationX, wandControl.rotationY, wandControl.rotationZ]}
-                    scale={isMobile ? 0.13 : wandControl.scale} />
+                    position={[crystalBallController.positionX, crystalBallController.positionY, crystalBallController.positionZ]} 
+                    rotation={[crystalBallController.rotationX, crystalBallController.rotationY, crystalBallController.rotationZ]}
+                    scale={isMobile ? 0.13 : crystalBallController.scale} />
                 <ambientLight intensity={9}/>
                 <directionalLight position={[10,10,10]}/>
               </Suspense>
