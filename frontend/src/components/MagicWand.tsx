@@ -8,12 +8,21 @@ Title: The Elder Wand
 
 // import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+import { useRef } from 'react'
 import { Mesh } from 'three'
 
 const MagicWand = (props : any)=> {
   const { nodes, materials } = useGLTF('/models/the_elder_wand.glb')
+
+  const meshRef = useRef<Mesh>(null);
+  useFrame (()=>{
+    if (meshRef.current){
+      meshRef.current.rotation.z +=0.01;
+    }
+  })
    return (
-    <group {...props} dispose={null}>
+    <group {...props} ref={meshRef} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.07}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <mesh
