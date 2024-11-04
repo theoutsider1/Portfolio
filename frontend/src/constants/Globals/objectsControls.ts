@@ -20,39 +20,39 @@ interface ModelControl {
 // wand controller
 export const wandControlConfig : ModelControl = {
     rotationX: {
-        value : 0,
+        value : 2.8,
         min: -10,
         max: 10,
       },
       rotationY: {
-        value : -6.6,
-        min: -10,
-        max: 10,
-      },
-      rotationZ: {
-        value : 0.4,
-        min: -10,
-        max: 10,
-      },
-      positionX: {
         value : 0,
         min: -10,
         max: 10,
       },
+      rotationZ: {
+        value : -1.4,
+        min: -10,
+        max: 10,
+      },
+      positionX: {
+        value : -1.2,
+        min: -10,
+        max: 10,
+      },
       positionY: {
-        value : -1.9,
+        value : 0.3,
         min: -10,
         max: 10,
       },
       positionZ: {
-        value : -5.5,
+        value : -1.5,
         min: -10,
         max: 10,
       },
       scale : {
-        value: 0.2,
-        min: 0.1,
-        max: 10,
+        value: 0.02,
+        min: 0.02,
+        max: 0.02,
     }
 }
 
