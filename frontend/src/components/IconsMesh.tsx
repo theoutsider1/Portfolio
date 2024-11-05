@@ -5,7 +5,7 @@ import react from "/assets/react.svg"
 import notion from "/assets/notion.svg"
 import { useRef } from "react"
 import { Mesh } from "three"
-
+import { useFrame } from "@react-three/fiber"
 
 export const IconsMesh =() => {
     const meshRef  = useRef<Mesh>(null);
@@ -13,7 +13,20 @@ export const IconsMesh =() => {
     const figmaMeshRef  = useRef<Mesh>(null);
     const reactMeshRef  = useRef<Mesh>(null);
 
-    
+    useFrame(()=>{
+        if(meshRef.current){
+            meshRef.current.rotation.y +=0.01
+        }
+        if(gitMeshRef.current){
+            gitMeshRef.current.rotation.y +=0.01
+        }
+        if(figmaMeshRef.current){
+            figmaMeshRef.current.rotation.y +=0.01
+        }
+        if(reactMeshRef.current){
+            reactMeshRef.current.rotation.y +=0.01
+        }
+    })
 
     return (
         <>
