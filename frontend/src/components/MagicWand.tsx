@@ -16,8 +16,7 @@ const MagicWand = (props : any)=> {
   const { nodes, materials } = useGLTF('/models/the_elder_wand.glb')
 
   const meshRef = useRef<Mesh>(null);
-  
-  // First animation
+  // 1st Animation
   const flyWand = () => {
     
     if(meshRef.current ){
@@ -34,7 +33,7 @@ const MagicWand = (props : any)=> {
     }
   };
 
-
+// 2nd Animation
   const shakeWand = ()=> {
     if(meshRef.current){
       gsap.timeline({repeat:1, yoyo:true})
@@ -53,6 +52,19 @@ const MagicWand = (props : any)=> {
       
     }
   }
+  // handle All animations 
+  const handleAnimations = ()=>{
+    if(meshRef.current){
+      gsap.to(meshRef.current.position,{
+        x:meshRef.current.position.x,
+        y: 1,
+        duration:2,
+        onComplete: flyWand,
+      })
+     
+    }
+  }
+  
   
    return (
     <group {...props}
