@@ -14,7 +14,10 @@ import { Mesh } from 'three'
 
 const MagicWand = (props : any)=> {
   const { nodes, materials } = useGLTF('/models/the_elder_wand.glb')
+
   const meshRef = useRef<Mesh>(null);
+  
+  // First animation
   const flyWand = () => {
     
     if(meshRef.current ){
@@ -26,13 +29,30 @@ const MagicWand = (props : any)=> {
         duration: 1,
         ease: "power1.inOut",
         
-        //onComplete: shakeWand,  // Call the flip function after moving
+        onComplete: shakeWand,  // Call the flip function after moving
       });
     }
   };
 
 
-  
+  const shakeWand = ()=> {
+    if(meshRef.current){
+      gsap.timeline({repeat:1, yoyo:true})
+      .to(meshRef.current.rotation,{
+        // x:-0.1,
+        y: 0.5,
+        duration: 1,
+        ease:"power1.inOut"
+      }).to(meshRef.current.rotation,{
+        // x:-0.1,
+        y:1.8,
+        duration:0.5,
+        ease:"power1.inOut",
+         //onComplete: fix,
+      })
+      
+    }
+  }
   
    return (
     <group {...props}
