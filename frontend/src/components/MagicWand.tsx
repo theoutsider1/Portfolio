@@ -8,21 +8,36 @@ Title: The Elder Wand
 
 // import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
-import { useRef } from 'react'
+import { gsap } from 'gsap'
+import { useEffect, useRef } from 'react'
 import { Mesh } from 'three'
 
 const MagicWand = (props : any)=> {
   const { nodes, materials } = useGLTF('/models/the_elder_wand.glb')
-
   const meshRef = useRef<Mesh>(null);
-  useFrame (()=>{
-    if (meshRef.current){
-      meshRef.current.rotation.z +=0.01;
+  const flyWand = () => {
+    
+    if(meshRef.current ){
+     
+      gsap.to(meshRef.current.position, {
+        x: 1,         // Move to a new x position
+        y: 0.5,
+                 // Move to a new y position (upwards arc)
+        duration: 1,
+        ease: "power1.inOut",
+        
+        //onComplete: shakeWand,  // Call the flip function after moving
+      });
     }
-  })
+  };
+
+
+  
+  
    return (
-    <group {...props} ref={meshRef} dispose={null}>
+    <group {...props}
+     ref={meshRef} 
+     dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.07}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <mesh
