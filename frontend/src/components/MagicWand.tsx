@@ -64,7 +64,9 @@ const MagicWand = (props : any)=> {
      
     }
   }
-  
+  useEffect(()=>{
+    handleAnimations()
+  },[])
   
    return (
     <group {...props}
