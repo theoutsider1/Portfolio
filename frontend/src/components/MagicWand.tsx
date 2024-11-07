@@ -58,7 +58,7 @@ const MagicWand = (props : handletri)=> {
         y:1.8,
         duration:3,
         ease:"power1.inOut",
-       
+        onComplete: handleTriggerIcons ,
       })
     }
   }
