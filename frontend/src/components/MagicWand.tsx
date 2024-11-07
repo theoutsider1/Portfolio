@@ -75,7 +75,11 @@ const MagicWand = (props : handletri)=> {
      
     }
   }
-
+  useEffect(() => {
+   
+      handleAnimations();
+   
+  }, [handleTriggerIcons]);
   
    return (
     <group {...restProps}
