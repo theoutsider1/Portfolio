@@ -11,7 +11,7 @@ import { gsap } from 'gsap'
 import { useEffect, useRef } from 'react'
 import { Group, Mesh } from 'three'
 
-interface handletrigger {
+interface handletri {
   handleTriggerIcons: () => void;
   castShadow: boolean;
   position: [number, number, number];
@@ -19,9 +19,10 @@ interface handletrigger {
   scale?: number;
 }
 
-const MagicWand = (props : handletrigger)=> {
+const MagicWand = (props : handletri)=> {
   const { nodes, materials } = useGLTF('/models/the_elder_wand.glb');
   const {handleTriggerIcons, ...restProps} = props;
+  const animationStarted = useRef(false);
   const meshRef = useRef<Group>(null);
 
   // 1st Animation
