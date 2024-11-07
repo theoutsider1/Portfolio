@@ -6,6 +6,7 @@ Source: https://sketchfab.com/3d-models/the-elder-wand-efc7362a857749b3ae55fcbbb
 Title: The Elder Wand
 */
 
+// import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useEffect, useRef } from 'react'
@@ -20,11 +21,11 @@ interface handletri {
 }
 
 const MagicWand = (props : handletri)=> {
-  const { nodes, materials } = useGLTF('/models/the_elder_wand.glb');
+  const { nodes, materials } = useGLTF('/models/the_elder_wand.glb')
   const {handleTriggerIcons, ...restProps} = props;
   const animationStarted = useRef(false);
   const meshRef = useRef<Group>(null);
-
+  
   // 1st Animation
   const flyWand = () => {
     
@@ -35,8 +36,8 @@ const MagicWand = (props : handletri)=> {
         y: 0.5,    // Move to a new y position (upwards arc)
         duration: 1,
         ease: "power1.inOut",
+       })
       
-      })
     }
   };
 
@@ -55,6 +56,7 @@ const MagicWand = (props : handletri)=> {
         y:1.8,
         duration:3,
         ease:"power1.inOut",
+       
       })
     }
   }
@@ -66,11 +68,13 @@ const MagicWand = (props : handletri)=> {
         x:meshRef.current.position.x,
         y: 1,
         duration:2,
+        onComplete: flyWand,
       })
      
     }
   }
 
+  
    return (
     <group {...restProps}
      ref={meshRef} 
