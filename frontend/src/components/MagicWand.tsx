@@ -76,9 +76,11 @@ const MagicWand = (props : handletri)=> {
     }
   }
   useEffect(() => {
-   
+    // If condition to make sure handleAnimations runs 1 time only
+    if (!animationStarted.current) {
+      animationStarted.current = true;
       handleAnimations();
-   
+    }
   }, [handleTriggerIcons]);
   
    return (
