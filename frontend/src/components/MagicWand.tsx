@@ -6,70 +6,72 @@ Source: https://sketchfab.com/3d-models/the-elder-wand-efc7362a857749b3ae55fcbbb
 Title: The Elder Wand
 */
 
-// import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { useEffect, useRef } from 'react'
-import { Mesh } from 'three'
+import { Group, Mesh } from 'three'
 
-const MagicWand = (props : any)=> {
-  const { nodes, materials } = useGLTF('/models/the_elder_wand.glb')
+interface handletrigger {
+  handleTriggerIcons: () => void;
+  castShadow: boolean;
+  position: [number, number, number];
+  rotation: [number, number, number];
+  scale?: number;
+}
 
-  const meshRef = useRef<Mesh>(null);
+const MagicWand = (props : handletrigger)=> {
+  const { nodes, materials } = useGLTF('/models/the_elder_wand.glb');
+  const {handleTriggerIcons, ...restProps} = props;
+  const meshRef = useRef<Group>(null);
+
   // 1st Animation
   const flyWand = () => {
     
     if(meshRef.current ){
      
       gsap.to(meshRef.current.position, {
-        x: 1,         // Move to a new x position
-        y: 0.5,
-                 // Move to a new y position (upwards arc)
+        x: 1,       // Move to a new x position
+        y: 0.5,    // Move to a new y position (upwards arc)
         duration: 1,
         ease: "power1.inOut",
-        
-        onComplete: shakeWand,  // Call the flip function after moving
-      });
+      
+      })
     }
   };
 
 // 2nd Animation
   const shakeWand = ()=> {
     if(meshRef.current){
-      gsap.timeline({repeat:1, yoyo:true})
+      gsap
+      .timeline()
       .to(meshRef.current.rotation,{
         // x:-0.1,
         y: 0.5,
-        duration: 1,
+        duration: 0.1,
         ease:"power1.inOut"
       }).to(meshRef.current.rotation,{
         // x:-0.1,
         y:1.8,
-        duration:0.5,
+        duration:3,
         ease:"power1.inOut",
-         //onComplete: fix,
       })
-      
     }
   }
-  // handle All animations 
+
+// handle All animations 
   const handleAnimations = ()=>{
     if(meshRef.current){
       gsap.to(meshRef.current.position,{
         x:meshRef.current.position.x,
         y: 1,
         duration:2,
-        onComplete: flyWand,
       })
      
     }
   }
-  useEffect(()=>{
-    handleAnimations()
-  },[])
-  
+
    return (
-    <group {...props}
+    <group {...restProps}
      ref={meshRef} 
      dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.07}>
