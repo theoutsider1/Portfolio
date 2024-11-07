@@ -36,7 +36,9 @@ const MagicWand = (props : handletri)=> {
         y: 0.5,    // Move to a new y position (upwards arc)
         duration: 1,
         ease: "power1.inOut",
-       })
+        onComplete:()=> {
+          shakeWand()},  // Call the flip function after moving
+      })
       
     }
   };
