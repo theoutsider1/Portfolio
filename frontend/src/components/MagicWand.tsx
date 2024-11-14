@@ -9,8 +9,10 @@ Title: The Elder Wand
 // import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { gsap } from 'gsap'
-import { useEffect, useRef } from 'react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {RefObject, useEffect, useRef } from 'react'
 import { Group, Mesh } from 'three'
+
 
 interface handletri {
   handleTriggerIcons: () => void;
@@ -18,11 +20,14 @@ interface handletri {
   position: [number, number, number];
   rotation: [number, number, number];
   scale?: number;
+  testRef : RefObject<HTMLDivElement>;
 }
+gsap.registerPlugin(ScrollTrigger)
 
 const MagicWand = (props : handletri)=> {
+ 
   const { nodes, materials } = useGLTF('/models/the_elder_wand.glb')
-  const {handleTriggerIcons, ...restProps} = props;
+  const {handleTriggerIcons, testRef, ...restProps} = props;
   const animationStarted = useRef(false);
   const meshRef = useRef<Group>(null);
   
@@ -30,8 +35,16 @@ const MagicWand = (props : handletri)=> {
   const flyWand = () => {
     
     if(meshRef.current ){
-     
-      gsap.to(meshRef.current.position, {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: testRef.current,
+          start: "top center",
+          end: "bottom bottom",
+          scrub: true,
+          markers: true,
+        },
+      })
+      tl.to(meshRef.current.position, {
         x: 1,       // Move to a new x position
         y: 0.5,    // Move to a new y position (upwards arc)
         duration: 1,
@@ -77,7 +90,7 @@ const MagicWand = (props : handletri)=> {
   }
   useEffect(() => {
     // If condition to make sure handleAnimations runs 1 time only
-    if (!animationStarted.current) {
+    if (!animationStarted.current ) {
       animationStarted.current = true;
       handleAnimations();
     }
