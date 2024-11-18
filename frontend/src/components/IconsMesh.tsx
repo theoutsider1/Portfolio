@@ -31,8 +31,15 @@ export const IconsMesh =({testRef} : propInterface) => {
 
   const meshScale = (direction: 'forward' | 'reverse') => {
     if (reactMeshRef.current
-         ) {
+         && reduxMeshRef.current) {
       gsap.to(reactMeshRef.current.scale, {
+        x: direction === 'forward' ? targetScale : initialScale,
+        y: direction === 'forward' ? targetScale : initialScale,
+        z: direction === 'forward' ? targetScale : initialScale,
+        duration: 0.2,
+        ease: 'none',
+      })
+      gsap.to(reduxMeshRef.current.scale, {
         x: direction === 'forward' ? targetScale : initialScale,
         y: direction === 'forward' ? targetScale : initialScale,
         z: direction === 'forward' ? targetScale : initialScale,
