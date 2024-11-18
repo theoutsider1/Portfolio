@@ -22,32 +22,30 @@ interface propInterface{
 
 gsap.registerPlugin(ScrollTrigger)
 export const IconsMesh =({testRef} : propInterface) => {
-    const tailwindRef  = useRef<Mesh>(null);
-    const reduxMeshRef  = useRef<Mesh>(null);
-    const reactMeshRef  = useRef<Mesh>(null);
-   // const { viewport } = useTh()
+    
+  const meshRefs  = useRef<Mesh[]>([]);
   const initialScale = 0
   const targetScale = 0.001
 
   const meshScale = (direction: 'forward' | 'reverse') => {
-    if (reactMeshRef.current
-         && reduxMeshRef.current) {
-      gsap.to(reactMeshRef.current.scale, {
-        x: direction === 'forward' ? targetScale : initialScale,
-        y: direction === 'forward' ? targetScale : initialScale,
-        z: direction === 'forward' ? targetScale : initialScale,
-        duration: 0.2,
-        ease: 'none',
-      })
-      gsap.to(reduxMeshRef.current.scale, {
-        x: direction === 'forward' ? targetScale : initialScale,
-        y: direction === 'forward' ? targetScale : initialScale,
-        z: direction === 'forward' ? targetScale : initialScale,
-        duration: 0.2,
-        ease: 'none',
-      })
-     
-    }
+    meshRefs.current.forEach((meshElem)=>{
+      
+      if (meshElem) {
+        gsap.to(meshElem.scale, {
+          x: direction === 'forward' ? targetScale : initialScale,
+          y: direction === 'forward' ? targetScale : initialScale,
+          z: direction === 'forward' ? targetScale : initialScale,
+          duration: 0.2,
+          ease: 'none',
+        })
+      }
+    })
+  }
+  
+  const fillMeshRefs = (el: Mesh)=>{
+   if (el && !meshRefs.current.includes(el)) {
+        meshRefs.current.push(el)
+   }
   }
 
   useEffect(() => {
@@ -78,21 +76,21 @@ export const IconsMesh =({testRef} : propInterface) => {
         <>
         {/* frontend */}
             <Svg 
-                ref={reactMeshRef}
+                ref={fillMeshRefs}
                 src={react}
                 position={[0,0,2.5]}
                 scale={initialScale}
             />
             {/* </Mesh> */}
             <Svg 
-                ref={reduxMeshRef}
+                ref={fillMeshRefs}
                 src={redux}
                 position={[-0.3,0.1,2]}
                 scale={initialScale}
             />
            
             <Svg 
-                ref={tailwindRef}
+                ref={fillMeshRefs}
                 src={tailwindcss}
                 position={[0.3,0,2]}
                 scale={initialScale}
