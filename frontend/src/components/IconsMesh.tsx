@@ -44,8 +44,6 @@ export const IconsMesh =({testRef} : propInterface) => {
               ease: 'none',
 
             })
-            console.log('enter nest scoop');
-            
           } 
         
     })
@@ -54,7 +52,7 @@ export const IconsMesh =({testRef} : propInterface) => {
   const fillMeshRefs = (el: Mesh, svgName: string, svgScale:number) => {
     if (el && !meshRefs.current.some(info => info.mesh.uuid === el.uuid)) {
       el.name = svgName;  // Update the mesh's name property
-      el.scale.set( svgScale, svgScale,  svgScale)
+     // el.scale.set( initialScale, initialScale,  initialScale)
       
       meshRefs.current.push({
         mesh: el,   // Store the entire mesh
