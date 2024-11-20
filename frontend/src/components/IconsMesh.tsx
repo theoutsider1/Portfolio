@@ -9,9 +9,9 @@ import redux from "/assets/redux.svg"
 import postman from "/assets/postman.svg"
 import nodejs from "/assets/nodejs.svg"
 import tailwindcss from "/assets/tailwindcss.svg"
+import express from "/assets/expressSvg.svg"
 import { RefObject, useEffect, useRef } from "react"
 import { Mesh } from "three"
-import { useFrame } from "@react-three/fiber"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -93,65 +93,71 @@ export const IconsMesh =({testRef} : propInterface) => {
             <Svg 
                 ref={(el)=> fillMeshRefs(el as Mesh, 'react', 0.001)}
                 src={react}
-                position={[0,0,2.5]}
+                position={[-0.1,-0.1,2.9]}
                 scale={initialScale}
             />
             {/* </Mesh> */}
             <Svg 
                 ref={(el)=> fillMeshRefs(el as Mesh, 'redux',0.001)}
                 src={redux}
-                position={[-0.3,0.1,2]}
+                position={[-0.7,0.1,2]}
                 scale={initialScale}
             />
            
             <Svg 
                 ref={(el)=> fillMeshRefs(el as Mesh, 'taiwlind',0.001)}
                 src={tailwindcss}
-                position={[0.3,0,2]}
+                position={[0.5,0,2]}
                 scale={initialScale}
             /> 
         {/* backend */}
             <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'github',0.001)}
-                src={github}
-                position={[0,1.5,-2]}
-                scale={initialScale}
-            />
-            <Svg 
-               ref={(el)=> fillMeshRefs(el as Mesh, 'figma',0.02)}
+               ref={(el)=> fillMeshRefs(el as Mesh, 'figma',0.008)}
                 src={figma}
-                position={[1.5,2,-3]}
+                position={[0.9,0.1,2]}
                 scale={0.009}
             />
             
             <Svg 
-               ref={(el)=> fillMeshRefs(el as Mesh, 'notion',0.01)}
+               ref={(el)=> fillMeshRefs(el as Mesh, 'notion',0.006)}
                 src={notion}
-                position={[-0.3,0.5,2]}
+                position={[1.1,0.5,2]}
                 scale={initialScale}
             />
             <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'nest',0.03)}
+                ref={(el)=> fillMeshRefs(el as Mesh, 'nest',0.02)}
                 src={nestjs}
-                position={[0,1,1]}
+                position={[-0.2,1.1,1]}
                 scale={initialScale}
             />
             <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'typescript',0.00)}
+                ref={(el)=> fillMeshRefs(el as Mesh, 'typescript',0.001)}
                 src={typescript}
                 position={[-0.5,3.2,-5]}
                 scale={initialScale}
             />
             <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'postman',0.004)}
+                ref={(el)=> fillMeshRefs(el as Mesh, 'postman',0.002)}
                 src={postman}
-                position={[-0.7,0.1,-3]}
+                position={[-2,1.1,-3]}
+                scale={initialScale}
+            />
+            <Svg 
+                ref={(el)=> fillMeshRefs(el as Mesh, 'github',0.001)}
+                src={github}
+                position={[-2,0.5,-3]}
                 scale={initialScale}
             />
             <Svg 
                 ref={(el)=> fillMeshRefs(el as Mesh, 'react',0.002)}
                 src={nodejs}
                 position={[1.9,1.1,-3]}
+                scale={initialScale}
+            />
+            <Svg 
+                ref={(el)=> fillMeshRefs(el as Mesh, 'react',0.02)}
+                src={express}
+                position={[1.4,1.1,-3]}
                 scale={initialScale}
             />
            
