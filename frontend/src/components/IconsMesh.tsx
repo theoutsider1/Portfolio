@@ -23,7 +23,7 @@ interface propInterface{
 interface MeshRef {
   mesh: Mesh;  // The Mesh object
   name: string; // The custom name
-  scale: number;
+  //scale: number;
   position: [number, number, number];
   
 }
@@ -33,27 +33,27 @@ gsap.registerPlugin(ScrollTrigger)
 export const IconsMesh =({testRef} : propInterface) => {
     
   const meshRefs  = useRef<MeshRef[]>([]);
-  const initialScale = 0.001
+  //const initialScale = 0.001
   const initialPositionY = -1
 
   const meshScale = (direction: 'forward' | 'reverse') => {
     meshRefs.current.forEach((meshElem)=>{
-      const targetScale = direction === 'forward' ? meshElem.scale : initialScale;
+      //const targetScale = direction === 'forward' ? meshElem.scale : initialScale;
       const targetPositionY = direction === 'forward' ? meshElem.position[1] : -1; 
       if (meshElem 
           ){
 
-            gsap.to(meshElem.mesh.scale, {
-              x: targetScale,
-              y: targetScale,
-              z: targetScale,
-              duration: 0.1,
-              ease: 'none',
+            // gsap.to(meshElem.mesh.scale, {
+            //   x: targetScale,
+            //   y: targetScale,
+            //   z: targetScale,
+            //   duration: 0.1,
+            //   ease: 'none',
 
-            })
+            // })
             gsap.to(meshElem.mesh.position, {
               y: targetPositionY,
-              duration: 2,
+              duration: 1,
               ease: 'power1.inOut',
 
             })
@@ -63,7 +63,9 @@ export const IconsMesh =({testRef} : propInterface) => {
     })
   }
   
-  const fillMeshRefs = (el: Mesh, svgName: string, svgScale:number, newPosition:number[]) => {
+  const fillMeshRefs = (el: Mesh, svgName: string,
+     //svgScale:number,
+      newPosition:number[]) => {
     if (el && !meshRefs.current.some(info => info.mesh.uuid === el.uuid)) {
       el.name = svgName;  // Update the mesh's name property
      // el.scale.set( initialScale, initialScale,  initialScale)
@@ -77,7 +79,7 @@ export const IconsMesh =({testRef} : propInterface) => {
       meshRefs.current.push({
         mesh: el,   // Store the entire mesh
         name: svgName,  // Store the custom name
-        scale: svgScale,
+       // scale: svgScale,
         position: pos,
       });
       console.log(pos);
@@ -113,89 +115,91 @@ export const IconsMesh =({testRef} : propInterface) => {
         <>
         {/* frontend */}
             <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'react', 0.001, [-0.1,-0.2, 3])}
+                ref={(el)=> fillMeshRefs(el as Mesh, 'react', [-0.1,-0.2, 3])}
                 src={react}
                 position={[-0.1,initialPositionY,3]}
-                scale={initialScale}
+                scale={0.001}
             />
             {/* </Mesh> */}
             <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'redux',0.001, [-0.7,-0.2,2])}
+                ref={(el)=> fillMeshRefs(el as Mesh, 'redux', [-0.7,-0.2,2])}
                 src={redux}
                 position={[-0.7,initialPositionY,2]}
-                scale={initialScale}
+                scale={0.001}
             />
            
             <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'taiwlind',0.001, [0.4,-0.3,2.2])}
+                ref={(el)=> fillMeshRefs(el as Mesh, 'taiwlind', [0.4,-0.3,2.2])}
                 src={tailwindcss}
                 position={[0.4,initialPositionY,2.2]}
-                scale={initialScale}
+                scale={0.001}
             /> 
         {/* backend */}
             <Svg 
-               ref={(el)=> fillMeshRefs(el as Mesh, 'figma',0.008, [0.9,0.1,2])}
+               ref={(el)=> fillMeshRefs(el as Mesh, 'figma',
+               //0.008,
+                [0.9,0.1,2])}
                 src={figma}
                 position={[0.9,initialPositionY,2]}
-                scale={0.009}
+                scale={0.008}
             />
             
             <Svg 
-               ref={(el)=> fillMeshRefs(el as Mesh, 'notion',0.006,[0.9, 0.6, 2])}
+               ref={(el)=> fillMeshRefs(el as Mesh, 'notion',[0.9, 0.6, 2])}
                 src={notion}
                 position={[0.9,initialPositionY,2]}
-                scale={initialScale}
+                scale={0.006}
             />
-            {/* <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'nest',0.03)}
+            <Svg 
+                ref={(el)=> fillMeshRefs(el as Mesh, 'nest', [0.6,0.2,-3])}
                 src={nestjs}
-                position={[0.6,0.2,-3]}
-                scale={initialScale}
-            /> */}
-            {/* <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'typescript',0.001)}
+                position={[0.6,initialPositionY,-3]}
+                scale={0.03}
+            />
+            <Svg 
+                ref={(el)=> fillMeshRefs(el as Mesh, 'typescript',[0.1,1.6,-9])}
                 src={typescript}
-                position={[-1.5,0.4,-5]}
-                scale={initialScale}
-            /> */}
-            {/* <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'postman',0.002)}
+                position={[0.5,initialPositionY,-5]}
+                scale={0.001}
+            />
+            <Svg 
+                ref={(el)=> fillMeshRefs(el as Mesh, 'postman', [2.9,0.8,-3])}
                 src={postman}
-                position={[2.9,0.8,-3]}
-                scale={initialScale}
+                position={[2.9,initialPositionY,-3]}
+                scale={0.002}
             />
             <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'github',0.001)}
+                ref={(el)=> fillMeshRefs(el as Mesh, 'github', [2.2,0.8,-3])}
                 src={github}
-                position={[2.2,0.8,-3]}
-                scale={initialScale}
-            /> */}
-            {/* <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'react',0.001)}
+                position={[2.2,initialPositionY,-3]}
+                scale={0.001}
+            />
+            <Svg 
+                ref={(el)=> fillMeshRefs(el as Mesh, 'react', [1,2,-9])}
                 src={nodejs}
-                position={[-1.5,0.4,-1]}
-                scale={initialScale}
-            /> */}
-            {/* <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'react',0.03)}
+                position={[1,initialPositionY,-9]}
+                scale={0.002}
+            />
+            <Svg 
+                ref={(el)=> fillMeshRefs(el as Mesh, 'react', [-1.5,0.1,-4])}
                 src={express}
-                position={[-1.5,0.1,-4]}
-                scale={initialScale}
+                position={[-1.5,initialPositionY,-4]}
+                scale={0.03}
             />
            
             <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'react',0.02)}
+                ref={(el)=> fillMeshRefs(el as Mesh, 'react', [-0.7,0.1,-7])}
                 src={mongo}
-                position={[-0.7,0.1,-7]}
-                scale={initialScale}
+                position={[-0.7,initialPositionY,-7]}
+                scale={0.02}
             />
            
             <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'react',0.002)}
+                ref={(el)=> fillMeshRefs(el as Mesh, 'react', [-0.1,0.1,-7])}
                 src={postgresql}
-                position={[-0.1,0.1,-7]}
-                scale={initialScale}
-            /> */}
+                position={[-0.1,initialPositionY,-7]}
+                scale={0.002}
+            />
            
             
         </>
