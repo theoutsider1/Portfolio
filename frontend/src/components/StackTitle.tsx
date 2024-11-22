@@ -1,20 +1,23 @@
-import { CameraControls, Environment, MeshReflectorMaterial, OrbitControls, Text, Text3D } from "@react-three/drei"
+import { CameraControls, Environment, MeshReflectorMaterial, OrbitControls, PerspectiveCamera, Text, Text3D } from "@react-three/drei"
 import { degToRad } from "three/src/math/MathUtils.js"
 import MagicWand from "./MagicWand"
+import { forwardRef } from "react"
+import { Mesh } from "three"
 
-
-export const StackTitle = ()=>{
+export const StackTitle = forwardRef<Mesh>((_,ref)=>{
     
 return (
     <>
-        <CameraControls 
-            minPolarAngle={Math.PI/2}
-            maxPolarAngle={Math.PI/2}
+        {/* <PerspectiveCamera
+            makeDefault 
+            position={[0,0,5]}
+            fov={50}
             //enableZoom={false}
             />
-        
+         */}
         <Text
-            position-x={-1.3}
+            ref={ref}
+            position-x={-3}
             position-y={0}
             position-z={-1.5}
             lineHeight={10}
@@ -42,7 +45,7 @@ return (
                     mirror={1}
                 />
         </mesh>
-        <Environment preset="sunset"/>
+        {/* <Environment preset="sunset"/> */}
     </>
 )
-}
+})
