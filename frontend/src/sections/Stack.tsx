@@ -1,33 +1,34 @@
 // import { PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState } from "react";
+import { Suspense, useRef } from "react";
  import MagicWand from "../components/MagicWand";
 import CanvasLoader from "../components/CanvasLoader";
 import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 // import { CrystalBall } from "../components/CrystalBall";
-import { crystallBallControlConfig, wandControlConfig } from "../constants/Globals/objectsControls";
+import { wandControlConfig } from "../constants/Globals/objectsControls";
 import { StackTitle } from "../components/StackTitle";
 import { IconsMesh } from "../components/IconsMesh";
+import { gsap } from "gsap";
+import { Mesh } from "three";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Environment } from "@react-three/drei";
 
-
+gsap.registerPlugin(ScrollTrigger)
 export const Stack = () => {
   
   const wandControl = useControls('wand Controls',{...wandControlConfig}) 
   const isMobile = useMediaQuery({maxWidth: 768})
   // const isTablet = useMediaQuery({minWidth:768, maxWidth: 1024})
-  const [triggerIconsRef, setTriggerIncons] = useState<boolean>(false);
-
-  // Function to trigger the state change
-  //And Check if the MagicWand animation completed
-  const handleTriggerIcons = () => {
-    setTriggerIncons(true); 
-  };
+  const titleRef = useRef<Mesh>(null);
+  // const tlRef = useRef<gsap.core.Timeline | null>(null);
+  const testRef = useRef<HTMLDivElement>(null)
+  
   
   return (
-        <section className="w-full min-h-screen  relative">
+        <section id='three' ref={testRef} className="w-full min-h-screen  relative">
             <Leva/>
-            <Canvas shadows dpr={[1, 1.5]} camera={{position: [0,0,3], fov:50}} 
+            <Canvas shadows dpr={[1, 1.5]} camera={{position: [0,0,5], fov:50}} 
                 style={{
                   width: `100vw`,
                   height: `100vh`
@@ -37,7 +38,7 @@ export const Stack = () => {
               <Suspense fallback={<CanvasLoader/>}>
 
                 {/* StackTitle Component */}
-                <StackTitle/>
+                <StackTitle ref={titleRef}/>
                 
                 {/* MagicWand component */}
                 <MagicWand 
@@ -45,13 +46,14 @@ export const Stack = () => {
                   position={[wandControl.positionX, wandControl.positionY, wandControl.positionZ]} 
                   rotation={[wandControl.rotationX, wandControl.rotationY, wandControl.rotationZ]}
                   scale={isMobile ? 0.13 : wandControl.scale}
-                  handleTriggerIcons= {handleTriggerIcons}/> 
+                  testRef={testRef}
+                  /> 
 
                 {/* Icons */}
-                {triggerIconsRef && 
-                    <IconsMesh/>
-                  }
-
+                
+                    <IconsMesh testRef={testRef}/>
+                
+                  <Environment preset="sunset"/>
                   <ambientLight intensity={3}/>
                   
                   <directionalLight 
