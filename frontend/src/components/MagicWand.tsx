@@ -74,6 +74,9 @@ const MagicWand = (props : handletri)=> {
         // onComplete:()=> {
         //   shakeWand()},  // Call the flip function after moving
       })
+      return (()=>{
+        tl.kill()
+      })
     }
   }, [testRef]);
   
