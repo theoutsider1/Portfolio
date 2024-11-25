@@ -1,11 +1,29 @@
 import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 
 
 export const ContactForm = ()=>{
     const form = useRef<HTMLFormElement>(null);
 
-    
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+        if (form.current){
+
+            emailjs
+              .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+                publicKey: 'YOUR_PUBLIC_KEY',
+              })
+              .then(
+                () => {
+                  console.log('SUCCESS!');
+                },
+                (error) => {
+                  console.log('FAILED...', error.text);
+                },
+              );
+        }
+    };
   
 
     return (
@@ -13,7 +31,7 @@ export const ContactForm = ()=>{
             <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                 <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white ">Contact Us</h2>
                 <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
-                <form ref={form} className="space-y-8">
+                <form ref={form} onSubmit={sendEmail} className="space-y-8">
                     <div>
                         <label htmlFor="email" className="block mb-2 text-sm font-medium text-white ">Your email</label>
                         <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="name@flowbite.com" required/>
