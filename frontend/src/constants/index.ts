@@ -25,26 +25,26 @@ export const navLinks: NavLinks[] = [
 export const ProjectsInfo: ProjectsInfos[] = [
     {
       id: 1,
-      name: '2jobs',
-      description: 'Welcome to my magical realm of web development! I’m Hatim Tagmi, your friendly neighborhood Web Wizard, casting spells of creativity and innovation to bring your digital dreams to life.',
+      name: 'Responsive Booking interface (Stepper Form)',
+      description: 'Developed a responsive booking interface featuring a step-by-step form for the Safiir Educational Advice and Study Guidance website. The interface allows users to easily navigate through the booking process. ',
       date: '2024',
     },
     {
       id: 2,
-      name: 'About',
-      description: 'Welcome to my magical realm of web development! I’m Hatim Tagmi, your friendly neighborhood Web Wizard, casting spells of creativity and innovation to bring your digital dreams to life.',
+      name: '2Jobs Platform',
+      description: 'Developed the 2Jobs platform, which connects job seekers with companies looking for candidates. A key feature of the platform is allowing job seekers to apply for jobs with minimal information, such as just their phone number.',
       date: '2024',
     },
     {
       id: 3,
-      name: 'Work',
-      description: 'Welcome to my magical realm of web development! I’m Hatim Tagmi, your friendly neighborhood Web Wizard, casting spells of creativity and innovation to bring your digital dreams to life.',
-      date: '2024',
+      name: 'Petify E-commerce Store',
+      description: 'Contributed to the development of Petify, an e-commerce store built by a team during my MERN bootcamp as a PFF. The platform features a modern, responsive user interface. ',
+      date: '2023',
     },
     {
       id: 4,
-      name: 'Contact',
-      description: 'Welcome to my magical realm of web development! I’m Hatim Tagmi, your friendly neighborhood Web Wizard, casting spells of creativity and innovation to bring your digital dreams to life.',
+      name: 'JosoPress Wordpress Website Customization',
+      description: 'Customized the purchased Josopress WordPress theme for a news website using WordPress and Elementor, adjusting the layout and functionality to meet the client\'s needs.',
       date: '2024',
     },
   ];
