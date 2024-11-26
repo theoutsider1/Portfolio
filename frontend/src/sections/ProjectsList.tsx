@@ -15,7 +15,7 @@ export function ProjectsList() {
                                     {project.date}
                                 </div>
                                 <div className="sm:w-2/4  text-zinc-300 ">
-                                    <h4 className="text-xl font-semibold sm:text-3xl sm:font-bold">{project.name}</h4>
+                                    <h4 className="text-xl font-semibold sm:text-2xl sm:font-bold">{project.name}</h4>
                                     <p className="mt-2 text-sm text-zinc-500 font-thin sm:text-base">
                                         {project.description}
                                     </p>
