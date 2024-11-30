@@ -114,7 +114,7 @@ export const IconsMesh =({testRef} : propInterface) => {
     return (
         <>
         {/* frontend */}
-            <Svg 
+            <Svg receiveShadow
                 ref={(el)=> fillMeshRefs(el as Mesh, 'react', [-0.1,-0.2, 3])}
                 src={react}
                 position={[-0.1,initialPositionY,3]}
@@ -136,32 +136,27 @@ export const IconsMesh =({testRef} : propInterface) => {
             /> 
         {/* backend */}
             <Svg 
+              ref={(el)=> fillMeshRefs(el as Mesh, 'notion',[1.6, 0.3, 2])}
+                src={notion}
+                position={[1.6,initialPositionY,2]}
+                scale={0.005}
+            />
+            <Svg 
                ref={(el)=> fillMeshRefs(el as Mesh, 'figma',
                //0.008,
-                [0.9,0.1,2])}
+                [1.3,0.4,2])}
                 src={figma}
-                position={[0.9,initialPositionY,2]}
+                position={[1.3,initialPositionY,2]}
                 scale={0.008}
             />
             
-            <Svg 
-               ref={(el)=> fillMeshRefs(el as Mesh, 'notion',[0.9, 0.6, 2])}
-                src={notion}
-                position={[0.9,initialPositionY,2]}
-                scale={0.006}
-            />
             <Svg 
                 ref={(el)=> fillMeshRefs(el as Mesh, 'nest', [0.6,0.2,-3])}
                 src={nestjs}
                 position={[0.6,initialPositionY,-3]}
                 scale={0.03}
             />
-            <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'typescript',[0.1,1.6,-9])}
-                src={typescript}
-                position={[0.5,initialPositionY,-5]}
-                scale={0.001}
-            />
+            
             <Svg 
                 ref={(el)=> fillMeshRefs(el as Mesh, 'postman', [2.9,0.8,-3])}
                 src={postman}
@@ -175,10 +170,16 @@ export const IconsMesh =({testRef} : propInterface) => {
                 scale={0.001}
             />
             <Svg 
-                ref={(el)=> fillMeshRefs(el as Mesh, 'react', [1,2,-9])}
+                ref={(el)=> fillMeshRefs(el as Mesh, 'react', [-3.4,0.9,-3])}
                 src={nodejs}
-                position={[1,initialPositionY,-9]}
+                position={[-3.4,initialPositionY,-9]}
                 scale={0.002}
+            />
+            <Svg 
+                ref={(el)=> fillMeshRefs(el as Mesh, 'typescript',[-4,0.7,-3])}
+                src={typescript}
+                position={[-4,initialPositionY,-5]}
+                scale={0.001}
             />
             <Svg 
                 ref={(el)=> fillMeshRefs(el as Mesh, 'react', [-1.5,0.1,-4])}
