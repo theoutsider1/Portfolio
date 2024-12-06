@@ -1,6 +1,6 @@
 export const Projects = ()=> {
     return (
-        <section className="max-w-7xl mx-auto flex">
+        <section id="work" className="max-w-7xl mx-auto flex">
             {/* Paragraph section */}
             <div className="w-1/2">
                     <div className="w-full h-full flex flex-col justify-end items-end text-secondary ">
