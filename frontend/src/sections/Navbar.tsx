@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { navLinks } from "../constants"
 
-const NavItems = ()=>{
+const NavItems = ({ onClick = () => {} })=>{
     return (
         <ul className="nav-ul w-full flex flex-col items-center sm:flex-row sm:justify-around relative z-20">
              {navLinks.map(navLink => (
@@ -10,7 +10,8 @@ const NavItems = ()=>{
                             <a 
                                 href={navLink.href} 
                                 className="nav-li_a text-lg md:text-lg transition-colors" 
-                                onClick={()=>{}}>{navLink.name}</a>
+                                onClick={onClick}
+                            >{navLink.name}</a>
                     </li>
                 ))} 
         </ul>
