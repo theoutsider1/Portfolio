@@ -1,7 +1,7 @@
 export const About = ()=>{
 
     return (
-        <section className="w-full flex sm:flex-row px-4 sm:px-12 my-12">
+        <section id="about" className="w-full flex sm:flex-row px-4 sm:px-12 my-12">
             {/* Section Title */}
             <div className="w-1/2">
                 <h2 className="text-right items-center text-secondary text-4xl sm:text-6xl font-bold sm:px-12">About</h2>
