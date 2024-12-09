@@ -35,7 +35,7 @@ const ShowCase = ()=>{
 
 
     return(
-        <section className="grid grid-cols-2 gap-4 border rounded-xl border-zinc-50 " >
+        <section className="mb-16 h-[400px] grid grid-cols-2 gap-4 border rounded-xl border-zinc-50 " >
             
             <div key={currentProject.id} className="flex flex-col justify-between bg-slate-200 bg-opacity-15 col-span-1 m-4 border rounded-lg border-slate-100 border-opacity-15">
                 
