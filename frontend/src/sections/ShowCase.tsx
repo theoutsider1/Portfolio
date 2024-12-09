@@ -33,9 +33,6 @@ const ShowCase = ()=>{
         }
     }
 
-   useEffect(()=>{
-    
-   },[currentIndex])
 
     return(
         <section className=" grid grid-cols-2 gap-4 border rounded-xl border-zinc-50">
