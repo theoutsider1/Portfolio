@@ -35,9 +35,9 @@ const ShowCase = ()=>{
 
 
     return(
-        <section className=" grid grid-cols-2 gap-4 border rounded-xl border-zinc-50">
+        <section className="grid grid-cols-2 gap-4 border rounded-xl border-zinc-50 " >
             
-            <div key={currentProject.id} className="bg-slate-200 bg-opacity-15 grid-span-1 m-4 border rounded-lg border-slate-100 border-opacity-15">
+            <div key={currentProject.id} className="flex flex-col justify-between bg-slate-200 bg-opacity-15 col-span-1 m-4 border rounded-lg border-slate-100 border-opacity-15">
                 
             <div className="flex gap-2 p-4">
                 <div className="text-white">
@@ -51,23 +51,18 @@ const ShowCase = ()=>{
                 <p>{currentProject.description}</p>
             </div>
             {/* icons div */}
-            <div className="flex justify-between px-4">
+            <div className="flex justify-between p-4">
                 {/* tech used & live project btn */}
+                <div className="flex flex-wrap items-center w-3/4 gap-2 px-2 py-4">
                 {currentProject.tech.map(stack => 
-                <div key={stack.id} className="flex gap-2 p-4">
                     <img 
+                        key={stack.id}
                         src={stack.href} 
-                        alt="toggle" className="w-6 h-6" />
-                    {/* <img 
-                        src={"assets/react.svg"} 
-                        alt="toggle" className="w-6 h-6" />
-                    <img 
-                        src={"assets/react.svg"} 
-                        alt="toggle" className="w-6 h-6" /> */}
+                        alt="toggle" className="w-6 h-6 mx-2" />
+                        )}
                 </div>
-                )}
-                <div>
-                    <button>Check live site</button>
+                <div className="flex items-center px-2">
+                    <button >Check live site</button>
                 </div>
             </div>
 
@@ -114,8 +109,8 @@ const ShowCase = ()=>{
             </div>
             </div>
            
-            <div className="grid-span-1 m-4 border-2">
-                <canvas>
+            <div className=" col-span-1 m-4 border-2">
+                <canvas className="w-full h-full">
 
                 </canvas>
             </div>
