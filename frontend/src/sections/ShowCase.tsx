@@ -11,12 +11,24 @@ const ShowCase = ()=>{
         if (direction === 'r') {
             if (currentIndex < ProjectsInfo.length - 1) {
                 setCurrentIndex((prevIndex) => prevIndex + 1);
+    
+                // Update button states
+                if (currentIndex + 1 === ProjectsInfo.length - 1) {
+                    setSwiperRight(true);
+                }
+                setSwipeLeft(false);
             }
         }
     
         if (direction === 'l') {
             if (currentIndex > 0) {
                 setCurrentIndex((prevIndex) => prevIndex - 1);
+    
+                // Update button states
+                if (currentIndex - 1 === 0) {
+                    setSwipeLeft(true);
+                }
+                setSwiperRight(false);
             }
         }
     }
