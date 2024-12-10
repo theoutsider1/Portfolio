@@ -119,7 +119,7 @@ const ShowCase = ()=>{
             <div className=" col-span-1 m-4 border-2">
                 <Canvas className="">
                         <ambientLight intensity={1}/>
-                        <directionalLight position={[10, 10, 5]}/>
+                        <directionalLight position={[0, -5, 5]}/>
                         <Center>
                             <Suspense fallback={<CanvasLoader/>}>
                                 <group scale={1.4} position={[-0.2, -2, 1]} rotation={[0, 0.01, 0]}>
