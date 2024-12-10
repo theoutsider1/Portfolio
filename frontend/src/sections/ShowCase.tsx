@@ -2,8 +2,8 @@ import {Suspense, useState } from "react";
 import { ProjectsInfo } from "../constants";
 import { Center } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader";
-import { Stack } from "./Stack";
 import { Canvas } from "@react-three/fiber";
+import { Compouter } from "../components/Computer";
 const ShowCase = ()=>{
 
     const [currentIndex , setCurrentIndex]= useState<number>(0)
@@ -119,11 +119,11 @@ const ShowCase = ()=>{
             <div className=" col-span-1 m-4 border-2">
                 <Canvas className="">
                         <ambientLight intensity={1}/>
-                        <directionalLight position={[10 , 10, 5]}/>
+                        <directionalLight position={[10, 10, 5]}/>
                         <Center>
                             <Suspense fallback={<CanvasLoader/>}>
-                                <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                                    
+                                <group scale={1.4} position={[-0.2, -2, 1]} rotation={[0, 0.01, 0]}>
+                                    <Compouter/>
                                 </group>
                             </Suspense>
                         </Center>
