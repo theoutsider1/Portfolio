@@ -46,11 +46,10 @@ export function Compouter(props: JSX.IntrinsicElements['group']) {
           geometry={nodes['monitor-screen'].geometry}
           material={nodes['monitor-screen'].material}
           position={[0.127, 1.831, 0.511]}
-          rotation={[0.571, -0.005, 0.031]}
+          rotation={[0, -0.05, -0.02]}
           scale={[0.661, 0.608, 0.401]}
         >
           <planeGeometry args={[1,1]}/>
-          
           <meshBasicMaterial map={txt}/>
          
         </mesh>
