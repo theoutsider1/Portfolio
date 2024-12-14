@@ -35,7 +35,11 @@ function Laptop(props: JSX.IntrinsicElements['group'])  {
         <group position={[0, 1.16, 4.3]} rotation={[Math.PI / 2, 0, 0]}>
           <mesh material={materials.aluminium} geometry={nodes['Cube008'].geometry} />
           <mesh material={materials['matte.001']} geometry={nodes['Cube008_1'].geometry} />
-          <mesh geometry={nodes['Cube008_2'].geometry} >
+          <mesh geometry={nodes['Cube008_2'].geometry}
+          position={[0, 0, 0]}
+          rotation={[0, -0.05, -0.02]}
+          scale={[2.29, 1.1, 1]}
+          >
            
             <planeGeometry args={[1,1]}/>
             <meshBasicMaterial map={txt}/>
