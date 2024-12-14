@@ -119,7 +119,7 @@ const ShowCase = ()=>{
            
             <div className=" col-span-1 m-4 border-2">
                 <Canvas camera={{ position: [0, 0, -20], fov: 50 }}>
-                        <ambientLight intensity={5}/>
+                    <pointLight position={[10, 10, 10]} intensity={1.5} />
                         <directionalLight position={[0, -5, 5]}/>
                         <Center>
                             <Suspense fallback={<CanvasLoader/>}>
