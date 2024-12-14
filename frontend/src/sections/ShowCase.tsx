@@ -1,6 +1,6 @@
 import {Suspense, useState } from "react";
 import { ProjectsInfo } from "../constants";
-import { Center, Environment } from "@react-three/drei";
+import { Center, ContactShadows, Environment } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader";
 import { Canvas } from "@react-three/fiber";
 import Laptop from "../components/Laptop";
@@ -130,6 +130,7 @@ const ShowCase = ()=>{
                             </group>
                                 <Environment preset="city" />
                             </Suspense>
+                            <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
                         </Center>
                 </Canvas>
             </div>
