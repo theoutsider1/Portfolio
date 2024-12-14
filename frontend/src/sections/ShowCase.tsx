@@ -122,9 +122,12 @@ const ShowCase = ()=>{
                         <directionalLight position={[0, -5, 5]}/>
                         <Center>
                             <Suspense fallback={<CanvasLoader/>}>
-                                <group scale={1.8} position={[-0.2, -2.5, 1]} rotation={[0, -0.01, 0]}>
+                            <group 
+                                rotation={[-0.2, Math.PI, 0]} 
+                                position={[0, -1, -2]}  //  animation values  position={[0, -1, -9]}  
+                                > 
                                     <Laptop/>
-                                </group>
+                            </group>
                                 <Environment preset="city" />
                             </Suspense>
                         </Center>
