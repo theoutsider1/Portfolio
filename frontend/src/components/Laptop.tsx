@@ -37,7 +37,8 @@ function Laptop(props: JSX.IntrinsicElements['group'])  {
           <mesh material={materials['matte.001']} geometry={nodes['Cube008_1'].geometry} />
           <mesh geometry={nodes['Cube008_2'].geometry} >
            
-            
+            <planeGeometry args={[1,1]}/>
+            <meshBasicMaterial map={txt}/>
           </mesh>
         </group>
       </group>
