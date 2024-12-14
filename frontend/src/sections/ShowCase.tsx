@@ -1,9 +1,10 @@
 import {Suspense, useState } from "react";
 import { ProjectsInfo } from "../constants";
-import { Center } from "@react-three/drei";
+import { Center, Environment } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader";
 import { Canvas } from "@react-three/fiber";
 import { Compouter } from "../components/Computer";
+import Laptop from "../components/Laptop";
 const ShowCase = ()=>{
 
     const [currentIndex , setCurrentIndex]= useState<number>(0)
@@ -117,13 +118,13 @@ const ShowCase = ()=>{
             </div>
            
             <div className=" col-span-1 m-4 border-2">
-                <Canvas className="">
-                        <ambientLight intensity={1}/>
+                <Canvas camera={{ position: [0, 0, -20], fov: 50 }}>
+                        <ambientLight intensity={5}/>
                         <directionalLight position={[0, -5, 5]}/>
                         <Center>
                             <Suspense fallback={<CanvasLoader/>}>
-                                <group scale={1.4} position={[-0.2, -2, 1]} rotation={[0, 0.01, 0]}>
-                                    <Compouter/>
+                                <group scale={1.8} position={[-0.2, -2.5, 1]} rotation={[0, -0.01, 0]}>
+                                    <Laptop/>
                                 </group>
                             </Suspense>
                         </Center>
