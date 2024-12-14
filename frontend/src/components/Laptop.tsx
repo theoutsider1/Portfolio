@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { useGLTF, useVideoTexture } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 // Define the GLTFResult type for the loaded model
 interface GLTFResult extends GLTF {
@@ -24,6 +24,7 @@ interface GLTFResult extends GLTF {
   }
 function Laptop(props: JSX.IntrinsicElements['group'])  {
   const group = useRef<THREE.Group | null>(null);
+  const txt = useVideoTexture('/textures/project/petify.mp4')
   // Load model
   const { nodes, materials } = useGLTF('/models/mac-draco.glb') as GLTFResult
 
