@@ -120,7 +120,7 @@ const ShowCase = ()=>{
                 <Canvas camera={{ position: [0, 0, -20], fov: 50 }}>
                     <pointLight position={[10, 10, 10]} intensity={1.5} />
                         <directionalLight position={[0, -5, 5]}/>
-                        <Center>
+                        
                             <Suspense fallback={<CanvasLoader/>}>
                             <group 
                                 rotation={[-0.2, Math.PI, 0]} 
@@ -132,7 +132,7 @@ const ShowCase = ()=>{
                             </Suspense>
                             <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
                             <OrbitControls enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />
-                        </Center>
+                        
                 </Canvas>
             </div>
         </section>
