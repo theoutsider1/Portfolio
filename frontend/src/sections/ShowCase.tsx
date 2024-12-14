@@ -3,7 +3,6 @@ import { ProjectsInfo } from "../constants";
 import { Center, Environment } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader";
 import { Canvas } from "@react-three/fiber";
-import { Compouter } from "../components/Computer";
 import Laptop from "../components/Laptop";
 const ShowCase = ()=>{
 
@@ -126,6 +125,7 @@ const ShowCase = ()=>{
                                 <group scale={1.8} position={[-0.2, -2.5, 1]} rotation={[0, -0.01, 0]}>
                                     <Laptop/>
                                 </group>
+                                <Environment preset="city" />
                             </Suspense>
                         </Center>
                 </Canvas>
