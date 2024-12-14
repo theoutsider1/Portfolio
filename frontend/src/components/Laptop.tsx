@@ -37,7 +37,7 @@ function Laptop(props: JSX.IntrinsicElements['group'])  {
           <mesh material={materials['matte.001']} geometry={nodes['Cube008_1'].geometry} />
           <mesh geometry={nodes['Cube008_2'].geometry}
           position={[0, 0, 0]}
-          rotation={[0, -0.05, -0.02]}
+          rotation={[-Math.PI / 2, 0, 0]}
           scale={[2.29, 1.1, 1]}
           >
            
