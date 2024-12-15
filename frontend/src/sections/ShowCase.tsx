@@ -1,6 +1,6 @@
 import {Suspense, useState } from "react";
 import { ProjectsInfo } from "../constants";
-import { Center, ContactShadows, Environment, OrbitControls } from "@react-three/drei";
+import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader";
 import { Canvas } from "@react-three/fiber";
 import Laptop from "../components/Laptop";
@@ -120,12 +120,12 @@ const ShowCase = ()=>{
                 <Canvas camera={{ position: [0, 0, -20], fov: 50 }}>
                     <pointLight position={[10, 10, 10]} intensity={1.5} />
                             <Suspense fallback={<CanvasLoader/>}>
-                            <group 
-                                rotation={[-0.2, Math.PI, 0]} 
-                                position={[0, -1, -2]}  //  animation values  position={[0, -1, -9]}  
-                                > 
-                                    <Laptop/>
-                            </group>
+                                <group 
+                                    rotation={[-0.2, Math.PI, 0]} 
+                                    position={[0, -1, -2]}  //  animation values  position={[0, -1, -9]}  
+                                    > 
+                                        <Laptop currentProject= {currentProject}/>
+                                </group>
                                 <Environment preset="city" />
                             </Suspense>
                             <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
