@@ -2,6 +2,8 @@ import * as THREE from 'three'
 import { useRef } from 'react'
 import { useGLTF, useVideoTexture } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
+import { ProjectsInfos } from '../constants/Globals/types';
+import { GroupProps } from '@react-three/fiber';
 // Define the GLTFResult type for the loaded model
 interface GLTFResult extends GLTF {
     nodes: {
@@ -21,6 +23,10 @@ interface GLTFResult extends GLTF {
       trackpad: THREE.Material;
       touchbar: THREE.Material;
     };
+  }
+
+  interface LaptopProps extends GroupProps {
+    currentProject : ProjectsInfos;
   }
 function Laptop(props: JSX.IntrinsicElements['group'])  {
   const group = useRef<THREE.Group | null>(null);
