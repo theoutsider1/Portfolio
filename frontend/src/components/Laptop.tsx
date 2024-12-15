@@ -30,7 +30,7 @@ interface GLTFResult extends GLTF {
   }
 function Laptop({currentProject, ...props}: LaptopProps)  {
   const group = useRef<THREE.Group | null>(null);
-  const txt = useVideoTexture('/textures/project/petify.mp4')
+  const txt = useVideoTexture(currentProject.projectDirection)
   // Load model
   const { nodes, materials } = useGLTF('/models/mac-draco.glb') as GLTFResult
 
