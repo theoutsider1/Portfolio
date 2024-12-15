@@ -75,7 +75,7 @@ const ShowCase = ()=>{
 
                 <div className="flex justify-between p-4">
                     <button onClick={() => swipeProjects('l')} disabled={swiperLeft}>
-                        <span className="hidden border-2 border-secondary border-opacity-25 rounded-xl p-1.5 sm:p-2.5 text-center text-gray-400 sm:inline-flex items-center">
+                        <span className={`hidden border-2 rounded-xl text-center sm:inline-flex items-center border-secondary ${swiperLeft === false ? `border-opacity-50 text-gray-100` : ` border-opacity-25 text-gray-400`}  p-1.5 sm:p-2.5`}>
                             <svg
                                 className="w-5 h-5 transform -rotate-180"
                                 aria-hidden="true"
