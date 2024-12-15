@@ -28,7 +28,7 @@ interface GLTFResult extends GLTF {
   interface LaptopProps extends GroupProps {
     currentProject : ProjectsInfos;
   }
-function Laptop(props: JSX.IntrinsicElements['group'])  {
+function Laptop({currentProject, ...props}: LaptopProps)  {
   const group = useRef<THREE.Group | null>(null);
   const txt = useVideoTexture('/textures/project/petify.mp4')
   // Load model
