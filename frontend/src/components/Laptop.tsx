@@ -27,6 +27,7 @@ interface GLTFResult extends GLTF {
 
   interface LaptopProps extends GroupProps {
     currentProject : ProjectsInfos;
+    index: number;
   }
 function Laptop({currentProject, ...props}: LaptopProps)  {
   const group = useRef<THREE.Group | null>(null);
