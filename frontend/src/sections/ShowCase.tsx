@@ -124,7 +124,7 @@ const ShowCase = ()=>{
                                     rotation={[-0.2, Math.PI, 0]} 
                                     position={[0, -1, -2]}  //  animation values  position={[0, -1, -9]}  
                                     > 
-                                        <Laptop currentProject= {currentProject}/>
+                                        <Laptop currentProject= {currentProject} index={currentIndex}/>
                                 </group>
                                 <Environment preset="city" />
                             </Suspense>
