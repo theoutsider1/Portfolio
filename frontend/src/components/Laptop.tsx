@@ -29,7 +29,7 @@ interface GLTFResult extends GLTF {
     currentProject : ProjectsInfos;
     index: number;
   }
-function Laptop({currentProject, ...props}: LaptopProps)  {
+function Laptop({currentProject,index, ...props}: LaptopProps)  {
   const group = useRef<THREE.Group | null>(null);
   const groupScreenRef = useRef<THREE.Group | null>(null);
   const txt = useVideoTexture(currentProject.projectDirection)
