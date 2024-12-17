@@ -1,21 +1,23 @@
-import {Suspense, useState } from "react";
+import {Suspense, useRef, useState } from "react";
 import { ProjectsInfo } from "../constants";
 import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 import CanvasLoader from "../components/CanvasLoader";
 import { Canvas } from "@react-three/fiber";
 import Laptop from "../components/Laptop";
+
 const ShowCase = ()=>{
 
     const [currentIndex , setCurrentIndex]= useState<number>(0)
     const [swiperRight, setSwiperRight] = useState(false)
     const [swiperLeft, setSwipeLeft] = useState(false)
     const currentProject = ProjectsInfo[currentIndex]
+    const sectionRef = useRef<HTMLDivElement | null>(null);
 
     const swipeProjects = (direction : 'r' | 'l')=>{
         if (direction === 'r') {
             if (currentIndex < ProjectsInfo.length - 1) {
                 setCurrentIndex((prevIndex) => prevIndex + 1);
-    
+                
                 // Update button states
                 if (currentIndex + 1 === ProjectsInfo.length - 1) {
                     setSwiperRight(true);
@@ -39,7 +41,7 @@ const ShowCase = ()=>{
 
 
     return(
-        <section className="mb-16 h-[450px] grid grid-cols-2 gap-4 border rounded-xl border-zinc-50 " >
+        <section ref={sectionRef} className="mb-16 h-[450px] grid grid-cols-2 gap-4 border rounded-xl border-zinc-50 " >
             
             <div key={currentProject.id} className="flex flex-col justify-between bg-slate-200 bg-opacity-15 col-span-1 m-4 border rounded-lg border-slate-100 border-opacity-15">
                 
@@ -124,7 +126,7 @@ const ShowCase = ()=>{
                                     rotation={[-0.2, Math.PI, 0]} 
                                     position={[0, -1, -2]}  //  animation values  position={[0, -1, -9]}  
                                     > 
-                                        <Laptop currentProject= {currentProject} index={currentIndex}/>
+                                        <Laptop currentProject= {currentProject.projectDirection} sectionRef={sectionRef}/>
                                 </group>
                                 <Environment preset="city" />
                             </Suspense>
