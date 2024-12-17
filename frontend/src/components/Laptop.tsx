@@ -39,10 +39,11 @@ function Laptop({currentProject,sectionRef, ...props}: LaptopProps)  {
 
   // Load model
   const { nodes, materials } = useGLTF('/models/mac-draco.glb') as GLTFResult
-  //Open Laptop Anim
+  //Open Laptop Animation
   const anim = ()=>{
     
       if(groupScreenRef.current){
+        //Open Laptop
         gsap.to(groupScreenRef.current.position, {
           x: 0,
           y: 1.16,
@@ -56,7 +57,13 @@ function Laptop({currentProject,sectionRef, ...props}: LaptopProps)  {
           z: 0,
           duration: 2,
           ease: 'power1.in',
-         
+          // Play video
+          onComplete: () => {
+            // Play the video after the animation ends
+            if (vd.image instanceof HTMLVideoElement) {
+              vd.image.play();
+            }
+          },
         })
       }
   }
@@ -68,7 +75,7 @@ function Laptop({currentProject,sectionRef, ...props}: LaptopProps)  {
          start: 'top center',
          onEnter: anim, 
      }})
-
+     
      return () => {
        tl.kill()
      }
