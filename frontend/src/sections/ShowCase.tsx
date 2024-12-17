@@ -118,7 +118,7 @@ const ShowCase = ()=>{
                 </div>
             </div>
            
-            <div className=" col-span-1 m-4 border-2">
+            <div className=" col-span-1 m-4">
                 <Canvas camera={{ position: [0, 0, -20], fov: 50 }}>
                     <pointLight position={[10, 10, 10]} intensity={1.5} />
                             <Suspense fallback={<CanvasLoader/>}>
