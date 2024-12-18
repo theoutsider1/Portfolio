@@ -41,7 +41,7 @@ const ShowCase = ()=>{
 
 
     return(
-        <section ref={sectionRef} className="mb-16 h-[450px] grid grid-cols-2 gap-4 border rounded-xl border-zinc-50 " >
+        <section ref={sectionRef} className="mb-16 h-[450px] grid grid-cols-2 gap-4" >
             
             <div key={currentProject.id} className="flex flex-col justify-between bg-slate-200 bg-opacity-15 col-span-1 m-4 border rounded-lg border-slate-100 border-opacity-15">
                 
@@ -126,7 +126,7 @@ const ShowCase = ()=>{
                                     rotation={[-0.2, Math.PI, 0]} 
                                     position={[0, -1, -2]}  //  animation values  position={[0, -1, -9]}  
                                     > 
-                                        <Laptop currentProject= {currentProject.projectDirection} sectionRef={sectionRef}/>
+                                        <Laptop currentProject= {currentProject} sectionRef={sectionRef}/>
                                 </group>
                                 <Environment preset="city" />
                             </Suspense>
