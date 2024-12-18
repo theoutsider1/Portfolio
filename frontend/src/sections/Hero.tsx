@@ -1,21 +1,25 @@
+import { useMediaQuery } from "react-responsive"
 
 
 export const Hero = ()=>{
+
+    const isMobile = useMediaQuery({maxWidth: 268})
     return (
-        <section className="mx-4 my-8 sm:my-10 sm:p-12 h-4/5 bg-secondary flex flex-col justify-center items-center rounded-3xl">
+        <section className="sm:mx-4 h-screen sm:my-10 sm:p-12  flex flex-col justify-around  items-center rounded-3xl">
            
             <div className="w-full"> 
-                <h1 className="text-center py-8 text-7xl sm:text-7xl md:text-9xl text-primary font-extrabold sm:font-black">
+                <h1 className="text-center text-6xl sm:text-7xl md:text-9xl text-secondary font-extrabold sm:font-black">
                     Web Wizard
                 </h1>
+                
             </div>
             <div className="w-full flex flex-row  px-4 sm:p-8">
-
-                <div className="w-1/2 flex flex-col sm:px-20">
+               
+                <div className="w-full flex flex-col sm:px-20">
 
                     {/* paragraph */}
-                    <div className="sm:w-full">
-                        <p className="text-left text-sm sm:text-2xl sm:font-light">
+                    <div className="">
+                        <p className="text-secondary opacity-35 text-center text-xs sm:text-2xl sm:font-light">
                             Casting spells with code to create magical digital experiences
                         </p>
                         
@@ -23,7 +27,7 @@ export const Hero = ()=>{
                     
 
                     {/* icons */}
-                    <div className=" flex ">
+                    <div className="flex justify-center text-secondary p-2">
                         
                         <a className="mr-6 " href="https://www.linkedin.com/in/hatim-tagmi/" target="_blank" rel="noopener noreferrer">
                             <svg
@@ -48,16 +52,21 @@ export const Hero = ()=>{
                     </div>
                     
                     {/* Button */}
-                    <div className="my-4 ">
-                        <button className="bg-primary rounded-full py-2.5 px-8 my-4 text-secondary">Contact me</button>
-                    </div>
+                    {/* <div className="my-4 ">
+                        <button className="bg-secondary rounded-full py-2.5 px-8 my-4 text-secondary">Contact me</button>
+                    </div> */}
                     
                 </div>
-                <div className="w-1/2 h-1/2 flex justify-start relative sm:-top-48">
-                    <img src="/assets/wand.png" className="absolute" alt="wand" />
-                </div>
+                {
+                    isMobile ? 
+                        <div className="w-1/2 h-1/2 flex justify-start relative sm:-top-48">
+                            <img src="/assets/wand.png" className="absolute" alt="wand" />
+                        </div>
+                    : 
+                    null
+                }
             </div>
-            
+           
            
            
         </section>
