@@ -1,5 +1,9 @@
+import React from "react";
 
-export const About = (isMobile)=>{
+interface AboutProps {
+    isMobile : boolean;
+}
+export const About: React.FC<AboutProps> = (isMobile)=>{
 
     return (
         <section id="about" className="w-full flex flex-col sm:flex-row px-4 sm:px-12 sm:my-12">
