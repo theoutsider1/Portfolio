@@ -1,38 +1,25 @@
 import { useMediaQuery } from "react-responsive"
 
-
 export const Hero = ()=>{
 
-    const isMobile = useMediaQuery({maxWidth: 268})
+    const isMobile = useMediaQuery({maxWidth: 368})
     return (
-        <section className="sm:mx-4 h-screen sm:my-10 sm:p-12  flex flex-col justify-around  items-center rounded-3xl">
+        <section className="w-full sm:mx-4 h-screen sm:my-10 flex flex-col justify-around  items-center rounded-3xl">
            
-            <div className="w-full"> 
-                <h1 className="text-center text-6xl sm:text-7xl md:text-9xl text-secondary font-extrabold sm:font-black">
+            <div className="w-full mt-12 sm:mt-0"> 
+                <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-neutral-500 text-center text-5xl sm:text-7xl md:text-9xl text-secondary font-extrabold sm:font-black">
                     Web Wizard
                 </h1>
-                
-            </div>
-            <div className="w-full flex flex-row  px-4 sm:p-8">
-               
-                <div className="w-full flex flex-col sm:px-20">
-
-                    {/* paragraph */}
-                    <div className="">
-                        <p className="text-secondary opacity-35 text-center text-xs sm:text-2xl sm:font-light">
+                <div className="">
+                        <p className="px-4 sm:px-0 bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-neutral-500  opacity-35 text-center text-xs sm:text-2xl sm:font-light">
                             Casting spells with code to create magical digital experiences
                         </p>
-                        
-                    </div>
-                    
-
-                    {/* icons */}
-                    <div className="flex justify-center text-secondary p-2">
+                        <div className="flex justify-center text-secondary p-2">
                         
                         <a className="mr-6 " href="https://www.linkedin.com/in/hatim-tagmi/" target="_blank" rel="noopener noreferrer">
                             <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
+                            className="h-4 w-4 sm:h-7 sm:w-7"
                             fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -42,7 +29,7 @@ export const Hero = ()=>{
                         <a className="" href="https://github.com/theoutsider1" target="_blank" rel="noopener noreferrer">
                             <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
+                            className="h-4 w-4 sm:h-7 sm:w-7"
                             fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -50,23 +37,9 @@ export const Hero = ()=>{
                             </svg>
                         </a>
                     </div>
-                    
-                    {/* Button */}
-                    {/* <div className="my-4 ">
-                        <button className="bg-secondary rounded-full py-2.5 px-8 my-4 text-secondary">Contact me</button>
-                    </div> */}
-                    
-                </div>
-                {
-                    isMobile ? 
-                        <div className="w-1/2 h-1/2 flex justify-start relative sm:-top-48">
-                            <img src="/assets/wand.png" className="absolute" alt="wand" />
-                        </div>
-                    : 
-                    null
-                }
+                    </div>
             </div>
-           
+              
            
            
         </section>
