@@ -24,7 +24,10 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
             <div className="sm:w-1/2">
                 <div className="w-full flex sm:justify-end items-center">
                 
-                    <Btn btnText={aboutContent.btnText}/>
+                    <Btn 
+                        btnText={aboutContent.btnText} 
+                        isMobile={isMobile}
+                        />
 
                 </div>
                 <div className="w-full my-4 py-12 text-secondary ">
@@ -45,7 +48,10 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
                 </p>
                 </div>
                 <div className= "w-full flex justify-end items-center sm:py-0" >
-                    <Btn btnText={aboutContent.btnText}/>
+                    <Btn 
+                        btnText={aboutContent.btnText}
+                        isMobile={isMobile}
+                        />
                 </div>   
             </div>
             }
