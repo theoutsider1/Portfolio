@@ -1,4 +1,8 @@
+import { SectionContent } from "../constants"
+
 export const Projects = ()=> {
+
+    const projectSectionContent = SectionContent.Project
     return (
         <section id="work" className="max-w-7xl mx-auto flex">
             {/* Paragraph section */}
