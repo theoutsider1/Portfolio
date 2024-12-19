@@ -10,7 +10,7 @@ export const Btn: React.FC<BtnProps> = ({btnText, isMobile})=>{
         <>
             <button className="flex items-center font-thin text-secondary">
                     <span className="border-2 text-sm sm:text-base sm:font-light inline-flex items-center sm:my-4 border-secondary rounded-full py-1.5 sm:py-2.5 px-4 sm:px-8">
-                       Learn More
+                       (btnText)
                     </span>
                     <span className="border-2 border-secondary rounded-full p-1.5 sm:p-2.5 text-center inline-flex items-center">
                      <svg
