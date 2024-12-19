@@ -13,7 +13,7 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
             {/* Section Title */}
             <div className="sm:w-1/2">
                 <h2 className="text-left sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold sm:px-12">
-                    About
+                    {aboutContent.title}
                 </h2>
             </div>
             
@@ -24,12 +24,13 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
             <div className="sm:w-1/2">
                 <div className="w-full flex sm:justify-end items-center">
                 
-                    {/* <Btn/> */}
+                    <Btn btnText={aboutContent.btnText}/>
 
                 </div>
                 <div className="w-full my-4 py-12 text-secondary ">
-                    <p className="text-sm sm:text-lg font-thin sm:leading-loose">Welcome to my magical realm of web development! I’m Hatim Tagmi, 
-                        your friendly neighborhood Web Wizard, casting spells of creativity and innovation to bring your digital dreams to life. Armed with my trusty wand (or keyboard), I conjure captivating websites that blend enchanting designs with powerful functionality.</p>
+                    <p className="text-sm sm:text-lg font-thin sm:leading-loose">
+                        {aboutContent.paragraph}
+                    </p>
                 </div>
 
                
@@ -39,12 +40,12 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
             <div className="sm:w-1/2">
                 <div className="w-full flex justify-start my-4 py-12 text-secondary ">
                 
-                <p className="text-sm sm:text-lg font-thin sm:leading-loose">Welcome to my magical realm of web development! I’m Hatim Tagmi, 
-                    your friendly neighborhood Web Wizard, casting spells of creativity and innovation to bring your digital dreams to life. Armed with my trusty wand (or keyboard), I conjure captivating websites that blend enchanting designs with powerful functionality.</p>
-                
+                <p className="text-sm sm:text-lg font-thin sm:leading-loose">
+                    {aboutContent.paragraph}
+                </p>
                 </div>
                 <div className= "w-full flex justify-end items-center sm:py-0" >
-                {/* <Btn/> */}
+                    <Btn btnText={aboutContent.btnText}/>
                 </div>   
             </div>
             }
