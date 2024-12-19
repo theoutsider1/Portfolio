@@ -1,4 +1,4 @@
-import { NavLinks, ProjectsInfos } from "./Globals/types";
+import { NavLinks, ProjectsInfos, SectionContentInterface } from "./Globals/types";
 
 export const navLinks: NavLinks[] = [
     {
@@ -36,9 +36,9 @@ export const ProjectsInfo: ProjectsInfos[] = [
         tech: [{
           id:10,
           name: 'dsada',
-          href: 'ddada'
+          href: 'assets/react.svg'
         }],
-        projectDirection: '/textures/project/petify.mp4',
+        projectDirection: '/textures/project/project1.mp4',
       },
     { 
       id: 2,
@@ -64,14 +64,14 @@ export const ProjectsInfo: ProjectsInfos[] = [
         {
           id:13,
           name: 'Javascript',
-          href: 'assets/javascript.svg'
+          href: 'assets/typescript.svg'
         },
         {
           id:14,
           name: 'I18n Translator',
-          href: 'assets/javascript.svg'
+          href: 'assets/redux.svg'
         }],
-        projectDirection: '/textures/project/petify.mp4',
+        projectDirection: '/textures/project/project2.mp4',
     },
     {
       id: 3,
@@ -102,7 +102,7 @@ export const ProjectsInfo: ProjectsInfos[] = [
         {
           id:14,
           name: 'nest',
-          href: 'assets/nest.svg'
+          href: 'assets/nestjs.svg'
         },
         {
           id:15,
@@ -130,7 +130,7 @@ export const ProjectsInfo: ProjectsInfos[] = [
           href: 'assets/figma.svg'
         },
       ],
-      projectDirection: '/textures/project/petify.mp4',
+      projectDirection: '/textures/project/project3.mp4',
     },
     {
       id: 4,
@@ -161,7 +161,7 @@ export const ProjectsInfo: ProjectsInfos[] = [
           {
             id:14,
             name: 'nest',
-            href: 'assets/nest.svg'
+            href: 'assets/expressSvg.svg'
           },
           {
           id:15,
@@ -176,8 +176,29 @@ export const ProjectsInfo: ProjectsInfos[] = [
           {
             id:17,
             name: 'PostgreSQL',
-            href: 'assets/postgresql.svg'
+            href: 'assets/mongo.svg'
         },],
         projectDirection: '/textures/project/petify.mp4',
     },
   ];
+
+
+  // Sections Content
+  
+
+  export const SectionContent: SectionContentInterface ={
+   
+      About: {
+        title: 'About',
+        paragraph: "Welcome to my magical realm of web development! I’m Hatim Tagmi, your friendly neighborhood Web Wizard, casting spells of creativity and innovation to bring your digital dreams to life. Armed with my trusty wand (or keyboard), I conjure captivating websites that blend enchanting designs with powerful functionality.",
+        btnText: "Explore"
+      },
+      Project: {
+        title : 'Projects',
+        paragraph: "This is desktop content.",
+        btnText: "Learn More", 
+             
+      },
+  }
+
+  
