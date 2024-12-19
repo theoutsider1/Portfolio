@@ -20,7 +20,11 @@ export interface ProjectsInfos {
 
 // SectionContent
 
-
+export interface SectionContentInterface {
+    About: SectionDetails;
+    Project: SectionDetails;
+  }
+  
   export interface SectionDetails {
     title: string;
     paragraph: string;
