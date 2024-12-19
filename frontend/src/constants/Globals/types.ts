@@ -18,3 +18,11 @@ export interface ProjectsInfos {
     projectDirection: string,
 }
 
+// SectionContent
+
+
+  export interface SectionDetails {
+    title: string;
+    paragraph: string;
+    btnText: string;
+  }
