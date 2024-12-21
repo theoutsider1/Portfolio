@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Canvas } from "@react-three/fiber";
 import CanvasLoader from "../components/CanvasLoader";
+import MagicWand from "../components/MagicWand";
 
 gsap.registerPlugin(ScrollTrigger)
 export const Stack = () => {
@@ -24,7 +25,15 @@ export const Stack = () => {
                     <Canvas shadows camera={{position: [0,0,5], fov:50}} >
                     <color attach="background" args={['#0a1020']}/>
                     <Suspense fallback={<CanvasLoader/>}>
-                                     
+                 
+                      {/* MagicWand component */}
+                      <MagicWand 
+                        castShadow
+                        position={[0,0,0]}
+                        rotation={[0,0,0]} scale={isMobile ? 0.13 : 0.15}
+                        testRef={testRef}
+                        />
+        
                     </Suspense>  
                     </Canvas>     
                 </div>
