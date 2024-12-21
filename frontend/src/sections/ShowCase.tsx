@@ -46,7 +46,7 @@ const ShowCase = ()=>{
             
                <ProjectsList currentProject={currentProject} swiperLeft={swiperLeft} swiperRight={swiperRight} swipeProjects={swipeProjects}/>
            
-            <div className=" sm:w-1/2 sm:m-4">
+            <div className=" sm:w-1/2 sm:m-4 order-2 sm:order-1">
                 <Canvas camera={{ position: [0, 0, -20], fov: 50 }}>
                     <pointLight position={[10, 10, 10]} intensity={1.5} />
                             <Suspense fallback={<CanvasLoader/>}>
