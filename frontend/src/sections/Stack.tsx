@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Canvas } from "@react-three/fiber";
 import CanvasLoader from "../components/CanvasLoader";
 import MagicWand from "../components/MagicWand";
+import { IconsMesh } from "../components/IconsMesh";
 
 gsap.registerPlugin(ScrollTrigger)
 export const Stack = () => {
@@ -33,6 +34,10 @@ export const Stack = () => {
                         rotation={[0,0,0]} scale={isMobile ? 0.13 : 0.15}
                         testRef={testRef}
                         />
+                       
+                      {/* Icons */}
+                      <IconsMesh testRef={testRef}/>
+                      
         
                     </Suspense>  
                     </Canvas>     
