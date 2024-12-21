@@ -41,11 +41,11 @@ const ShowCase = ()=>{
 
 
     return(
-        <section ref={sectionRef} className="mb-16 h-[450px] grid grid-cols-2 gap-4" >
+        <section ref={sectionRef} className="mb-16 h-[450px] flex flex-col sm:flex-row gap-4" >
             
-            <div key={currentProject.id} className="flex flex-col justify-between bg-slate-200 bg-opacity-15 col-span-1 m-4 border rounded-lg border-slate-100 border-opacity-15">
+            <div key={currentProject.id} className="sm:w-1/2 sm:flex sm:flex-col justify-between bg-slate-200 bg-opacity-15 col-span-1 m-4 border rounded-lg border-slate-100 border-opacity-15">
                 
-                <div className="flexflex-col justify-around gap-2 p-8">
+                <div className="flex flex-col justify-around gap-2 p-8">
                     <div className="text-white">
                         <div>{currentProject.date}</div>
                     </div>
@@ -118,7 +118,7 @@ const ShowCase = ()=>{
                 </div>
             </div>
            
-            <div className=" col-span-1 m-4">
+            <div className=" w-1/2 m-4">
                 <Canvas camera={{ position: [0, 0, -20], fov: 50 }}>
                     <pointLight position={[10, 10, 10]} intensity={1.5} />
                             <Suspense fallback={<CanvasLoader/>}>
