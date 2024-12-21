@@ -1,10 +1,11 @@
-// import { PerspectiveCamera } from "@react-three/drei";
-import { useRef } from "react";
+import {  useRef } from "react";
 import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
-import { wandControlConfig } from "../constants/Globals/objectsControls";
+import {wandControlConfig } from "../constants/Globals/objectsControls";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Canvas } from "@react-three/fiber";
+
 gsap.registerPlugin(ScrollTrigger)
 export const Stack = () => {
   
@@ -14,10 +15,15 @@ export const Stack = () => {
   
   
   return (
-        <section id='stack' ref={testRef} className="w-full flex h-screen mt-8 sm:px-12 sm:my-12">
+        <section id='stack' ref={testRef} className="bg-[#0a1020] w-full flex sm:rounded-xl mt-8 sm:px-12 sm:my-12">
             <Leva/>
             <div className="w-1/2">
                 <h2 className="text-right items-center text-secondary text-4xl sm:text-6xl font-bold sm:px-12">Stack</h2>
+                <div className="h-[450px] sm:px-12">
+                    <Canvas shadows camera={{position: [0,0,5], fov:50}} >
+                      
+                    </Canvas>     
+                </div>
             </div>
 
             <div className="w-1/2">
