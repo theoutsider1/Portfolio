@@ -15,18 +15,19 @@ export const Stack = () => {
   
   
   return (
-        <section id='stack' ref={testRef} className="bg-[#0a1020] w-full flex sm:rounded-xl mt-8 sm:px-12 sm:my-12">
+        <section id='stack' ref={testRef} className="sm:bg-[#0a1020] w-full flex flex-row sm:rounded-xl mt-8 sm:px-12 sm:my-12">
             <Leva/>
-            <div className="w-1/2">
-                <h2 className="text-right items-center text-secondary text-4xl sm:text-6xl font-bold sm:px-12">Stack</h2>
+            <div className="sm:w-1/2">
+                <h2 className="sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold sm:px-12">Stack</h2>
                 <div className="h-[450px] sm:px-12">
                     <Canvas shadows camera={{position: [0,0,5], fov:50}} >
-                      
+                     <color attach="background" args={['#0a1020']}/>
+                 
                     </Canvas>     
                 </div>
             </div>
 
-            <div className="w-1/2">
+            <div className="sm:w-1/2">
                 <div className="w-full my-8 py-12 text-secondary ">
                     <p className="text-sm sm:text-lg font-thin sm:leading-loose">
                     Contributed to the development of Petify, an e-commerce store built by a team during my MERN bootcamp as a PFF. The platform features a modern, responsive user interface. 
