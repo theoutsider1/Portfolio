@@ -8,7 +8,7 @@ import { Canvas } from "@react-three/fiber";
 import CanvasLoader from "../components/CanvasLoader";
 import MagicWand from "../components/MagicWand";
 import { IconsMesh } from "../components/IconsMesh";
-import { Environment } from "@react-three/drei";
+import { Environment, Stars } from "@react-three/drei";
 
 gsap.registerPlugin(ScrollTrigger)
 export const Stack = () => {
@@ -26,6 +26,7 @@ export const Stack = () => {
                 <div className="h-[450px] sm:px-12">
                     <Canvas shadows camera={{position: [0,0,5], fov:50}} >
                     <color attach="background" args={['#0a1020']}/>
+                    <Stars saturation={0} count={1000} speed={0.5} />
                     <Suspense fallback={<CanvasLoader/>}>
                  
                       {/* MagicWand component */}
@@ -37,7 +38,17 @@ export const Stack = () => {
                         />
                       {/* Icons */}
                       <IconsMesh testRef={testRef}/>
-                      {/* Envirement */}
+
+                      {/* MagicWand component */}
+                      <MagicWand 
+                        castShadow
+                        position={[0,0,0]}
+                        rotation={[0,0,0]} scale={isMobile ? 0.13 : 0.15}
+                        testRef={testRef}
+                        />
+                      {/* Icons */}
+                      <IconsMesh testRef={testRef}/>
+                      {/*Envirement  */}
                       <Environment preset="dawn"/> 
                     </Suspense>  
                     </Canvas>     
