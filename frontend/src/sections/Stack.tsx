@@ -1,10 +1,11 @@
-import {  useRef } from "react";
+import {  Suspense, useRef } from "react";
 import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import {wandControlConfig } from "../constants/Globals/objectsControls";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Canvas } from "@react-three/fiber";
+import CanvasLoader from "../components/CanvasLoader";
 
 gsap.registerPlugin(ScrollTrigger)
 export const Stack = () => {
@@ -21,8 +22,10 @@ export const Stack = () => {
                 <h2 className="sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold sm:px-12">Stack</h2>
                 <div className="h-[450px] sm:px-12">
                     <Canvas shadows camera={{position: [0,0,5], fov:50}} >
-                     <color attach="background" args={['#0a1020']}/>
-                 
+                    <color attach="background" args={['#0a1020']}/>
+                    <Suspense fallback={<CanvasLoader/>}>
+                                     
+                    </Suspense>  
                     </Canvas>     
                 </div>
             </div>
