@@ -23,7 +23,7 @@ export const Stack = () => {
             <Leva/>
             <div className="sm:w-1/2 sm:pr-12 relative">
                 <img src='/assets/spotlight5.png' className="absolute transform  -scale-x-100 -left-4 opacity-70 rounded-3xl" alt="" />
-                <h2 className="sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold ">Stack</h2>
+                <h2 className="pt-4 sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold ">Stack</h2>
                 <div className=" w-full sm:text-right my-8 py-12 text-secondary ">
                     <p className="text-sm sm:text-lg font-thin sm:leading-loose">
                     Contributed to the development of Petify, an e-commerce store built by a team during my MERN bootcamp as a PFF. The platform features a modern, responsive user interface. 
