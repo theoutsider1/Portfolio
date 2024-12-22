@@ -36,7 +36,7 @@ export const Stack = () => {
                 <div className="w-full mt-12 h-[250px]">
                     <Canvas shadows camera={{position: [0,0,5], fov:50}} >
                     <color attach="background" args={['#0a1020']}/>
-                    <Stars saturation={0} count={2000} speed={0.5} />
+                    <Stars saturation={0} count={1000} speed={2} />
                     <Suspense fallback={<CanvasLoader/>}>
                  
                       {/* MagicWand component */}
