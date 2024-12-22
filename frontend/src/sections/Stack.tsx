@@ -19,14 +19,24 @@ export const Stack = () => {
   
   
   return (
-        <section id='stack' ref={testRef} className="sm:bg-[#0a1020] w-full flex flex-row sm:rounded-xl mt-8 sm:px-12 sm:my-12">
+        <section id='stack' ref={testRef} className="sm:bg-[#0a1020] w-full flex flex-col sm:flex-row sm:rounded-3xl mt-8 px-4 gap-4 sm:my-12 bg-cyan-500 shadow-xl  shadow-[#0c0c11]-500/50">
             <Leva/>
+            <div className="sm:w-1/2 sm:pr-12 relative">
+                <img src='/assets/spotlight5.png' className="absolute transform  -scale-x-100 -left-4 opacity-70 rounded-3xl" alt="" />
+                <h2 className="sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold ">Stack</h2>
+                <div className=" w-full sm:text-right my-8 py-12 text-secondary ">
+                    <p className="text-sm sm:text-lg font-thin sm:leading-loose">
+                    Contributed to the development of Petify, an e-commerce store built by a team during my MERN bootcamp as a PFF. The platform features a modern, responsive user interface. 
+                    </p>
+                </div>
+            </div>
+
             <div className="sm:w-1/2">
-                <h2 className="sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold sm:px-12">Stack</h2>
-                <div className="h-[450px] sm:px-12">
+               
+                <div className="w-full mt-12 h-[250px]">
                     <Canvas shadows camera={{position: [0,0,5], fov:50}} >
                     <color attach="background" args={['#0a1020']}/>
-                    <Stars saturation={0} count={1000} speed={0.5} />
+                    <Stars saturation={0} count={2000} speed={0.5} />
                     <Suspense fallback={<CanvasLoader/>}>
                  
                       {/* MagicWand component */}
@@ -52,14 +62,6 @@ export const Stack = () => {
                       <Environment preset="dawn"/> 
                     </Suspense>  
                     </Canvas>     
-                </div>
-            </div>
-
-            <div className="sm:w-1/2">
-                <div className="w-full my-8 py-12 text-secondary ">
-                    <p className="text-sm sm:text-lg font-thin sm:leading-loose">
-                    Contributed to the development of Petify, an e-commerce store built by a team during my MERN bootcamp as a PFF. The platform features a modern, responsive user interface. 
-                    </p>
                 </div>
             </div>
                 
