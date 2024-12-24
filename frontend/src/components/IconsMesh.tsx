@@ -31,12 +31,12 @@ export const IconsMesh =({testRef} : propInterface) => {
     
   const meshRefs  = useRef<MeshRef[]>([]);
   //const initialScale = 0.001
-  const initialPositionY = -5
+  const initialPositionY = -7
 
   const meshScale = (direction: 'forward' | 'reverse') => {
     meshRefs.current.forEach((meshElem)=>{
       //const targetScale = direction === 'forward' ? meshElem.scale : initialScale;
-      const targetPositionY = direction === 'forward' ? meshElem.position[1] : -1; 
+      const targetPositionY = direction === 'forward' ? meshElem.position[1] : -7; 
       if (meshElem ) {
             gsap.to(meshElem.mesh.position, {
               y: targetPositionY,
