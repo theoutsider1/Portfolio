@@ -11,7 +11,7 @@ interface handletri {
   position: [number, number, number];
   rotation: [number, number, number];
   scale?: number;
-  testRef : RefObject<HTMLDivElement>;
+  testRef? : RefObject<HTMLDivElement>;
 }
 gsap.registerPlugin(ScrollTrigger)
 
@@ -22,30 +22,9 @@ const MagicWand = (props : handletri)=> {
   const meshRef = useRef<Group>(null);
   
   
-
-// 2nd Animation
-  // const shakeWand = ()=> {
-  //   if(meshRef.current){
-  //     gsap
-  //     .timeline()
-  //     .to(meshRef.current.rotation,{
-  //       // x:-0.1,
-  //       y: 0.5,
-  //       duration: 0.1,
-  //       ease:"power1.inOut"
-  //     }).to(meshRef.current.rotation,{
-  //       // x:-0.1,
-  //       y:1.8,
-  //       duration:3,
-  //       ease:"power1.inOut",
-  //       onComplete: handleTriggerIcons ,
-  //     })
-  //   }
-  // }
-
   useEffect(() => {
 
-    if(meshRef.current ){
+    if(meshRef.current && testRef ){
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: testRef.current,
@@ -56,24 +35,20 @@ const MagicWand = (props : handletri)=> {
         },
       })
 
-      tl.to(meshRef.current.rotation, {
-        // x: 0.5,       // Move to a new x position
-        // y: 0.5, 
-        z: 0,   // Move to a new y position (upwards arc)
-        duration: 1,
-        ease: "power1.inOut",
-        // onComplete:()=> {
-        //   shakeWand()},  // Call the flip function after moving
-      })
+      
       tl.to(meshRef.current.position, {
         x: 0,       // Move to a new x position
-        y: 0.2, 
-        z: 2,   // Move to a new y position (upwards arc)
+        y: 0,       // Move to a new y position 
+        z: 0.5,     // Move to a new z position 
+        duration: 1,
+        ease: "power1.inOut",})
+      tl.to(meshRef.current.rotation, {
+        x: 0.5,       // Move to a new x position
+        y: 0,         // Move to a new x position
+        z: 0,         // Move to a new z position 
         duration: 1,
         ease: "power1.inOut",
-        // onComplete:()=> {
-        //   shakeWand()},  // Call the flip function after moving
-      })
+       },0)
       return (()=>{
         tl.kill()
       })
@@ -84,7 +59,7 @@ const MagicWand = (props : handletri)=> {
     <group {...restProps}
      ref={meshRef} 
      dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]} scale={0.07}>
+      <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <mesh
             castShadow
@@ -92,7 +67,7 @@ const MagicWand = (props : handletri)=> {
             geometry={(nodes.Cylinder__0 as Mesh ).geometry}
             material={materials['Scene_-_Root']}
             rotation={[-Math.PI / 2, 0, 0]}
-            scale={100}
+            
           />
         </group>
       </group>
