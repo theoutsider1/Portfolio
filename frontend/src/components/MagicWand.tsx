@@ -42,6 +42,13 @@ const MagicWand = (props : handletri)=> {
         z: 0.5,     // Move to a new z position 
         duration: 1,
         ease: "power1.inOut",})
+      tl.to(meshRef.current.scale, {
+        x: 0.4,       // Move to a new x scale
+        y: 0.4,       // Move to a new y scale
+        z: 0.4,       // Move to a new z scale
+        duration: 1,
+        ease: "power1.inOut",
+         },0)
       tl.to(meshRef.current.rotation, {
         x: 0.5,       // Move to a new x position
         y: 0,         // Move to a new x position
