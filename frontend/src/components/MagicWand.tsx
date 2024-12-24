@@ -10,7 +10,7 @@ interface handletri {
   castShadow: boolean;
   position: [number, number, number];
   rotation: [number, number, number];
-  scale?: number;
+  scale?: number | [number, number, number];
   testRef? : RefObject<HTMLDivElement>;
 }
 gsap.registerPlugin(ScrollTrigger)
