@@ -58,7 +58,7 @@ export const Stack = () => {
                         castShadow
                         position={getConfigValues(wandControlConfig, 'position', isMobile)}
                         rotation={getConfigValues(wandControlConfig, 'rotation', isMobile)}
-                        scale={isMobile ? 0.13 : 0.15}
+                        scale={scaleValue}
                         testRef={testRef}
                         />
                       {/* Icons */}
