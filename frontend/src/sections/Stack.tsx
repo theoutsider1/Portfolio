@@ -1,4 +1,4 @@
-import {  Suspense, useEffect, useRef } from "react";
+import {  Suspense, useRef } from "react";
 import { Leva, } from "leva";
 import { useMediaQuery } from "react-responsive";
 import {wandControlConfig } from "../constants/Globals/objectsControls";
@@ -45,9 +45,8 @@ export const Stack = () => {
                 </div>
             </div>
 
-            <div className="sm:w-1/2">
+            <div className="sm:w-1/2 mt-2 sm:mt-0">
                
-                <div className="w-full sm:mt-12 sm:h-[250px]">
                     <Canvas shadows camera={{position: [0,0,5], fov:50}} >
                     <color attach="background" args={['#0a1020']}/>
                     <Stars saturation={0} count={1000} speed={2} />
@@ -67,7 +66,6 @@ export const Stack = () => {
                       <Environment preset="dawn"/> 
                     </Suspense>  
                     </Canvas>     
-                </div>
             </div>
                 
         </section>
