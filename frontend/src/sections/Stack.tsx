@@ -56,8 +56,8 @@ export const Stack = () => {
                       {/* MagicWand component */}
                       <MagicWand 
                         castShadow
-                        position={[0,0,0]}
-                        rotation={[0,0,0]}
+                        position={getConfigValues(wandControlConfig, 'position', isMobile)}
+                        rotation={getConfigValues(wandControlConfig, 'rotation', isMobile)}
                         scale={isMobile ? 0.13 : 0.15}
                         testRef={testRef}
                         />
