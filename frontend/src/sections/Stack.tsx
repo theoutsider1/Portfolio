@@ -1,5 +1,5 @@
-import {  Suspense, useRef } from "react";
-import { Leva, useControls } from "leva";
+import {  Suspense, useEffect, useRef } from "react";
+import { Leva, } from "leva";
 import { useMediaQuery } from "react-responsive";
 import {wandControlConfig } from "../constants/Globals/objectsControls";
 import { gsap } from "gsap";
@@ -12,11 +12,25 @@ import { Environment, Stars } from "@react-three/drei";
 
 gsap.registerPlugin(ScrollTrigger)
 export const Stack = () => {
-  
-  const wandControl = useControls('wand Controls',{...wandControlConfig}) 
+  // const mobileWandControl = wandControlConfig
+  // const wandControl = useControls('wand Controls',{...wandControlConfig}) 
   const isMobile = useMediaQuery({maxWidth: 368})
   const testRef = useRef<HTMLDivElement>(null)
-  
+  const getConfigValues = (config: any, type: 'position' | 'rotation' | 'scale', isMobile: boolean) : [number, number, number] => {
+    const device = isMobile ? 'mobile' : 'desktop';
+    if (type == 'scale') {
+      console.log(config.scale[device].value);
+      
+      return config.scale[device].value;
+    };
+      return [
+        config[`${type}X`][device].value,
+        config[`${type}Y`][device].value,
+        config[`${type}Z`][device].value,
+      ];
+  };
+  const scaleValue = getConfigValues(wandControlConfig, 'scale', isMobile);
+
   
   return (
         <section id='stack' ref={testRef} className="bg-[#0a1020] w-full flex flex-col sm:flex-row rounded-3xl mt-8 px-4 gap-4 sm:my-12 sm:bg-slate-[#0d0d12] sm:shadow-lg sm:shadow-[#0d0d12]">
@@ -43,17 +57,8 @@ export const Stack = () => {
                       <MagicWand 
                         castShadow
                         position={[0,0,0]}
-                        rotation={[0,0,0]} scale={isMobile ? 0.13 : 0.15}
-                        testRef={testRef}
-                        />
-                      {/* Icons */}
-                      <IconsMesh testRef={testRef}/>
-
-                      {/* MagicWand component */}
-                      <MagicWand 
-                        castShadow
-                        position={[0,0,0]}
-                        rotation={[0,0,0]} scale={isMobile ? 0.13 : 0.15}
+                        rotation={[0,0,0]}
+                        scale={isMobile ? 0.13 : 0.15}
                         testRef={testRef}
                         />
                       {/* Icons */}
