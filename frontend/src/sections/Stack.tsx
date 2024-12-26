@@ -40,8 +40,8 @@ export const Stack = () => {
                 <h2 className="pt-4 sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold ">Stack</h2>
                 <div className=" w-full sm:text-right sm:my-8 pt-12 sm:pt-0 sm:py-12 text-secondary ">
                     <p className="text-sm sm:text-lg font-thin sm:leading-loose">
-                    Contributed to the development of Petify, an e-commerce store built by a team during my MERN bootcamp as a PFF. The platform features a modern, responsive user interface. 
-                    </p>
+
+                    In my spells room,I weave magic using HTMLus Arcana, CSSus Shieldum, Tailwindus Bractum, JavaScriptus Fluxia, Typescriptus Magica, Reacto Interfacia, Reduxus Imperium, Axiosum Revelia, Prime Reactum Lumina, GSAPus Tempus, React Fiberum Revelia, Nestus Fortificus, Expressium Maxima, Rest APIus Revelia, MongoDBus Mysticius, PostgreSQLum Datafluxia, Prismaum Arcana, Supabaseum Revelia, and WordPresso Craftia to weave modern digital enchantments.                     </p>
                 </div>
             </div>
 
