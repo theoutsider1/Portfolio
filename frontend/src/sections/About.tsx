@@ -28,7 +28,7 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
                     <Btn 
                         btnText={aboutContent.btnText} 
                         isMobile={isMobile}
-                        link={link}
+                        link={linkedinLink}
                         />
 
                 </div>
