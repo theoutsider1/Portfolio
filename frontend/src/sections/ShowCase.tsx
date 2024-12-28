@@ -44,7 +44,7 @@ const ShowCase = ()=>{
     return(
         <section ref={sectionRef} className="mb-16 sm:h-[450px] flex flex-col sm:flex-row gap-4" >
             
-               <ProjectsList currentProject={currentProject} swiperLeft={swiperLeft} swiperRight={swiperRight} swipeProjects={swipeProjects}/>
+            <ProjectsList currentProject={currentProject} swiperLeft={swiperLeft} swiperRight={swiperRight} swipeProjects={swipeProjects}/>
            
             <div className=" sm:w-1/2 sm:m-4 order-2 sm:order-1">
                 <Canvas camera={{ position: [0, 0, -20], fov: 50 }}>

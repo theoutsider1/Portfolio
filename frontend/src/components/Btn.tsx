@@ -2,13 +2,14 @@ interface BtnProps {
     btnText: String;
     // onClick?: ()=> void ;
     isMobile : boolean
+    link: string;
 }
-export const Btn: React.FC<BtnProps> = ({btnText, isMobile})=>{
+export const Btn: React.FC<BtnProps> = ({btnText, isMobile, link})=>{
 
     
     return (
         <>
-            <button className="flex items-center font-thin text-secondary">
+            <a className="flex items-center font-thin text-secondary cursor-pointer" href={link}  target="_blank"  rel="noopener noreferrer">
                     <span className="border-2 text-sm sm:text-base sm:font-light inline-flex items-center sm:my-4 border-secondary rounded-full py-1.5 sm:py-2.5 px-4 sm:px-8">
                        {btnText}
                     </span>
@@ -34,7 +35,7 @@ export const Btn: React.FC<BtnProps> = ({btnText, isMobile})=>{
                                 <span className="sr-only">Icon description</span>
                             </span>
                         }
-            </button>
+            </a>
         </>
     )
 }
