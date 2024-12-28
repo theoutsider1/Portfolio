@@ -7,7 +7,8 @@ interface AboutProps {
     isMobile : boolean;
 }
 export const About: React.FC<AboutProps> = ({isMobile})=>{
-    const aboutContent: SectionDetails = SectionContent.About
+    const aboutContent: SectionDetails = SectionContent.About;
+    const linkedinLink = 'https://www.linkedin.com/in/hatim-tagmi/'
     return (
         <section id="about" className="w-full flex flex-col sm:flex-row px-4 sm:px-12 sm:my-12">
             {/* Section Title */}
@@ -27,6 +28,7 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
                     <Btn 
                         btnText={aboutContent.btnText} 
                         isMobile={isMobile}
+                        link={link}
                         />
 
                 </div>
@@ -51,6 +53,7 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
                     <Btn 
                         btnText={aboutContent.btnText}
                         isMobile={isMobile}
+                        link={linkedinLink}
                         />
                 </div>   
             </div>
