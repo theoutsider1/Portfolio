@@ -1,4 +1,4 @@
-import {  Suspense, useRef } from "react";
+import {  Suspense, useRef, useState } from "react";
 import { Leva, } from "leva";
 import { useMediaQuery } from "react-responsive";
 import {wandControlConfig } from "../constants/Globals/objectsControls";
@@ -12,8 +12,7 @@ import { Environment, Stars } from "@react-three/drei";
 
 gsap.registerPlugin(ScrollTrigger)
 export const Stack = () => {
-  // const mobileWandControl = wandControlConfig
-  // const wandControl = useControls('wand Controls',{...wandControlConfig}) 
+
   const isMobile = useMediaQuery({maxWidth: 368})
   const testRef = useRef<HTMLDivElement>(null)
   const getConfigValues = (config: any, type: 'position' | 'rotation' | 'scale', isMobile: boolean) : [number, number, number] => {
@@ -30,18 +29,36 @@ export const Stack = () => {
       ];
   };
   const scaleValue = getConfigValues(wandControlConfig, 'scale', isMobile);
-
+const HumanLangue = ()=>{
+    return (
+      <p className="text-sm sm:text-base font-thin sm:leading-loose">
+                    In my spells room,I weave magic using Html, 
+                    Tailwind-Css, JavaScript, Typescript,
+                     React Js, Redux Toolkit, Axios, Prime React, GSAP, React Fiber Three, Nest js, Express js , RESTApi, MongoDB, PostgreSQL, Prisma, Supabase, and WordPress Craftia to weave modern digital enchantments. 
+      </p>
+    )
+}
   
   return (
         <section id='stack' ref={testRef} className="bg-[#0a1020] w-full flex flex-col sm:flex-row rounded-3xl mt-8 px-4 gap-4 sm:my-12 sm:bg-slate-[#0d0d12] sm:shadow-lg sm:shadow-[#0d0d12]">
             <Leva/>
             <div className="sm:w-1/2 sm:pr-12 relative">
-                <img src='/assets/spotlight5.png' className="absolute transform  -scale-x-100 -left-4 opacity-70 rounded-3xl" alt="" />
+                <img src='/assets/spotlight5.png' className="absolute transform  -scale-x-100 -left-4 opacity-70 rounded-3xl pointer-events-none" alt="" />
                 <h2 className="pt-4 sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold ">Stack</h2>
                 <div className=" w-full sm:text-right sm:my-8  text-secondary ">
-                    <p className="text-sm sm:text-base font-thin sm:leading-loose">
-
-                    In my spells room,I weave magic using HTMLus Arcana, CSSus Shieldum, Tailwindus Bractum, JavaScriptus Fluxia, Typescriptus Magica, Reacto Interfacia, Reduxus Imperium, Axiosum Revelia, Prime Reactum Lumina, GSAPus Tempus, React Fiberum Revelia, Nestus Fortificus, Expressium Maxima, Rest APIus Revelia, MongoDBus Mysticius, PostgreSQLum Datafluxia, Prismaum Arcana, Supabaseum Revelia, and WordPresso Craftia to weave modern digital enchantments.                     </p>
+                
+              <p className="text-sm sm:text-base font-thin sm:leading-loose">
+                In my spells room, I weave magic using HTMLus Arcana, CSSus Shieldum,
+                Tailwindus Bractum, JavaScriptus Fluxia, Typescriptus Magica, Reacto
+                Interfacia, Reduxus Imperium, Axiosum Revelia, Prime Reactum Lumina,
+                GSAPus Tempus, React Fiberum Revelia, Nestus Fortificus, Expressium
+                Maxima, Rest APIus Revelia, MongoDBus Mysticius, PostgreSQLum Datafluxia,
+                Prismaum Arcana, Supabaseum Revelia, and WordPresso Craftia to weave
+                modern digital enchantments.
+              </p>
+           
+          <div>
+          </div>
                 </div>
             </div>
 
