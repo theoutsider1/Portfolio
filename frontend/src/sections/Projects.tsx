@@ -7,6 +7,7 @@ interface ProjectProps {
 export const Projects: React.FC<ProjectProps> = ({isMobile})=> {
     
     const projectSectionContent = SectionContent.Project
+    const gitLink = "https://github.com/theoutsider1"
     return (
         <section id="work" className="flex my-4 sm:my-0">
             {/* Paragraph section */}
@@ -18,7 +19,7 @@ export const Projects: React.FC<ProjectProps> = ({isMobile})=> {
                         <Btn
                                 btnText={projectSectionContent.btnText}
                                 isMobile={isMobile}
-                                
+                                link={gitLink}
                             />
                     </div>
                         <p className="w-full sm:mb-0 my-8 text-base font-thin leading-loose px-12 text-right">
@@ -51,6 +52,7 @@ export const Projects: React.FC<ProjectProps> = ({isMobile})=> {
                         <Btn
                                     btnText={projectSectionContent.btnText}
                                     isMobile={isMobile}
+                                    link={gitLink}
                                 />
                     </div>
          
