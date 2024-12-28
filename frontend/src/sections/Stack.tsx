@@ -47,7 +47,8 @@ const HumanLangue = ()=>{
                 <img src='/assets/spotlight5.png' className="absolute transform  -scale-x-100 -left-4 opacity-70 rounded-3xl pointer-events-none" alt="" />
                 <h2 className="pt-4 sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold ">Stack</h2>
                 <div className=" w-full sm:text-right sm:my-8  text-secondary ">
-               
+                {!showMuggleVersion ? (
+            <>
               <p className="text-sm sm:text-base font-thin sm:leading-loose">
                 In my spells room, I weave magic using HTMLus Arcana, CSSus Shieldum,
                 Tailwindus Bractum, JavaScriptus Fluxia, Typescriptus Magica, Reacto
@@ -57,7 +58,10 @@ const HumanLangue = ()=>{
                 Prismaum Arcana, Supabaseum Revelia, and WordPresso Craftia to weave
                 modern digital enchantments.
               </p>
-            
+            </>
+          ) : (
+            <HumanLangue />
+          )}
           <div>
           </div>
                 </div>
