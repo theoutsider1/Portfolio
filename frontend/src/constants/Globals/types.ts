@@ -13,7 +13,8 @@ export interface ProjectsInfos {
     id: number,
     name: string,
     description: string,
-    date: string,
+    logo: string,
+    style: string,
     tech: Tech[],
     projectDirection: string,
 }

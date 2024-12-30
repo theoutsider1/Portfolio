@@ -30,9 +30,10 @@ export const navLinks: NavLinks[] = [
 export const ProjectsInfo: ProjectsInfos[] = [
     {
         id: 1,
-        name: 'JosoPress Wordpress Website Customization',
+        name: 'JosoPress',
         description: 'Customized the purchased Josopress WordPress theme for a news website using WordPress and Elementor, adjusting the layout and functionality to meet the client\'s needs.',
-        date: '2024',
+        logo: '/assets/josopressLogo.svg',
+        style: 'w-16 sm:w-24',
         tech: [{
           id:10,
           name: 'dsada',
@@ -44,7 +45,8 @@ export const ProjectsInfo: ProjectsInfos[] = [
       id: 2,
       name: 'Responsive Booking interface (Stepper Form)',
       description: 'Developed a responsive booking interface featuring a step-by-step form for the Safiir Educational Advice and Study Guidance website. The interface allows users to easily navigate through the booking process. ',
-      date: '2024',
+      logo: '2024',
+      style: '',
       tech: [
         {
         id:10,
@@ -77,7 +79,8 @@ export const ProjectsInfo: ProjectsInfos[] = [
       id: 3,
       name: '2Jobs Platform',
       description: 'Developed the 2Jobs platform, which connects job seekers with companies looking for candidates. A key feature of the platform is allowing job seekers to apply for jobs with minimal information, such as just their phone number.',
-      date: '2024',
+      logo: 'assets/2jobs.svg',
+      style: 'w-14 sm:w-auto',
       tech: [
         {
         id:10,
@@ -119,24 +122,15 @@ export const ProjectsInfo: ProjectsInfos[] = [
           name: 'PostgreSQL',
           href: 'assets/postgresql.svg'
         },
-        {
-          id:18,
-          name: 'github',
-          href: 'assets/github.svg'
-        },
-        {
-          id:19,
-          name: 'firgma',
-          href: 'assets/figma.svg'
-        },
       ],
-      projectDirection: '/textures/project/project3.mp4',
+      projectDirection: '/textures/project/2jobs.mp4',
     },
     {
       id: 4,
       name: 'Petify E-commerce Store',
       description: 'Contributed to the development of Petify, an e-commerce store built by a team during my MERN bootcamp as a PFF. The platform features a modern, responsive user interface. ',
-      date: '2023',
+      logo: 'assets/PetifyLogo.png',
+      style: 'w-10',
       tech: [
         {
           id:10,
@@ -148,6 +142,7 @@ export const ProjectsInfo: ProjectsInfos[] = [
           name: 'Tailwind',
           href: 'assets/tailwindcss.svg'
           },
+          //Axios svg
           {
             id:12,
             name: 'Axios',
@@ -195,10 +190,27 @@ export const ProjectsInfo: ProjectsInfos[] = [
       },
       Project: {
         title : 'Projects',
-        paragraph: "This is desktop content.",
-        btnText: "Learn More", 
+        paragraph: "Welcome to my magical realm of web development! I’m Hatim Tagmi, your friendly neighborhood Web Wizard, casting spells of creativity and innovation to bring your digital dreams to life. Armed with my trusty wand (or keyboard), I conjure captivating websites that blend enchanting designs with powerful functionality.",
+        btnText: "Explore", 
              
       },
   }
 
-  
+  export const displayText = [
+  { id: 1, name: 'Html' },
+  { id: 2, name: 'Tailwind-Css' },
+  { id: 3, name: 'Javascript' },
+  { id: 4, name: 'Typescript' },
+  { id: 5, name: 'React Js' },
+  { id: 6, name: 'Redux Toolkit' },
+  { id: 7, name: 'Axios' },
+  { id: 8, name: 'GSAP' },
+  { id: 9, name: 'React fiber three' },
+  { id: 10, name: 'Nest Js' },
+  { id: 11, name: 'Express' },
+  { id: 12, name: 'MongoDB' },
+  { id: 13, name: 'PostgreSQL' },
+  { id: 14, name: 'Prisma' },
+  { id: 15, name: 'Supabase' },
+  { id: 16, name: 'Wordpress' },
+  ]
