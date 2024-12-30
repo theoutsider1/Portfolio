@@ -3,7 +3,10 @@ import { useEffect, useState } from "react";
 export const ScrollTopBtn = ()=>{
 
     const [showTopBtn, setShowTopBtn]= useState(false)
-   
+    const handleScrollTop = ()=>{
+        window.scrollTo({top:0 , behavior: 'smooth'})
+    }
+    
     return (
         <div className={`relative z-20 cursor-pointer` }>
             {showTopBtn && 
