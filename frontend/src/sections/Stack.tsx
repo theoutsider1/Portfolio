@@ -42,7 +42,6 @@ const HumanLangue = ()=>{
   
   return (
         <section id='stack' ref={testRef} className="bg-[#0a1020] w-full flex flex-col sm:flex-row rounded-3xl mt-8 px-4 gap-4 sm:my-12 sm:bg-slate-[#0d0d12] sm:shadow-lg sm:shadow-[#0d0d12]">
-            <Leva/>
             <div className="sm:w-1/2 sm:pr-12 relative">
                 <img src='/assets/spotlight5.png' className="absolute transform  -scale-x-100 -left-4 opacity-70 rounded-3xl pointer-events-none" alt="" />
                 <h2 className="pt-4 sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold ">Stack</h2>
