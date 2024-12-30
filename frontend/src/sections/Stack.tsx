@@ -32,7 +32,7 @@ export const Stack = () => {
   const scaleValue = getConfigValues(wandControlConfig, 'scale', isMobile);
 const HumanLangue = ()=>{
     return (
-      <p className="text-sm sm:text-base font-thin sm:leading-loose">
+      <p className="text-sm my-4 sm:text-base font-thin sm:leading-loose">
                     In my spells room,I weave magic using Html, 
                     Tailwind-Css, JavaScript, Typescript,
                      React Js, Redux Toolkit, Axios, Prime React, GSAP, React Fiber Three, Nest js, Express js , RESTApi, MongoDB, PostgreSQL, Prisma, Supabase, and WordPress Craftia to weave modern digital enchantments. 
