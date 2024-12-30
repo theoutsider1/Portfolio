@@ -14,11 +14,11 @@ export const ProjectsList:React.FC<CardProps> =({currentProject,swiperLeft, swip
         <div key={currentProject.id} className=" relative order-1 sm:order-2 sm:w-1/2 sm:flex sm:flex-col justify-between m-3 sm:m-4 border rounded-lg border-slate-100 border-opacity-15">
             {/* <img src='/assets/spotlight5.png' className="absolute opacity-70 rounded-lg" alt="" /> */}
 
-            <div className="flex flex-col justify-around gap-3 p-2 sm:p-8">
-                <div className="text-white">
-                    <div>{currentProject.date}</div>
+            <div className="flex flex-col justify-around gap-3 p-2">
+                <div className="text-white sm:mx-4">
+                    <img src={currentProject.logo} alt="logo" className={`${currentProject.style} `}/>
                 </div>
-                <div className="text-white text-xl font-semibold sm:text-2xl sm:font-bold">
+                <div className="text-white text-xl sm:px-6 font-semibold sm:text-2xl sm:font-bold">
                     <h4>{currentProject.name}</h4>
                 </div>
             </div>
