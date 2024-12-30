@@ -18,7 +18,7 @@ export const ScrollTopBtn = ()=>{
     return (
         <div className={`relative z-20 cursor-pointer` }>
             {showTopBtn && 
-               <span className="bg-white-0 backdrop-filter backdrop-blur-sm bg-opacity-20 fixed right-28 bottom-10 text-white border-2 rounded-xl text-center sm:inline-flex items-center border-secondary p-1.5 sm:p-2.5" onClick={handleScrollTop} >
+               <span className="bg-white-0 backdrop-filter backdrop-blur-sm bg-opacity-20 fixed right-2 bottom-10 text-white border rounded-xl text-center sm:inline-flex items-center border-secondary p-1.5 sm:p-2.5" onClick={handleScrollTop} >
                     <svg
                         className="w-5 h-5 transform -rotate-90"
                         aria-hidden="true"
