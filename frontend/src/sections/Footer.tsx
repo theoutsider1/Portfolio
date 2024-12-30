@@ -1,9 +1,9 @@
 export const Footer = ()=>{
     return (
         <footer className="text-zinc-50">
-            <div className="bg-[#171720] p-4 text-center text-sm flex justify-between">
+            <div className="bg-[#171720] p-2 sm:text-center text-xs sm:text-sm flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between">
                 <span className="order-3 sm:order-1">© 2024 All Rights Reserved</span> 
-                <span className="px-2 order-2"> Woven with ancient spells by the Web Wizard | Hatim</span>
+                <span className="order-2"> Woven with ancient spells by the Web Wizard | Hatim</span>
                 {/* <!-- Social network icons container --> */}
                 <div className="flex order-1 sm:order-3">
 
