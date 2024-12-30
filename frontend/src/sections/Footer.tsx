@@ -1,11 +1,11 @@
 export const Footer = ()=>{
     return (
         <footer className="text-zinc-50">
-            <div className="bg-[#171720] p-2 sm:text-center text-xs sm:text-sm flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between">
+            <div className="bg-[#171720] p-2 text-center text-xs sm:text-sm flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between">
                 <span className="order-3 sm:order-1">© 2024 All Rights Reserved</span> 
-                <span className="order-2"> Woven with ancient spells by the Web Wizard | Hatim</span>
+                <span className="order-1 sm:order-2 px-4"> Woven with ancient spells by the Web Wizard | Hatim</span>
                 {/* <!-- Social network icons container --> */}
-                <div className="flex order-1 sm:order-3">
+                <div className="flex justify-center order-2 sm:order-3">
 
                     <a className="mr-6 " href="https://www.linkedin.com/in/hatim-tagmi/" target="_blank" rel="noopener noreferrer">
                         <svg
