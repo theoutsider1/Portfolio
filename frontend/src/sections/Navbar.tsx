@@ -1,10 +1,15 @@
 import { useState } from "react"
 import { navLinks } from "../constants"
+import { useMediaQuery } from "react-responsive"
 
 const NavItems = ({ onClick = () => {} })=>{
+    const isMobile = useMediaQuery({maxWidth:368})
     return (
-        <ul className="nav-ul w-full flex flex-col items-center sm:flex-row sm:justify-around relative z-20">
-             {navLinks.map(navLink => (
+        <ul className="nav-ul w-full flex flex-col items-center sm:flex-row sm:justify-between relative z-20">
+
+            {/* Show up Logo in navBar only in small devices */}
+            {isMobile ? <img src="/assets/owlLogo.png" className="w-24" alt="" /> : null}
+            {navLinks.map(navLink => (
                     <li className="nav-li text-secondary hover:text-third max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-10 p-4 " 
                         key={navLink.id}>
                             <a 
@@ -31,13 +36,7 @@ export  const Navbar = ()=>{
             
             <div className=" max-w-7xl mx-auto">
                 <div className="flex justify-end sm:block sm:justify-center py-5 mx-auto sm:px-10 px-5">
-                    
-                    {/* Add LOGO */}
-
-                    {/* <a href="/" className="text-white font-bold text-xl hover:font-semibold transition-colors" >
-                        Hatim Tagmi
-                    </a> */}
-
+                
                     {/* Burger */}
 
                     <button 
