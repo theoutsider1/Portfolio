@@ -3,7 +3,6 @@ import { useMediaQuery } from "react-responsive"
 import { Navbar } from "./Navbar"
 
 
-
 export const Hero = ()=>{
 
     const isMobile = useMediaQuery({maxWidth: 368})
@@ -45,7 +44,7 @@ export const Hero = ()=>{
             </div>
             <div className="w-full">
                 <Canvas camera={{position: [0,0,5], fov:50}}>
-                                
+                <pointLight position={[5, 5, 5]} intensity={1.5} />
                 </Canvas>
             </div>
            
