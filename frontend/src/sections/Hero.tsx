@@ -1,13 +1,17 @@
+import { Canvas } from "@react-three/fiber"
 import { useMediaQuery } from "react-responsive"
+import { Navbar } from "./Navbar"
+
+
 
 export const Hero = ()=>{
 
     const isMobile = useMediaQuery({maxWidth: 368})
     return (
-        <section className="w-full sm:mx-4 h-screen sm:my-10 flex flex-col justify-around  items-center rounded-3xl">
+        <section className="w-full sm:mx-4 h-screen sm:my-10 flex flex-col justify-center sm:justify-around  items-around">
            
-            <div className="w-full mt-12 sm:mt-0"> 
-                <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-neutral-500 text-center text-5xl sm:text-7xl md:text-9xl text-secondary font-extrabold sm:font-black">
+            <div className="w-full "> 
+                <h1 className=" bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-neutral-500 text-center text-5xl sm:text-7xl md:text-9xl text-secondary font-extrabold sm:font-black">
                     Web Wizard
                 </h1>
                 <div className="">
@@ -39,7 +43,13 @@ export const Hero = ()=>{
                     </div>
                     </div>
             </div>
-              
+            <div className="w-full">
+                <Canvas camera={{position: [0,0,5], fov:50}}>
+                                
+                </Canvas>
+            </div>
+           
+           <Navbar/>
            
            
         </section>
