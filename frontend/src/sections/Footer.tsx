@@ -5,7 +5,7 @@ export const Footer = ()=>{
                 <span className="order-3 sm:order-1">
                     <img src="/assets/oowl.svg" className="w-24" alt="" />
                 </span> 
-                <span className="order-1 sm:order-2 px-4 sm:px-0">
+                <span className="order-1 sm:order-2">
                     Woven with ancient spells by the Web Wizard  <br/> © 2024 All Rights Reserved.
                      </span>
                 {/* <!-- Social network icons container --> */}
