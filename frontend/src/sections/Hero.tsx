@@ -2,8 +2,9 @@ import { Canvas } from "@react-three/fiber"
 import { useMediaQuery } from "react-responsive"
 import { Suspense } from "react"
 import CanvasLoader from "../components/CanvasLoader"
-import { ContactShadows,} from "@react-three/drei"
+import { ContactShadows, Environment} from "@react-three/drei"
 import { Navbar } from "./Navbar"
+import MagicWand from "../components/MagicWand"
 
 
 export const Hero = ()=>{
@@ -49,6 +50,11 @@ export const Hero = ()=>{
                 <Canvas camera={{position: [0,0,5], fov:50}}>
                 <pointLight position={[5, 5, 5]} intensity={1.5} />
                     <Suspense fallback={<CanvasLoader/>}>
+                        <MagicWand
+                            castShadow
+                            position={[0,0,0]}
+                            rotation={[0,0,0]}
+                            scale={isMobile ? 0.7 : 2.2}/>
                         
                     </Suspense>
                 <ContactShadows position={[0, -0.8, 0]} scale={20} blur={2} far={4.5} />                        
