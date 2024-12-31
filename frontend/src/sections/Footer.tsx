@@ -1,9 +1,13 @@
 export const Footer = ()=>{
     return (
-        <footer className="text-zinc-50">
-            <div className="bg-[#171720] p-2 text-center text-xs sm:text-sm flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between">
-                <span className="order-3 sm:order-1">© 2024 All Rights Reserved</span> 
-                <span className="order-1 sm:order-2 px-4"> Woven with ancient spells by the Web Wizard | Hatim</span>
+        <footer className="text-[#b0b1b3] shadow-2xl shadow-[#b0b1b3] mt-20 pt-2">
+            <div className="bg-[#171720] p-2 text-center text-xs sm:text-sm flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between items-center">
+                <span className="order-3 sm:order-1">
+                    <img src="/assets/oowl.svg" className="w-24" alt="" />
+                </span> 
+                <span className="order-1 sm:order-2 px-4 sm:px-0">
+                    Woven with ancient spells by the Web Wizard  <br/> © 2024 All Rights Reserved.
+                     </span>
                 {/* <!-- Social network icons container --> */}
                 <div className="flex justify-center order-2 sm:order-3">
 
