@@ -1,5 +1,8 @@
 import { Canvas } from "@react-three/fiber"
 import { useMediaQuery } from "react-responsive"
+import { Suspense } from "react"
+import CanvasLoader from "../components/CanvasLoader"
+import { ContactShadows,} from "@react-three/drei"
 import { Navbar } from "./Navbar"
 
 
@@ -45,6 +48,10 @@ export const Hero = ()=>{
             <div className="w-full">
                 <Canvas camera={{position: [0,0,5], fov:50}}>
                 <pointLight position={[5, 5, 5]} intensity={1.5} />
+                    <Suspense fallback={<CanvasLoader/>}>
+                        
+                    </Suspense>
+                <ContactShadows position={[0, -0.8, 0]} scale={20} blur={2} far={4.5} />                        
                 </Canvas>
             </div>
            
