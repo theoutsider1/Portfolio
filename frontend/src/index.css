@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Squada+One&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,9 +9,15 @@
   }
 
 body {
-    background: #1f2e13;
+    background-color: #171720;
 }
 .scrollbar-custom {
   
   scrollbar-color: #f4fc96 #f4fc96; /* Thumb color and track color */
 }
+
+/* @layer utilities {
+  .project-section{
+    @apply col-span-1 rounded-lg bg-[#ffffff] opacity-10 border-2 border-[#ffffff];
+  }
+} */
