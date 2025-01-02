@@ -13,7 +13,7 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
         <section id="about" className="w-full flex flex-col sm:flex-row px-4 sm:px-12 sm:my-12">
             {/* Section Title */}
             <div className="sm:w-1/2">
-                <h2 className="text-left sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold sm:px-12">
+                <h2 className="text-left squada sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold sm:px-12">
                     {aboutContent.title}
                 </h2>
             </div>
@@ -32,8 +32,8 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
                         />
 
                 </div>
-                <div className="w-full my-4 py-12 text-secondary ">
-                    <p className="text-sm sm:text-lg font-thin sm:leading-loose">
+                <div className=" w-full my-4 py-12 text-secondary">
+                    <p className="text-sm sm:text-lg font-roboto font-light opacity-60 sm:leading-loose">
                         {aboutContent.paragraph}
                     </p>
                 </div>
@@ -45,7 +45,7 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
             <div className="sm:w-1/2">
                 <div className="w-full flex justify-start my-4 py-12 text-secondary ">
                 
-                <p className="text-sm sm:text-lg font-thin sm:leading-loose">
+                <p className="text-sm sm:text-lg font-roboto font-light opacity-70 sm:leading-loose">
                     {aboutContent.paragraph}
                 </p>
                 </div>
