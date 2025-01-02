@@ -33,7 +33,7 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
 
                 </div>
                 <div className=" w-full my-4 py-12 text-secondary">
-                    <p className="text-sm sm:text-lg font-roboto font-light opacity-60 sm:leading-loose">
+                    <p className="text-sm sm:text-lg font-roboto font-light opacity-70 sm:leading-loose">
                         {aboutContent.paragraph}
                     </p>
                 </div>
