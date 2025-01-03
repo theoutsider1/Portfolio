@@ -22,7 +22,7 @@ export const ProjectsList:React.FC<CardProps> =({currentProject,swiperLeft, swip
                     <h4>{currentProject.name}</h4>
                 </div>
             </div>
-            <div className="px-2 sm:px-8 font-thin sm:font-light text-sm text-slate-200 sm:text-base">
+            <div className="px-2 sm:px-8 font-roboto font-light opacity-70 text-sm text-slate-200 sm:text-base">
                 <p>{currentProject.description}</p>
             </div>
             {/* icons div */}
