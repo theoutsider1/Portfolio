@@ -38,12 +38,12 @@ export const ContactForm = ()=>{
     return (
         <section className="bg-[#171720] ">
             <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-                <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white ">Let's Connect</h2>
-                <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">Want to send feedback ? Have questions about a project? Shoot me an email.</p>
+                <h2 className="squada mb-4 text-4xl sm:text-6xl tracking-tight text-center text-white ">Let's Connect</h2>
+                <p className="mb-8 lg:mb-16 font-roboto font-light text-center text-secondary opacity-50 sm:text-xl">Want to send feedback ? Have questions about a project? Shoot me an email.</p>
                 {/* Contact Form */}
                 <form ref={form} onSubmit={sendEmail} className="space-y-8">
                     <div>
-                        <label htmlFor="email" className="block mb-2 text-sm font-medium text-white ">Your email</label>
+                        <label htmlFor="email" className="block mb-2 font-roboto text-sm font-medium text-white opacity-70">Your email</label>
                         <input type="email" 
                                 name="from_mail" 
                                 id="email" 
@@ -51,7 +51,7 @@ export const ContactForm = ()=>{
                                 placeholder="Your Email Adress" required/>
                     </div>
                     <div>
-                        <label htmlFor="subject" className="block mb-2 text-sm font-medium text-white ">Subject</label>
+                        <label htmlFor="subject" className="block mb-2 font-roboto text-sm font-medium text-white opacity-70">Subject</label>
                         <input type="text" 
                                 id="subject" 
                                 name="from_subject" 
@@ -59,7 +59,7 @@ export const ContactForm = ()=>{
                                 placeholder="Let us know how we can help you" required/>
                     </div>
                     <div className="sm:col-span-2">
-                        <label htmlFor="message" className="block mb-2 text-sm font-medium text-white">Your message</label>
+                        <label htmlFor="message" className="block mb-2 font-roboto text-sm font-medium text-white opacity-70">Your message</label>
                         <textarea id="message" 
                                     rows={6} 
                                     name="message" 
@@ -68,7 +68,7 @@ export const ContactForm = ()=>{
                         </textarea>
                     </div>
                     <button type="submit" 
-                            className="py-3 px-5 text-sm font-medium text-center text-[#171720] rounded-lg bg-white sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300" 
+                            className="sm:py-3 py-2 sm:px-5 px-2 font-roboto text-sm font-medium text-center text-[#171720] rounded-lg bg-white sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300" 
                             disabled={stateMessage === 'Sending Message' ? true : false} >
                                 Send message
                     </button>

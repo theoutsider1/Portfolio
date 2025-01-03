@@ -9,7 +9,7 @@ export const Btn: React.FC<BtnProps> = ({btnText, isMobile, link})=>{
     
     return (
         <>
-            <a className="flex items-center font-thin text-secondary cursor-pointer" href={link}  target="_blank"  rel="noopener noreferrer">
+            <a className="flex items-center font-roboto font-light text-secondary cursor-pointer" href={link}  target="_blank"  rel="noopener noreferrer">
                     <span className="border-2 text-sm sm:text-base sm:font-light inline-flex items-center sm:my-4 border-secondary rounded-full py-1.5 sm:py-2.5 px-4 sm:px-8">
                        {btnText}
                     </span>

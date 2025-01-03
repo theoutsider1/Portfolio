@@ -31,7 +31,7 @@ export const Stack = () => {
   const scaleValue = getConfigValues(wandControlConfig, 'scale', isMobile);
 const HumanLangue = ()=>{
     return (
-      <p className="font-roboto my-4 sm:text-base font-light opacity-70 sm:leading-loose">
+      <p className="font-roboto my-4 text-sm sm:text-base font-light opacity-70 sm:leading-loose">
                     In my spells room,I weave magic using Html, 
                     Tailwind-Css, JavaScript, Typescript,
                      React Js, Redux Toolkit, Axios, Prime React, GSAP, React Fiber Three, Nest js, Express js , RESTApi, MongoDB, PostgreSQL, Prisma, Supabase, and WordPress Craftia to weave modern digital enchantments. 
@@ -47,7 +47,7 @@ const HumanLangue = ()=>{
                 <div className=" w-full sm:text-right sm:my-8  text-secondary ">
                   {!showMuggleVersion ? (
                     <>
-                      <p className="font-roboto my-4 sm:text-base font-light opacity-70 sm:leading-loose">
+                      <p className="font-roboto text-sm my-4 sm:text-base font-light opacity-70 sm:leading-loose">
                         In my spells room, I weave magic using HTMLus Arcana, CSSus Shieldum,
                         Tailwindus Bractum, JavaScriptus Fluxia, Typescriptus Magica, Reacto
                         Interfacia, Reduxus Imperium, Axiosum Revelia, Prime Reactum Lumina,

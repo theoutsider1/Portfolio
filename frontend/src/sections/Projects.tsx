@@ -40,7 +40,7 @@ export const Projects: React.FC<ProjectProps> = ({isMobile})=> {
             <div className="flex flex-col px-4">
             {/* Tittle & Button section */}
             <div className="">
-                        <h2 className="text-left items-center text-secondary text-3xl font-bold">{projectSectionContent.title}</h2>
+                        <h2 className="text-left items-center text-secondary squada text-4xl font-bold">{projectSectionContent.title}</h2>
             </div>
             
                     <div className="w-full h-full flex flex-col justify-end items-end text-secondary ">
