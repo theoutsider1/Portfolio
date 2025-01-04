@@ -1,22 +1,33 @@
 import { About } from "./sections/About"
 import { Stack } from "./sections/Stack"
 import { Hero } from "./sections/Hero"
-import { Navbar } from "./sections/Navbar"
 import { Projects } from "./sections/Projects"
-import { ProjectsList } from "./sections/ProjectsList"
+import { ContactForm } from "./sections/ContactForm"
+import { Footer } from "./sections/Footer"
+import ShowCase from "./sections/ShowCase"
+import { useMediaQuery } from "react-responsive"
+import { ScrollTopBtn } from "./components/ScrollTopBtn"
 
 function App() {
- 
+ const isMobile = useMediaQuery({maxWidth:368})
 
   return (
     <>
-      <main className="max-w-7xl mx-auto">
-        <Hero/>
-        <Navbar/>
-        <About/>
-        <Projects/>
-        <ProjectsList/>
+      <main className="">
+      <ScrollTopBtn/>
+
+        <div className="sm:max-w-7xl sm:mx-auto">
+          <Hero/>
+          {/* <Navbar/> */}
+          <About isMobile={isMobile}/>
+          <Projects isMobile={isMobile}/>
+          {/* <ProjectsList/> */}
+          <ShowCase/>
         <Stack/>
+        </div>
+
+        <ContactForm/>
+        <Footer/>
       </main>
     </>
   )
