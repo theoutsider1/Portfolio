@@ -21,8 +21,7 @@ body {
   scrollbar-color: #f4fc96 #f4fc96; /* Thumb color and track color */
 }
 
-/* @layer utilities {
-  .project-section{
-    @apply col-span-1 rounded-lg bg-[#ffffff] opacity-10 border-2 border-[#ffffff];
-  }
-} */
+.backdrop-blur-sm {
+  -webkit-backdrop-filter: blur(8px); /* Safari, iOS */
+  backdrop-filter: blur(8px); /* Standard for other browsers */
+}
