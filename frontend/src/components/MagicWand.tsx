@@ -38,7 +38,7 @@ const MagicWand = (props : handletri)=> {
           start: "top center",
           end: "center center",
           scrub: true,
-          markers: true,
+          markers: false,
         },
       })
 

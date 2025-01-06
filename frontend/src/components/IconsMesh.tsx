@@ -82,7 +82,7 @@ export const IconsMesh =({testRef} : propInterface) => {
           start: 'center center',
           end: 'center center',
           scrub: true,
-          markers: true,
+          markers: false,
           onUpdate: (self) => {
             if (self.direction === 1) {
               meshScale('forward')
