@@ -87,7 +87,6 @@ const HumanLangue = ()=>{
                         testRef={testRef}
                         />
                       {/* Icons */}
-                      <IconsMesh testRef={testRef}/>
                       {/*Envirement  */}
                       <Environment preset="dawn"/> 
                     </Suspense>  
