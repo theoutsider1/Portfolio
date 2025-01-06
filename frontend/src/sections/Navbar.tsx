@@ -3,7 +3,7 @@ import { navLinks } from "../constants"
 import { useMediaQuery } from "react-responsive"
 
 const NavItems = ({ onClick = () => {} })=>{
-    const isMobile = useMediaQuery({maxWidth:368})
+    const isMobile = useMediaQuery({maxWidth:468})
     return (
         <ul className="nav-ul w-full flex flex-col items-center sm:flex-row sm:justify-between relative z-20">
 
