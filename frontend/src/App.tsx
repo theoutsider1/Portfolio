@@ -9,7 +9,7 @@ import { useMediaQuery } from "react-responsive"
 import { ScrollTopBtn } from "./components/ScrollTopBtn"
 
 function App() {
- const isMobile = useMediaQuery({maxWidth:368})
+ const isMobile = useMediaQuery({maxWidth:468})
 
   return (
     <>
