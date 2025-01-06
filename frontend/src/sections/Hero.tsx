@@ -9,7 +9,7 @@ import MagicWand from "../components/MagicWand"
 
 export const Hero = ()=>{
 
-    const isMobile = useMediaQuery({maxWidth: 268})
+    const isMobile = useMediaQuery({maxWidth: 468})
     return (
         <section className="w-full sm:mx-4 h-screen sm:my-10 flex flex-col justify-center sm:justify-around  items-around">
            
