@@ -3,12 +3,9 @@ import { navLinks } from "../constants"
 import { useMediaQuery } from "react-responsive"
 
 const NavItems = ({ onClick = () => {} })=>{
-    const isMobile = useMediaQuery({maxWidth:468})
     return (
         <ul className="nav-ul w-full flex flex-col items-center sm:flex-row sm:justify-between relative z-20">
 
-            {/* Show up Logo in navBar only in small devices */}
-            {isMobile ? <img src="/assets/owlLogo.png" className="w-24" alt="" /> : null}
             {navLinks.map(navLink => (
                     <li className="nav-li text-secondary hover:text-third max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-10 p-4 " 
                         key={navLink.id}>
@@ -26,6 +23,8 @@ const NavItems = ({ onClick = () => {} })=>{
 
 export  const Navbar = ()=>{
     const [isOpen, setisOpen] = useState(false);
+    const isMobile = useMediaQuery({maxWidth:468})
+
     // Toggle Menu
     const toggleMenu = ()=>{
         setisOpen((prevIsOpen => !prevIsOpen))
@@ -36,7 +35,7 @@ export  const Navbar = ()=>{
             
             <div className=" max-w-7xl mx-auto">
                 <div className="flex justify-end sm:block sm:justify-center py-5 mx-auto sm:px-10 px-5">
-                
+                    
                     {/* Burger */}
 
                     <button 
@@ -55,7 +54,8 @@ export  const Navbar = ()=>{
             </div>
 
             {/* Mobile sidebar Menu */}
-            
+            {isMobile ? <img src="/assets/owlLogo.png" className="w-24 absolute left-0  top-2 " alt="" /> : null}
+
             <div className={`nav-sidebar absolute left-0 right-0 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block
                 ${isOpen ? `max-h-screen` : `max-h-0`}`}>
                 <nav className="p-5">
