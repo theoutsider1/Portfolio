@@ -31,7 +31,7 @@ export const Hero = ()=>{
                             castShadow
                             position={[0,0,0]}
                             rotation={[0,0,0]}
-                            scale={isMobile ? 0.7 : 2.2}/>
+                            scale={isMobile ? 1 : 2.2}/>
                         <Environment preset="dawn"/>
                     </Suspense>
                 <ContactShadows position={[0, -0.8, 0]} scale={20} blur={2} far={4.5} />                        
