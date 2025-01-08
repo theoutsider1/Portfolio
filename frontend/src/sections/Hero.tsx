@@ -11,7 +11,7 @@ export const Hero = ()=>{
 
     const isMobile = useMediaQuery({maxWidth: 468})
     return (
-        <section className="w-full sm:mx-4 h-screen sm:my-10 flex flex-col justify-center sm:justify-around  items-around">
+        <section id="home" className="w-full sm:mx-4 h-screen sm:my-10 flex flex-col justify-center sm:justify-around  items-around">
            
             <div className="w-full "> 
                 <h1 className="uppercase bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-neutral-500 text-center text-7xl sm:text-9xl squada font-large ">
@@ -21,10 +21,6 @@ export const Hero = ()=>{
                         <p className="px-4 sm:px-0 bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-neutral-500  opacity-35 text-center text-xs font-roboto sm:text-2xl sm:font-regular">
                             Casting spells with code to create magical digital experiences
                         </p>
-                        <div className="flex justify-center text-secondary p-2">
-                        
-                        
-                    </div>
                     </div>
             </div>
             <div className="w-full">
