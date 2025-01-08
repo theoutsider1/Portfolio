@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { navLinks } from "../constants"
 import { useMediaQuery } from "react-responsive"
 
@@ -24,6 +24,7 @@ const NavItems = ({ onClick = () => {} })=>{
 export  const Navbar = ()=>{
     const [isOpen, setisOpen] = useState(false);
     const isMobile = useMediaQuery({maxWidth:468})
+    const [stickMenu, setStickMenu]= useState(false)
 
     // Toggle Menu
     const toggleMenu = ()=>{
@@ -31,11 +32,11 @@ export  const Navbar = ()=>{
     }
     return (
         //fixed top-o left-0
-        <header className="fixed top-0 right-0 sm:static sm:top-auto sm:left-auto z-50 w-full">
+        <header className={`fixed top-0 right-0 z-50 w-full `}>
             
             <div className=" max-w-7xl mx-auto">
-                <div className="flex justify-end sm:block sm:justify-center py-5 mx-auto sm:px-10 px-5">
-                    
+                <div className="flex justify-end sm:block sm:justify-center py-5 sm:py-2 mx-auto sm:px-10 px-5">
+                     
                     {/* Burger */}
 
                     <button 
