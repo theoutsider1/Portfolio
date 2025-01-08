@@ -190,7 +190,7 @@ export const ProjectsInfo: ProjectsInfos[] = [
       },
       Project: {
         title : 'Projects',
-        paragraph: "Welcome to my magical realm of web development! I’m Hatim Tagmi, your friendly neighborhood Web Wizard, casting spells of creativity and innovation to bring your digital dreams to life. Armed with my trusty wand (or keyboard), I conjure captivating websites that blend enchanting designs with powerful functionality.",
+        paragraph: "Venture into the shadows of my enchanted archive, where every project holds a spark of magic and mystery. Here, spells are whispered into code, and visions take flight through ethereal design. Each creation is a portal to another realm, woven with care and bound by the secrets of the digital arts. Beyond the flicker of the wand, hidden within the scrolls of my craft, lies the essence of ingenuity—crafted to enchant, inspire, and leave a trace of wonder in every visitor's heart.",
         btnText: "Explore", 
              
       },
