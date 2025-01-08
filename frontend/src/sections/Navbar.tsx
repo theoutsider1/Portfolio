@@ -30,6 +30,15 @@ export  const Navbar = ()=>{
     const toggleMenu = ()=>{
         setisOpen((prevIsOpen => !prevIsOpen))
     }
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= window.innerHeight * 0.8) {
+                setStickMenu(true);
+            } else {
+                setStickMenu(false);
+            }
+        });
+    }, []);
     return (
         //fixed top-o left-0
         <header className={`fixed top-0 right-0 z-50 w-full ${stickMenu ? `sm:stiky sm:backdrop-blur-sm sm:transition-all sm:duration-100 sm:ease-in-out top-0 sm:shadow-lg sm:shadow-[#9a9b9c12]` : `sm:static`}`}>
