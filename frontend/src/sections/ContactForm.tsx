@@ -37,7 +37,7 @@ export const ContactForm = ()=>{
 
     return (
         <section className="bg-[#171720] ">
-            <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+            <div id="contact" className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                 <h2 className="squada mb-4 text-4xl sm:text-6xl tracking-tight text-center text-white ">Let's Connect</h2>
                 <p className="mb-8 lg:mb-16 font-roboto font-light text-center text-secondary opacity-50 sm:text-xl">Want to send feedback ? Have questions about a project? Shoot me an email.</p>
                 {/* Contact Form */}
