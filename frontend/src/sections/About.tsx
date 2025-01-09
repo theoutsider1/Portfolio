@@ -20,10 +20,8 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
             
             {/* Button Section & Description */}
            
-           { 
-           !isMobile ? (
-            <div className="sm:w-1/2">
-                <div className="w-full flex sm:justify-end items-center">
+            <div className="sm:w-1/2 flex flex-col-reverse sm:flex-col gap-10 sm:gap-5">
+                <div className=" w-full sm:flex sm:justify-end items-center ">
                 
                     <Btn 
                         btnText={aboutContent.btnText} 
@@ -32,32 +30,16 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
                         />
 
                 </div>
-                <div className=" w-full my-4 py-12 text-secondary">
-                    <p className="text-sm sm:text-lg font-roboto font-light opacity-70 sm:leading-loose">
+                <div className=" w-full my-4 sm:py-12 text-secondary ">
+                    <p className="text-base sm:text-lg font-roboto font-light opacity-70 sm:leading-loose">
                         {aboutContent.paragraph}
                     </p>
                 </div>
 
                
                 
-            </div>)
-            : 
-            <div className="sm:w-1/2">
-                <div className="w-full flex justify-start my-4 py-12 text-secondary ">
-                
-                <p className="text-sm sm:text-lg font-roboto font-light opacity-70 sm:leading-loose">
-                    {aboutContent.paragraph}
-                </p>
-                </div>
-                <div className= "w-full flex justify-end items-center sm:py-0" >
-                    <Btn 
-                        btnText={aboutContent.btnText}
-                        isMobile={isMobile}
-                        link={linkedinLink}
-                        />
-                </div>   
             </div>
-            }
+            
         </section>
     )
 }
