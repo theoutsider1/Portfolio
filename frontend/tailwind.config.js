@@ -18,7 +18,7 @@ export default {
         },
       },
       fontFamily: {
-        squada: ["Squada One", "serif"], // Use Squada One font
+        times: ['"Times New Roman"', "serif"],
         roboto: ['Roboto', 'serif'],
       },
       fontWeight: {
