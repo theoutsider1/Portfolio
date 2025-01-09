@@ -14,7 +14,7 @@ export const Hero = ()=>{
         <section id="home" className="w-full sm:mx-4 h-screen sm:my-10 flex flex-col justify-center sm:justify-around  items-around">
            
             <div className="w-full "> 
-                <h1 className="uppercase bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-neutral-500 text-center text-7xl sm:text-9xl squada font-large ">
+                <h1 className="uppercase bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-neutral-500 text-center text-7xl sm:text-9xl font-times font-large ">
                     Web Wizard
                 </h1>
                 <div className="">
