@@ -11,7 +11,7 @@ const NavItems = ({ onClick = () => {} })=>{
                         key={navLink.id}>
                             <a 
                                 href={navLink.href} 
-                                className="nav-li_a text-lg md:text-lg transition-colors" 
+                                className="nav-li_a font-times text-lg md:text-lg " 
                                 onClick={onClick}
                             >{navLink.name}</a>
                     </li>
