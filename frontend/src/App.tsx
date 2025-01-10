@@ -7,10 +7,12 @@ import { Footer } from "./sections/Footer"
 import ShowCase from "./sections/ShowCase"
 import { useMediaQuery } from "react-responsive"
 import { ScrollTopBtn } from "./components/ScrollTopBtn"
+import { useProgress } from "@react-three/drei"
 
 function App() {
  const isMobile = useMediaQuery({maxWidth:468})
-
+// Track loading state using useProgress
+const {active} = useProgress();
   return (
     <>
       <main className="">
