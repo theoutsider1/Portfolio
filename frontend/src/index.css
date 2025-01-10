@@ -11,16 +11,17 @@
 
 * {
     scroll-behavior: smooth;
+    scrollbar-color: #f4fc96 #f4fc96;
   }
 
 body {
     background-color: #171720;
 }
-.scrollbar-custom {
-  
-  scrollbar-color: #f4fc96 #f4fc96; /* Thumb color and track color */
+@layer components {
+  .group-hover-styles {
+    @apply group-hover:border-[#e1fac9] group-hover:shadow-md group-hover:shadow-[#e1fac9];
+  }
 }
-
 .backdrop-blur-sm {
   -webkit-backdrop-filter: blur(8px); /* Safari, iOS */
   backdrop-filter: blur(8px); /* Standard for other browsers */
