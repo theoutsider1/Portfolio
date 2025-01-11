@@ -9,6 +9,7 @@ import { useMediaQuery } from "react-responsive";
 import { ScrollTopBtn } from "./components/ScrollTopBtn";
 import { useProgress } from "@react-three/drei";
 import { useState } from "react";
+import { CanvasLoader } from "./components/CanvasLoader";
 
 function App() {
   const isMobile = useMediaQuery({ maxWidth: 468 });
@@ -20,7 +21,9 @@ function App() {
  
   return (
     <>
-      
+      {isLoading ? (
+        <CanvasLoader />
+      ) : (
         <main className="">
           <ScrollTopBtn />
 
@@ -37,7 +40,7 @@ function App() {
           <ContactForm />
           <Footer />
         </main>
-      
+      )}
     </>
   );
 }
