@@ -1,32 +1,9 @@
-import { Html, useProgress } from "@react-three/drei"
 
-const CanvasLoader = ()=>{
-    const {progress} = useProgress();
+export const CanvasLoader = ()=>{
+   
     return (
-        <Html
-        as="div"
-        center
-        style={{
-            display : 'flex',
-            justifyContent : 'center',
-            alignItems : 'center',
-            flexDirection : 'column'
-
-        }}>
-
-            <span className="canvas-loader"/>
-            <p style={{
-                fontSize: 14,
-                color: 'white',
-                fontWeight : 800,
-                marginTop : 40,
-                }}>
-
-                {progress !== 0 ? `${progress.toFixed(2)}% `:  'Loading...'}
-            </p>
-
-        </Html>
-    )
+        <section className="w-full h-screen flex flex-col justify-center items-center text-white">
+            <img src="/assets/oowl.svg" alt="Wizard-Logo" className="logo block w-1/2"/>
+        </section>
+    )   
 }
-
-export default CanvasLoader
