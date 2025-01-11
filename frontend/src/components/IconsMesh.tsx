@@ -119,7 +119,7 @@ export const IconsMesh =({testRef} : propInterface) => {
                 ref={(el)=> fillMeshRefs(el as Mesh, 'taiwlind', [0.4,0.6,2.2])}
                 src={tailwindcss}
                 position={[0.4,initialPositionY,2.2]}
-                scale={0.001}
+                scale={0.01}
             /> 
         {/* backend */}
             <Svg 
@@ -142,7 +142,6 @@ export const IconsMesh =({testRef} : propInterface) => {
                 scale={0.001}
             />
             <Svg 
-                // ref={(el)=> fillMeshRefs(el as Mesh, 'typescript',[-4,0.7,-3])}
                 ref={(el)=> fillMeshRefs(el as Mesh, 'typescript',[1.2,-1.7,-3])}
                 src={typescript}
                 position={[1.2,initialPositionY,-3]}
