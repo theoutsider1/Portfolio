@@ -1,7 +1,6 @@
 import { Canvas } from "@react-three/fiber"
 import { useMediaQuery } from "react-responsive"
 import { Suspense } from "react"
-import CanvasLoader from "../components/CanvasLoader"
 import { ContactShadows, Environment} from "@react-three/drei"
 import { Navbar } from "./Navbar"
 import MagicWand from "../components/MagicWand"
@@ -10,8 +9,9 @@ import MagicWand from "../components/MagicWand"
 export const Hero = ()=>{
 
     const isMobile = useMediaQuery({maxWidth: 468})
+   
     return (
-        <section id="home" className="w-full sm:mx-4 h-screen sm:my-10 flex flex-col justify-center sm:justify-around  items-around">
+        <section id="home" className="wand opacity-0 w-full sm:mx-4 h-screen sm:my-10 flex flex-col justify-center sm:justify-around  items-around">
            
             <div className="w-full "> 
                 <h1 className="uppercase bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-[#d2ff96] text-center text-7xl sm:text-9xl font-times font-large ">
@@ -23,10 +23,10 @@ export const Hero = ()=>{
                         </p>
                     </div>
             </div>
-            <div className="w-full">
+            <div className="wand w-full opacity-0">
                 <Canvas camera={{position: [0,0,5], fov:50}}>
                 <pointLight position={[5, 5, 5]} intensity={1.5} />
-                    <Suspense fallback={<CanvasLoader/>}>
+                    <Suspense fallback={null}>
                         <MagicWand
                             castShadow
                             position={[0,0,0]}
