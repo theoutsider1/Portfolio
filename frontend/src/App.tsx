@@ -8,7 +8,7 @@ import ShowCase from "./sections/ShowCase";
 import { useMediaQuery } from "react-responsive";
 import { ScrollTopBtn } from "./components/ScrollTopBtn";
 import { useProgress } from "@react-three/drei";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CanvasLoader } from "./components/CanvasLoader";
 
 function App() {
@@ -18,7 +18,13 @@ function App() {
   // Conditionally render the loader based on `active`
   const [isLoading, setIsLoading] = useState(true);
 
- 
+  useEffect(() => {
+    if (!active) {
+      setTimeout(() => {
+        setIsLoading(false); // Stop showing loader once loading is complete
+      }, 500);
+    }
+  }, [active]);
   return (
     <>
       {isLoading ? (
