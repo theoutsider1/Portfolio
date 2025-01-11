@@ -49,7 +49,7 @@ const ShowCase = ()=>{
             <div className=" sm:w-1/2 sm:m-4 order-2 sm:order-1">
                 <Canvas camera={{ position: [0, 0, -20], fov: 50 }}>
                     <pointLight position={[10, 10, 10]} intensity={1.5} />
-                            <Suspense fallback={<CanvasLoader/>}>
+                            <Suspense fallback={null}>
                                 <group 
                                     rotation={[-0.2, Math.PI, 0]} 
                                     position={[0, -1, -2]}  //  animation values  position={[0, -1, -9]}  
