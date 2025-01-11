@@ -77,7 +77,7 @@ const HumanLangue = ()=>{
                     <Canvas shadows camera={{position: [0,0,5], fov:50}} >
                     <color attach="background" args={['#0a1020']}/>
                     <Stars saturation={0} count={1000} speed={2} />
-                    <Suspense fallback={<CanvasLoader/>}>
+                    <Suspense fallback={null}>
                  
                       {/* MagicWand component */}
                       <MagicWand 
