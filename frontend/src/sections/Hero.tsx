@@ -1,15 +1,26 @@
 import { Canvas } from "@react-three/fiber"
 import { useMediaQuery } from "react-responsive"
-import { Suspense } from "react"
+import { Suspense, useEffect } from "react"
 import { ContactShadows, Environment} from "@react-three/drei"
 import { Navbar } from "./Navbar"
 import MagicWand from "../components/MagicWand"
+import { gsap } from "gsap"
 
 
 export const Hero = ()=>{
 
     const isMobile = useMediaQuery({maxWidth: 468})
-   
+    useEffect(()=>{
+        const timeout = setTimeout(() => {
+            gsap.to('.wand', {
+              opacity: 1,
+              duration: 4,
+              ease: 'Power3.out',
+            });
+          }, 100); // Slight delay to ensure rendering
+        
+          return () => clearTimeout(timeout); // Cleanup
+    },[])
     return (
         <section id="home" className="wand opacity-0 w-full sm:mx-4 h-screen sm:my-10 flex flex-col justify-center sm:justify-around  items-around">
            
@@ -23,7 +34,7 @@ export const Hero = ()=>{
                         </p>
                     </div>
             </div>
-            <div className="wand w-full opacity-0">
+            <div className="w-full opacity-0">
                 <Canvas camera={{position: [0,0,5], fov:50}}>
                 <pointLight position={[5, 5, 5]} intensity={1.5} />
                     <Suspense fallback={null}>
