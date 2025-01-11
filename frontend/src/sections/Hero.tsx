@@ -13,15 +13,13 @@ export const Hero = ()=>{
     const sectionRef = useRef<HTMLDivElement | null >(null);
     useEffect(()=>{
         if(sectionRef.current){
-         const timeout =setTimeout(() => {
+         
             gsap.to(sectionRef.current, {
               opacity: 1,
               duration: 4,
               ease: 'Power3.out',
+              delay: 0.5,
             });
-          }, 200); // Slight delay to ensure rendering
-          
-           return () => clearTimeout(timeout); // Cleanup
         }
     },[])
     return (
