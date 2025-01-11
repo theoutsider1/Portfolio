@@ -34,7 +34,7 @@ export const Hero = ()=>{
                         </p>
                     </div>
             </div>
-            <div className="w-full opacity-0">
+            <div className="w-full">
                 <Canvas camera={{position: [0,0,5], fov:50}}>
                 <pointLight position={[5, 5, 5]} intensity={1.5} />
                     <Suspense fallback={null}>
