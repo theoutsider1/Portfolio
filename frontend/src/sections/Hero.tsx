@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber"
 import { useMediaQuery } from "react-responsive"
-import { Suspense, useEffect } from "react"
+import { Suspense, useEffect, useRef } from "react"
 import { ContactShadows, Environment} from "@react-three/drei"
 import { Navbar } from "./Navbar"
 import MagicWand from "../components/MagicWand"
@@ -9,20 +9,23 @@ import { gsap } from "gsap"
 
 export const Hero = ()=>{
 
-    const isMobile = useMediaQuery({maxWidth: 468})
+    const isMobile = useMediaQuery({maxWidth: 468});
+    const sectionRef = useRef<HTMLDivElement | null >(null);
     useEffect(()=>{
-        const timeout = setTimeout(() => {
-            gsap.to('.wand', {
+        if(sectionRef.current){
+         const timeout =setTimeout(() => {
+            gsap.to(sectionRef.current, {
               opacity: 1,
               duration: 4,
               ease: 'Power3.out',
             });
-          }, 100); // Slight delay to ensure rendering
-        
-          return () => clearTimeout(timeout); // Cleanup
+          }, 200); // Slight delay to ensure rendering
+          
+           return () => clearTimeout(timeout); // Cleanup
+        }
     },[])
     return (
-        <section id="home" className="wand opacity-0 w-full sm:mx-4 h-screen sm:my-10 flex flex-col justify-center sm:justify-around  items-around">
+        <section id="home"ref={sectionRef} className="wand opacity-0 w-full sm:mx-4 h-screen sm:my-10 flex flex-col justify-center sm:justify-around  items-around">
            
             <div className="w-full "> 
                 <h1 className="uppercase bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-[#d2ff96] text-center text-7xl sm:text-9xl font-times font-large ">
