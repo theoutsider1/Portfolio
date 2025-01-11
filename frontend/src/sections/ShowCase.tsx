@@ -1,7 +1,6 @@
 import {Suspense, useRef, useState } from "react";
 import { ProjectsInfo } from "../constants";
 import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
-import CanvasLoader from "../components/CanvasLoader";
 import { Canvas } from "@react-three/fiber";
 import Laptop from "../components/Laptop";
 import { ProjectsList } from "./ProjectsList";

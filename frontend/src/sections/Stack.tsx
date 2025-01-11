@@ -4,7 +4,6 @@ import {wandControlConfig } from "../constants/Globals/objectsControls";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Canvas } from "@react-three/fiber";
-import CanvasLoader from "../components/CanvasLoader";
 import MagicWand from "../components/MagicWand";
 import { IconsMesh } from "../components/IconsMesh";
 import { Environment, Stars } from "@react-three/drei";
