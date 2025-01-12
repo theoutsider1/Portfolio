@@ -31,7 +31,7 @@ export const Projects: React.FC<ProjectProps> = ({isMobile})=> {
             {/* Tittle & Button section */}
                 <div className=" w-1/2 flex flex-col px-4 sm:px-0">
                     <div className="">
-                        <h2 className="text-right items-center text-secondary squada sm:text-6xl font-bold px-12">{projectSectionContent.title}</h2>
+                        <h2 className="text-right items-center text-secondary squada text-5xl sm:text-7xl font-bold px-12">{projectSectionContent.title}</h2>
                     </div>
                    
                 </div>
@@ -40,7 +40,7 @@ export const Projects: React.FC<ProjectProps> = ({isMobile})=> {
             <div className="flex flex-col px-4">
             {/* Tittle & Button section */}
             <div className="">
-                        <h2 className="text-left items-center text-secondary squada text-4xl font-bold">{projectSectionContent.title}</h2>
+                        <h2 className="text-left items-center text-secondary squada text-5xl font-bold">{projectSectionContent.title}</h2>
             </div>
             
                     <div className="w-full h-full flex flex-col justify-end items-end text-secondary ">
