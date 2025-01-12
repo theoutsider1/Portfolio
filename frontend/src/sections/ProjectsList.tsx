@@ -15,7 +15,11 @@ interface CardProps {
 export const ProjectsList: React.FC<CardProps> = ({
   onProjectSelect,
 }) => {
-    
+    const handleSlide = (swiper : any) => {
+        console.log(swiper.activeIndex);
+        
+        onProjectSelect(ProjectsInfo[swiper.activeIndex]); // Trigger callback to send data to parent
+      };
   return (
     <div className=" relative order-1 sm:order-2 sm:w-1/2  m-3 sm:m-4 border rounded-lg border-slate-100 border-opacity-15">
       <Swiper className="mySwiper">
