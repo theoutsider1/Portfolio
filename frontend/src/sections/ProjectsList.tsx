@@ -40,7 +40,7 @@ export const ProjectsList: React.FC<CardProps> = ({
                   alt="logo"
                   className={`${currentProject.style} `}
                 />
-              <div className="text-white text-xl sm:px-2 font-roboto font-semibold sm:text-2xl sm:font-bold">
+              <div className="text-white text-xl  px-2 font-roboto font-semibold sm:text-2xl sm:font-bold">
                 <h4>{currentProject.name}</h4>
               </div>
               </div>
