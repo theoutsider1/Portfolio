@@ -13,15 +13,15 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
         <section id="about" className="w-full flex flex-col sm:flex-row px-4 sm:px-12 sm:pt-14">
             {/* Section Title */}
             <div className="sm:w-1/2">
-                <h2 className="text-left squada sm:text-right items-center text-secondary text-4xl sm:text-6xl font-bold sm:px-12">
+                <h2 className="text-left squada sm:text-right items-center text-secondary text-5xl sm:text-7xl sm:px-12">
                     {aboutContent.title}
                 </h2>
             </div>
             
             {/* Button Section & Description */}
            
-            <div className="sm:w-1/2 flex flex-col-reverse sm:flex-col gap-10 sm:gap-5">
-                <div className=" w-full sm:flex sm:justify-end items-center ">
+            <div className="sm:w-1/2 flex flex-col-reverse items-center sm:flex-col gap-10 sm:gap-5">
+                <div className=" w-full flex justify-end items-center ">
                 
                     <Btn 
                         btnText={aboutContent.btnText} 
