@@ -33,7 +33,7 @@ export const ProjectsInfo: ProjectsInfos[] = [
         name: 'JosoPress',
         description: 'Customized the purchased Josopress WordPress theme for a news website using WordPress and Elementor, adjusting the layout and functionality to meet the client\'s needs.',
         logo: '/assets/josopressLogo.svg',
-        style: 'w-1/6 -mt-5',
+        style: 'w-1/5 px-2',
         tech: [{
           id:10,
           name: 'dsada',
@@ -130,7 +130,7 @@ export const ProjectsInfo: ProjectsInfos[] = [
       name: 'Petify E-commerce Store',
       description: 'Contributed to the development of Petify, an e-commerce store built by a team during my MERN bootcamp as a PFF. The platform features a modern, responsive user interface. ',
       logo: 'assets/PetifyLogo.png',
-      style: 'w-10 my-3',
+      style: 'w-10 m-3',
       tech: [
         {
           id:10,
