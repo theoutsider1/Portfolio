@@ -15,7 +15,7 @@ const ShowCase = ()=>{
     }
 
     return(
-        <section ref={sectionRef} className="mb-16 sm:h-[450px] flex flex-col sm:flex-row gap-4" >
+        <section ref={sectionRef} className="mb-16 mt-16 sm:h-[450px] flex flex-col sm:flex-row gap-4" >
             
             <ProjectsList onProjectSelect={handleSwipeProjects}/>
            
