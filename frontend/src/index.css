@@ -26,3 +26,9 @@ body {
   -webkit-backdrop-filter: blur(8px); /* Safari, iOS */
   backdrop-filter: blur(8px); /* Standard for other browsers */
 }
+/* Swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+

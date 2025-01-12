@@ -33,7 +33,7 @@ export const ProjectsInfo: ProjectsInfos[] = [
         name: 'JosoPress',
         description: 'Customized the purchased Josopress WordPress theme for a news website using WordPress and Elementor, adjusting the layout and functionality to meet the client\'s needs.',
         logo: '/assets/josopressLogo.svg',
-        style: 'w-16 sm:w-24',
+        style: 'w-1/6 -mt-5',
         tech: [{
           id:10,
           name: 'dsada',
@@ -45,8 +45,8 @@ export const ProjectsInfo: ProjectsInfos[] = [
       id: 2,
       name: 'Responsive Booking interface (Stepper Form)',
       description: 'Developed a responsive booking interface featuring a step-by-step form for the Safiir Educational Advice and Study Guidance website. The interface allows users to easily navigate through the booking process. ',
-      logo: '2024',
-      style: '',
+      logo: 'assets/logo-circle.ico ',
+      style: 'w-20',
       tech: [
         {
         id:10,
@@ -80,7 +80,7 @@ export const ProjectsInfo: ProjectsInfos[] = [
       name: '2Jobs Platform',
       description: 'Developed the 2Jobs platform, which connects job seekers with companies looking for candidates. A key feature of the platform is allowing job seekers to apply for jobs with minimal information, such as just their phone number.',
       logo: 'assets/2jobs.svg',
-      style: 'w-14 sm:w-auto',
+      style: '',
       tech: [
         {
         id:10,
@@ -130,7 +130,7 @@ export const ProjectsInfo: ProjectsInfos[] = [
       name: 'Petify E-commerce Store',
       description: 'Contributed to the development of Petify, an e-commerce store built by a team during my MERN bootcamp as a PFF. The platform features a modern, responsive user interface. ',
       logo: 'assets/PetifyLogo.png',
-      style: 'w-10',
+      style: 'w-10 my-3',
       tech: [
         {
           id:10,
