@@ -45,7 +45,7 @@ export const ProjectsInfo: ProjectsInfos[] = [
       id: 2,
       name: 'Responsive Booking interface (Stepper Form)',
       description: 'Developed a responsive booking interface featuring a step-by-step form for the Safiir Educational Advice and Study Guidance website. The interface allows users to easily navigate through the booking process. ',
-      logo: 'assets/logo-circle.ico ',
+      logo: 'assets/safiirLogo.ico ',
       style: 'w-20',
       tech: [
         {
