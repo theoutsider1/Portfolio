@@ -25,9 +25,10 @@ gsap.registerPlugin(ScrollTrigger)
 const MagicWand = (props : handletri)=> {
  
   const { nodes, materials } = useGLTF('/models/the_elder_wand.glb')
-  const {testRef, ...restProps} = props;
+  const {testRef,scale, ...restProps} = props;
   const meshRef = useRef<Group>(null);
-  
+  const scaleValue: number = typeof scale === 'number' ? scale : 1;
+
   
   useEffect(() => {
 
@@ -50,8 +51,8 @@ const MagicWand = (props : handletri)=> {
         duration: 1,
         ease: "power1.inOut",})
       tl.to(meshRef.current.scale, {
-        x: 0.4,       // Move to a new x scale
-        y: 0.4,       // Move to a new y scale
+        x: scaleValue,       // Move to a new x scale
+        y: scaleValue,       // Move to a new y scale
         z: 0.4,       // Move to a new z scale
         duration: 1,
         ease: "power1.inOut",
