@@ -71,7 +71,7 @@ const HumanLangue = ()=>{
                 </div>
             </div>
 
-            <div className="sm:w-1/2 mt-2 sm:mt-0 h-[250px] sm:h-auto">
+            <div className="sm:w-1/2 mt-2 sm:mt-0 h-[50vh] sm:h-auto">
                
                     <Canvas shadows camera={{position: [0,0,5], fov:50}} >
                     <color attach="background" args={['#0a1020']}/>
