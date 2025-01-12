@@ -31,4 +31,8 @@ body {
   width: 100%;
   height: 100%;
 }
-
+/* Target the draggable scrollbar handle */
+.swiper-scrollbar-drag {
+  background: #d9fdae; /* Color of the draggable part */
+  border-radius: 8px; 
+}
