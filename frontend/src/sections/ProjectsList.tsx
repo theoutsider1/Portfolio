@@ -22,7 +22,7 @@ export const ProjectsList: React.FC<CardProps> = ({
       };
   return (
     <div className=" relative order-1 sm:order-2 sm:w-1/2  m-3 sm:m-4 border rounded-lg border-slate-100 border-opacity-15">
-      <Swiper className="mySwiper">
+      <Swiper onSlideChange={handleSlide} className="mySwiper">
 
         {ProjectsInfo.map((currentProject) => (
           <SwiperSlide key={currentProject.id} className=" p-2">
