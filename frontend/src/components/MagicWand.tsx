@@ -31,8 +31,10 @@ const MagicWand = (props : handletri)=> {
 
   
   useEffect(() => {
-
-    if(meshRef.current && testRef ){
+    if(testRef?.current){
+      console.log('true');
+      
+    if(meshRef.current ){
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: testRef.current,
@@ -53,7 +55,7 @@ const MagicWand = (props : handletri)=> {
       tl.to(meshRef.current.scale, {
         x: scaleValue,       // Move to a new x scale
         y: scaleValue,       // Move to a new y scale
-        z: 0.4,       // Move to a new z scale
+        z: scaleValue,       // Move to a new z scale
         duration: 1,
         ease: "power1.inOut",
          },0)
@@ -68,11 +70,13 @@ const MagicWand = (props : handletri)=> {
         tl.kill()
       })
     }
+    }
   }, [testRef]);
   
    return (
     <group {...restProps}
      ref={meshRef} 
+     scale={scaleValue}
      dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
