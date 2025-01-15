@@ -9,14 +9,14 @@ export const Btn: React.FC<BtnProps> = ({btnText, isMobile, link})=>{
     
     return (
         <>
-            <a className="flex items-center font-roboto font-light text-secondary cursor-pointer group" href={link}  target="_blank"  rel="noopener noreferrer">
-                    <span className="border-2 text-sm sm:text-base sm:font-light inline-flex items-center sm:my-4 border-secondary group-hover-styles rounded-full py-1.5 sm:py-2.5 px-4 sm:px-8">
+            <a className="flex items-center font-roboto font-light text-third cursor-pointer group" href={link}  target="_blank"  rel="noopener noreferrer">
+                    <span className="border-2 text-sm sm:text-base sm:font-light inline-flex items-center sm:my-4 border-third group-hover-styles rounded-full py-1.5 sm:py-2.5 px-4 sm:px-8">
                        {btnText}
                     </span>
                     {
                         isMobile ? 
                             null :
-                                <span className="border-2 group-hover-styles rounded-full p-1.5 sm:p-2.5 text-center inline-flex items-center">
+                                <span className="border-2 border-third text-third group-hover-styles rounded-full p-1.5 sm:p-2.5 text-center inline-flex items-center">
                                 <svg
                                 className="w-5 h-5 transform -rotate-45"
                                 aria-hidden="true"
