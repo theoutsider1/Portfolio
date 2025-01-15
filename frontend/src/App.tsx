@@ -37,10 +37,10 @@ function App() {
             <Hero />
             {/* <Navbar/> */}
             <About isMobile={isMobile} />
+            <Stack />
             <Projects isMobile={isMobile} />
             {/* <ProjectsList/> */}
             <ShowCase />
-            <Stack />
           </div>
 
           <ContactForm />
