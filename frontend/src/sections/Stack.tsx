@@ -30,7 +30,7 @@ export const Stack = () => {
   const scaleValue = getConfigValues(wandControlConfig, 'scale', isMobile);
 const HumanLangue = ()=>{
     return (
-      <p className="font-roboto my-4 text-sm sm:text-base font-light opacity-70 sm:leading-loose">
+      <p className="font-roboto my-4 text-base sm:text-lg font-light opacity-70 sm:leading-loose">
                     In my spells room,I weave magic using Html, 
                     Tailwind-Css, JavaScript, Typescript,
                      React Js, Redux Toolkit, Axios, Prime React, GSAP, React Fiber Three, Nest js, Express js , RESTApi, MongoDB, PostgreSQL, Prisma, Supabase, and WordPress Craftia to weave modern digital enchantments. 
@@ -39,15 +39,15 @@ const HumanLangue = ()=>{
 }
   
   return (
-        <section id='stack' ref={testRef} className="w-full rounded-3xl mt-8 sm:pt-24  ">
+        <section id='stack' ref={testRef} className="w-full rounded-3xl sm:pt-24  ">
           <div className="bg-[#0a1020] rounded-3xl flex flex-col sm:flex-row px-4 gap-4 sm:bg-slate-[#0d0d12] sm:shadow-lg sm:shadow-[#0d0d12]">
             <div className="sm:w-1/2 sm:pr-12 relative">
                 <img src='/assets/spotlight5.png' className="absolute transform  -scale-x-100 -left-4 opacity-70 rounded-3xl pointer-events-none" alt="" />
-                <h2  className="squada pt-4 sm:text-right items-center text-secondary text-4xl sm:text-6xl">Stack</h2>
+                <h2  className="squada pt-4 sm:text-right items-center text-secondary text-5xl sm:text-7xl">Stack</h2>
                 <div className=" w-full sm:text-right sm:my-8  text-secondary ">
                   {!showMuggleVersion ? (
                     <>
-                      <p className="font-roboto text-sm my-4 sm:text-base font-light opacity-70 sm:leading-loose">
+                      <p className="font-roboto text-base my-4 sm:text-lg font-light opacity-70 sm:leading-loose">
                         In my spells room, I weave magic using HTMLus Arcana, CSSus Shieldum,
                         Tailwindus Bractum, JavaScriptus Fluxia, Typescriptus Magica, Reacto
                         Interfacia, Reduxus Imperium, Axiosum Revelia, Prime Reactum Lumina,
