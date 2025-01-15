@@ -13,7 +13,7 @@ export const Projects: React.FC<ProjectProps> = ({isMobile})=> {
             {/* Paragraph section */}
             {!isMobile ? 
             <div className="w-full flex">
-            <div className="sm:w-1/2 ">
+            <div className="sm:w-1/2">
                     <div className="w-full flex flex-col justify-end items-end text-secondary ">
                     <div className="sm:px-12">
                         <Btn
@@ -22,7 +22,7 @@ export const Projects: React.FC<ProjectProps> = ({isMobile})=> {
                                 link={gitLink}
                             />
                     </div>
-                        <p className="w-full sm:mb-0 my-8 text-base sm:text-lg font-roboto font-light opacity-70 leading-loose px-12 text-right">
+                        <p className="w-full sm:mb-0 my-8 text-base sm:text-lg font-roboto font-light leading-loose px-12 text-right">
                             {projectSectionContent.paragraph}
                         </p>
                     </div>
@@ -31,20 +31,20 @@ export const Projects: React.FC<ProjectProps> = ({isMobile})=> {
             {/* Tittle & Button section */}
                 <div className=" w-1/2 flex flex-col px-4 sm:px-0">
                     <div className="">
-                        <h2 className="text-right items-center text-secondary squada text-5xl sm:text-7xl font-bold px-12">{projectSectionContent.title}</h2>
+                        <h2 className="text-right items-center text-third squada text-5xl sm:text-7xl font-bold px-12">{projectSectionContent.title}</h2>
                     </div>
                    
                 </div>
             </div>
             : 
-            <div className="flex flex-col px-4">
+            <div className="flex flex-col justify-between gap-14 px-4">
             {/* Tittle & Button section */}
-            <div className="">
-                        <h2 className="text-left items-center text-secondary squada text-5xl font-bold">{projectSectionContent.title}</h2>
-            </div>
+                 <div className="">
+                        <h2 className="text-left items-center text-third squada text-5xl font-bold">{projectSectionContent.title}</h2>
+                </div>
             
-                    <div className="w-full h-full flex flex-col justify-end items-end text-secondary ">
-                        <p className="w-full pt-8 text-base sm:text-lg font-roboto font-light opacity-70 text-left">
+                    <div className="w-full h-full flex flex-col justify-end items-end text-white ">
+                        <p className="w-full pt-8 text-base sm:text-lg font-roboto font-light text-left">
                             {projectSectionContent.paragraph}
                         </p>
                     </div>

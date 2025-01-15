@@ -30,7 +30,7 @@ export const Stack = () => {
   const scaleValue = getConfigValues(wandControlConfig, 'scale', isMobile);
 const HumanLangue = ()=>{
     return (
-      <p className="font-roboto my-4 text-base sm:text-lg font-light opacity-70 sm:leading-loose">
+      <p className="font-roboto my-4 text-base sm:text-lg font-light sm:leading-loose">
                     In my spells room,I weave magic using Html, 
                     Tailwind-Css, JavaScript, Typescript,
                      React Js, Redux Toolkit, Axios, Prime React, GSAP, React Fiber Three, Nest js, Express js , RESTApi, MongoDB, PostgreSQL, Prisma, Supabase, and WordPress Craftia to weave modern digital enchantments. 
@@ -43,11 +43,11 @@ const HumanLangue = ()=>{
           <div className="bg-[#0a1020] rounded-3xl flex flex-col sm:flex-row px-4 gap-4 sm:bg-slate-[#0d0d12] sm:shadow-lg sm:shadow-[#0d0d12]">
             <div className="sm:w-1/2 sm:pr-12 relative">
                 <img src='/assets/spotlight5.png' className="absolute transform  -scale-x-100 -left-4 opacity-70 rounded-3xl pointer-events-none" alt="" />
-                <h2  className="squada pt-4 sm:text-right items-center text-secondary text-5xl sm:text-7xl">Stack</h2>
+                <h2  className="squada pt-4 sm:text-right items-center text-third text-5xl sm:text-7xl">Stack</h2>
                 <div className=" w-full sm:text-right sm:my-8  text-secondary ">
                   {!showMuggleVersion ? (
                     <>
-                      <p className="font-roboto text-base my-4 sm:text-lg font-light opacity-70 sm:leading-loose">
+                      <p className="font-roboto text-base my-4 sm:text-lg font-light sm:leading-loose">
                         In my spells room, I weave magic using HTMLus Arcana, CSSus Shieldum,
                         Tailwindus Bractum, JavaScriptus Fluxia, Typescriptus Magica, Reacto
                         Interfacia, Reduxus Imperium, Axiosum Revelia, Prime Reactum Lumina,
@@ -62,7 +62,7 @@ const HumanLangue = ()=>{
                   )}
                 <div>
                 <span
-                  className="font-roboto text-xs text-[#2b82c9] underline cursor-pointer z-50"
+                  className="font-roboto text-xs text-third underline cursor-pointer z-50"
                   onClick={() => setShowMuggleVersion(!showMuggleVersion)}>
                     {showMuggleVersion ? "Magical version!" : "Muggle version!"}
                 </span>
