@@ -9,13 +9,7 @@ export default {
       colors: {
         primary: '#1f2e13',
         secondary: 'white',
-        third: '#f3fb80',
-        fourth: "#22132e",
-        vulcan: "#f6f6f9",
-        black: {
-          200: '#333333', 
-          300: '#1a1a1a', 
-        },
+        third: '#e3f9cd',
       },
       fontFamily: {
         times: ['"Times New Roman"', "serif"],
