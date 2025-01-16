@@ -39,7 +39,7 @@ const HumanLangue = ()=>{
 }
   
   return (
-        <section id='stack' ref={testRef} className="w-full rounded-3xl sm:pt-24  ">
+        <section id='stack' ref={testRef} className="w-full rounded-3xl sm:pt-24 p-2 ">
           <div className="bg-[#0a1020] rounded-3xl flex flex-col sm:flex-row px-4 gap-4 sm:bg-slate-[#0d0d12] sm:shadow-lg sm:shadow-[#0d0d12]">
             <div className="sm:w-1/2 sm:pr-12 relative">
                 <img src='/assets/spotlight5.png' className="absolute transform  -scale-x-100 -left-4 opacity-70 rounded-3xl pointer-events-none" alt="" />
