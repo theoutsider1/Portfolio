@@ -64,7 +64,7 @@ export  const Navbar = ()=>{
             </div>
 
             {/* Mobile sidebar Menu */}
-            {isMobile ? <img src="/assets/owlLogo.png" className="w-24 absolute left-0  top-2 " alt="" /> : null}
+            {isMobile ? <img src="/assets/owla.png" className="w-16 absolute left-0  top-0 " alt="" /> : null}
 
             <div className={`nav-sidebar absolute left-0 right-0 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block
                 ${isOpen ? `max-h-screen` : `max-h-0`}`}>
