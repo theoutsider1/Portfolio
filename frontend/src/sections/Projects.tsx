@@ -9,7 +9,7 @@ export const Projects: React.FC<ProjectProps> = ({isMobile})=> {
     const projectSectionContent = SectionContent.Project
     const gitLink = "https://github.com/theoutsider1"
     return (
-        <section id="work" className="flex items-center h-screen  my-4 sm:my-0 sm:pt-16">
+        <section id="work" className="flex items-center my-14 sm:my-0 sm:pt-16">
             {/* Paragraph section */}
             {!isMobile ? 
             <div className="w-full flex">
