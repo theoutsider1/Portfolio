@@ -37,13 +37,14 @@ export const ContactForm = ()=>{
 
     return (
         <section className="bg-[#171720] ">
+            <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-third to-transparent opacity-45 " />
             <div id="contact" className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-                <h2 className="squada mb-4 text-4xl sm:text-6xl tracking-tight text-center text-white ">Let's Connect</h2>
+                <h2 className="squada mb-4 text-4xl sm:text-6xl tracking-tight text-center text-third ">Let's Connect</h2>
                 <p className="mb-8 lg:mb-16 font-roboto font-light text-center text-secondary opacity-50 sm:text-xl">Want to send feedback ? Have questions about a project? Shoot me an email.</p>
                 {/* Contact Form */}
-                <form ref={form} onSubmit={sendEmail} className="space-y-8">
+                <form ref={form} onSubmit={sendEmail} className="space-y-8 p-10 text-white">
                     <div>
-                        <label htmlFor="email" className="block mb-2 font-roboto text-sm font-medium text-white opacity-70">Your email</label>
+                        <label htmlFor="email" className="block mb-2 font-roboto text-sm font-medium  opacity-70">Your email</label>
                         <input type="email" 
                                 name="from_mail" 
                                 id="email" 
@@ -51,7 +52,7 @@ export const ContactForm = ()=>{
                                 placeholder="Your Email Adress" required/>
                     </div>
                     <div>
-                        <label htmlFor="subject" className="block mb-2 font-roboto text-sm font-medium text-white opacity-70">Subject</label>
+                        <label htmlFor="subject" className="block mb-2 font-roboto text-sm font-medium opacity-70">Subject</label>
                         <input type="text" 
                                 id="subject" 
                                 name="from_subject" 
@@ -59,7 +60,7 @@ export const ContactForm = ()=>{
                                 placeholder="Let us know how we can help you" required/>
                     </div>
                     <div className="sm:col-span-2">
-                        <label htmlFor="message" className="block mb-2 font-roboto text-sm font-medium text-white opacity-70">Your message</label>
+                        <label htmlFor="message" className="block mb-2 font-roboto text-sm font-medium opacity-70">Your message</label>
                         <textarea id="message" 
                                     rows={6} 
                                     name="message" 
