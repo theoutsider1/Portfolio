@@ -3,7 +3,7 @@ export const Footer = ()=>{
         <footer className="text-[#b0b1b3] shadow-2xl shadow-[#b0b1b3] mt-20 pt-2">
             <div className="bg-[#171720] p-2 text-center text-xs sm:text-sm flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between items-center">
                 <span className="order-3 sm:order-1">
-                    <img src="/assets/oowl.svg" className="w-24" alt="" />
+                    <img src="/assets/owlah.svg" className="w-16" alt="" />
                 </span> 
                 <span className="order-1 sm:order-2">
                     Woven with ancient spells by the Web Wizard  <br/> © 2024 All Rights Reserved.
