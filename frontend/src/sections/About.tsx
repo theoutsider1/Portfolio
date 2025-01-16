@@ -10,7 +10,7 @@ export const About: React.FC<AboutProps> = ({isMobile})=>{
     const aboutContent: SectionDetails = SectionContent.About;
     const linkedinLink = 'https://www.linkedin.com/in/hatim-tagmi/'
     return (
-        <section id="about" className="w-full h-screen flex flex-col sm:flex-row px-4 sm:px-12 sm:pt-14 gap-10">
+        <section id="about" className="w-full flex flex-col sm:flex-row px-4 sm:px-12 sm:pt-14 my-14 gap-10">
             {/* Section Title */}
             <div className="sm:w-1/2">
                 <h2 className="text-left squada sm:text-right items-center text-third text-5xl sm:text-7xl sm:px-12">
