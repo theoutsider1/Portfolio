@@ -12,14 +12,14 @@ export const navLinks: NavLinks[] = [
       href: '#about',
     },
     {
-      id: 3,
-      name: 'Work',
-      href: '#work',
-    },
-    {
       id: 4,
       name: 'Stack',
       href: '#stack',
+    },
+    {
+      id: 3,
+      name: 'Work',
+      href: '#work',
     },
     {
       id: 5,
@@ -28,19 +28,19 @@ export const navLinks: NavLinks[] = [
     },
   ];
 export const ProjectsInfo: ProjectsInfos[] = [
-    {
-        id: 1,
-        name: 'JosoPress',
-        description: 'Customized the purchased Josopress WordPress theme for a news website using WordPress and Elementor, adjusting the layout and functionality to meet the client\'s needs.',
-        logo: '/assets/josopressLogo.svg',
-        style: 'w-1/5 px-2',
-        tech: [{
-          id:10,
-          name: 'dsada',
-          href: 'assets/react.svg'
-        }],
-        projectDirection: '/textures/project/project1.mp4',
-      },
+    // {
+    //     id: 1,
+    //     name: 'JosoPress',
+    //     description: 'Customized the purchased Josopress WordPress theme for a news website using WordPress and Elementor, adjusting the layout and functionality to meet the client\'s needs.',
+    //     logo: '/assets/josopressLogo.svg',
+    //     style: 'w-1/5 px-2',
+    //     tech: [{
+    //       id:10,
+    //       name: 'dsada',
+    //       href: 'assets/react.svg'
+    //     }],
+    //     projectDirection: '/textures/project/project1.mp4',
+    //   },
     { 
       id: 2,
       name: 'Responsive Booking interface (Stepper Form)',
