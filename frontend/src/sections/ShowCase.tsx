@@ -5,6 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import Laptop from "../components/Laptop";
 import { ProjectsList } from "./ProjectsList";
 import { ProjectsInfos } from "../constants/Globals/types";
+import { useMediaQuery } from "react-responsive";
 
 const ShowCase = ()=>{
 
@@ -13,9 +14,10 @@ const ShowCase = ()=>{
     const handleSwipeProjects = (ProjectsInfo: ProjectsInfos)=>{
         setRightPro(ProjectsInfo)        
     }
+    const isMobile = useMediaQuery({maxWidth:468})
 
     return(
-        <section ref={sectionRef} className="mb-16 mt-16 sm:h-[450px] flex flex-col sm:flex-row gap-4" >
+        <section ref={sectionRef} className="mb-16 mt-16 flex flex-col sm:flex-row gap-4" >
             
             <ProjectsList onProjectSelect={handleSwipeProjects}/>
            
@@ -23,12 +25,7 @@ const ShowCase = ()=>{
                 <Canvas camera={{ position: [0, 0, -20], fov: 50 }}>
                     <pointLight position={[10, 10, 10]} intensity={1.5} />
                             <Suspense fallback={null}>
-                                <group 
-                                    rotation={[-0.2, Math.PI, 0]} 
-                                    position={[0, -1, -2]}  //  animation values  position={[0, -1, -9]}  
-                                    > 
-                                        <Laptop currentProject= {rightPro} sectionRef={sectionRef}/>
-                                </group>
+                                <Laptop currentProject= {rightPro} isMobile={isMobile} sectionRef={sectionRef}/>
                                 <Environment preset="city" />
                             </Suspense>
                             <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
