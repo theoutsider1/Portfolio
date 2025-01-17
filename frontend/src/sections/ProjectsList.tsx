@@ -22,7 +22,7 @@ export const ProjectsList: React.FC<CardProps> = ({
         onProjectSelect(ProjectsInfo[swiper.activeIndex]); // Trigger callback to send data to parent
       };
   return (
-    <div className=" relative order-1 sm:order-2 sm:w-1/2  m-3 sm:m-4 border rounded-lg border-slate-100 border-opacity-15">
+    <div className=" relative order-1 sm:order-2 sm:w-1/2  m-3 sm:m-4 border rounded-lg border-third border-opacity-15">
       <Swiper 
         scrollbar={{
           hide: false,
@@ -34,7 +34,7 @@ export const ProjectsList: React.FC<CardProps> = ({
         {ProjectsInfo.map((currentProject) => (
           <SwiperSlide key={currentProject.id} className=" p-2">
             <div className="flex flex-col justify-around gap-10">
-              <div className="text-white sm:mx-6">
+              <div className=" sm:mx-6">
                 <img
                   src={currentProject.logo}
                   alt="logo"
