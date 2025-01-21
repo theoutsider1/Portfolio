@@ -17,15 +17,15 @@ const ShowCase = ()=>{
     const isMobile = useMediaQuery({maxWidth:468})
 
     return(
-        <section ref={sectionRef} className="mb-16 mt-16 flex flex-col sm:flex-row gap-4" >
+        <section ref={sectionRef} className="mb-16 mt-16 flex flex-col sm:flex-row" >
             
             <ProjectsList onProjectSelect={handleSwipeProjects}/>
            
-            <div className=" sm:w-1/2 sm:m-4 order-2 sm:order-1">
+            <div className=" sm:w-1/2 sm:m-4 order-2 sm:order-1 h-[50vh] sm:h-auto">
                 <Canvas camera={{ position: [0, 0, -20], fov: 50 }}>
                     <pointLight position={[10, 10, 10]} intensity={1.5} />
                             <Suspense fallback={null}>
-                                <Laptop currentProject= {rightPro} isMobile={isMobile} sectionRef={sectionRef}/>
+                                <Laptop currentProject= {rightPro}  isMobile={isMobile} sectionRef={sectionRef}/>
                                 <Environment preset="city" />
                             </Suspense>
                             <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
